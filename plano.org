@@ -1,0 +1,42 @@
+* Explorando interfaces gráficas com o R
+
+Eduardo E. Ribeiro Jr\\
+Walmes M. Zeviani
+
+** =animation=
+
+  1. Método da transformação integral da probabilidade
+  2. Método da aceitação e rejeição
+  3. Método do amostrador independente
+  4. Método do passeio aleatório (random walk)
+  5. Método de Metropolis-Hastings
+
+** =rgl=
+
+  1. Superfície de mínimos quadrados de regressão não linear
+  2. Superfície de log-verossimilhança
+
+** =googleVis=
+
+** =rCharts=
+
+** =rpanel=
+
+** =gWidgets=
+
+*** Exemplos básicos
+
+*** Exemplos aplicados
+
+** =shiny=
+
+*** Exemplos básicos
+
+*** Exemplos aplicados
+
+  1. Índice de massa corporal
+  2. Delineamento em Quadrado Latino
+  3. Download de lista de exercícios
+  4. Ajuste de modelo de regressão linear simples
+  5. Ajuste de modelo de retenção de água
+  6. Ajuste de semivariograma e krigagem
