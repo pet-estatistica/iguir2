@@ -1,0 +1,28 @@
+#!/bin/bash
+
+##======================================================================
+##                                                        Eduardo Junior
+##                                                    eduardo.jr@ufpr.br
+##                                                            13-11-2015
+##======================================================================
+## Facilitando a inclusão do template em aplicacoes já elaboradas
+
+##-------------------------------------------
+## Para os arquivos ui.R
+
+for file in $(find -type f -name "ui.R"); do 
+    sed -i "1i\##-------------------------------------------\n## ui.R\n" $file
+    sed -i "/fluidPage(/a\        ## Cabeçalho IGUIR2\n        htmlOutput(\"header\"),\n" $file
+done
+
+##-------------------------------------------
+## Para os arquivos server.R
+
+for file in $(find -type f -name "server.R"); do 
+    sed -i "1i\##-------------------------------------------\n## server.R\n" $file
+    sed -i "/library(shiny)/a\## Carrega template das aplicações elaboradas pelo projeto iguiR2\nsource(\"../template.R\")" $file
+    sed -i "/require(shiny)/a\## Carrega template das aplicações elaboradas pelo projeto iguiR2\nsource(\"../template.R\")" $file
+    sed -i "/output){/a\        ## Cabeçalho IGUIR2\n        output\$header <- renderPrint({\n            template(\"TEMA\")\n        })" $file
+    sed -i "/session){/a\        ## Cabeçalho IGUIR2\n        output\$header <- renderPrint({\n            template(\"TEMA\")\n        })" $file
+done
+
