@@ -17,6 +17,7 @@ shinyUI(
         h4("Você consegue imitar uma moeda?"),
         p(txt),
         hr(),
+        
         sidebarPanel(
             helpText("Clique nos botões para declarar cara ou coroa."),
             actionButton("goCara", "Cara"),
@@ -24,10 +25,14 @@ shinyUI(
             h6("Número de lançamentos feitos:"),
             verbatimTextOutput("nlanc"),
             actionButton("goProcess", "Aplicar teste de hipótese!"),
+            actionButton("clear", "Recomeçar"),
             h6("Sequência das faces observadas (1=cara, 0=coroa):"),
             verbatimTextOutput("seqx"),
-            checkboxInput("teorico", "Valores teóricos: Binomial(n-1, p=0.5)")
+            checkboxInput(
+                "teorico", "Valores teóricos: Binomial(n-1, p=0.5)")
         ),
+
+        
         mainPanel(
             plotOutput("hist", width=500, height=500)
         )

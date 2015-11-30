@@ -13,7 +13,6 @@ moeda <- function(n){
 }
 
 ## Vetor vazio.
-x <- integer()
 N <- 1000
 
 shinyServer(
@@ -22,52 +21,57 @@ shinyServer(
         output$header <- renderPrint({
             template("TEMA")
         })
-        #         cara <- eventReactive(input$goCara, {
-        #             x <<- c(x, 1L)
-        #         })
-        #         coro <- eventReactive(input$goCoro, {
-        #             x <<- c(x, 0L)
-        #         })
-        #         output$nlanc <- renderText({
-        #             coro(); cara()
-        #             return(length(x))
-        #         })
-        cara <- reactive({
-            input$goCara
-            x <<- c(x, 1L)
+
+        ## Cria valores para reagirem à estímulos dos buttons
+        v <- reactiveValues(x = integer())
+        
+        ## Responde a estímulos no `input$goCara`.
+        observeEvent(input$goCara, {
+            v$x <- c(v$x, 1L)
         })
-        coro <- reactive({
-            input$goCoro
-            x <<- c(x, 0L)
+        
+        ## Responde a estímulos no `input$goCoro`.
+        observeEvent(input$goCoro, {
+                         v$x <- c(v$x, 0L)
+                     })
+
+        ## Responde a estímulos no `input$goCoro`.
+        observeEvent(input$clear, {
+            v$x <- integer()
         })
+        
         ## x começa com dois elementos. Descontá-los.
         output$nlanc <- renderText({
-            coro(); cara()
-            return(length(x)-2)
+            return(length(v$x))
         })
+        
         process <- eventReactive(input$goProcess, {
-            x <- x[-c(1:2)]
-            ## Número de lançamentos.
-            n <- length(x)
-            ## Número de caras.
-            k <- sum(x)
-            ## Número de trocas de face.
-            o <- sum(abs(diff(x)))
-            ## Faz várias execuções do experimento aleatório.
-            r <- replicate(N, moeda(n))
-            ## P-valor bilateral empírico.
-            p <- min(c(2*min(c(sum(r<=o), sum(r>=o)))/N, 1))
-            ## Lista com todos os elementos.
-            return(list(n=n, k=k, o=o, r=r, p=p, x=x))
+            with(reactiveValuesToList(v), {
+                x <- x
+                ## Número de lançamentos.
+                n <- length(x)
+                ## Número de caras.
+                k <- sum(x)
+                ## Número de trocas de face.
+                o <- sum(abs(diff(x)))
+                ## Faz várias execuções do experimento aleatório.
+                r <- replicate(N, moeda(n))
+                ## P-valor bilateral empírico.
+                p <- min(c(2*min(c(sum(r<=o), sum(r>=o)))/N, 1))
+                ## Lista com todos os elementos.
+                list(n=n, k=k, o=o, r=r, p=p, x=x)
+            })
         })
+        
         output$seqx <- renderText({
             s <- paste0(process()$x, collapse="")
             return(s)
         })
+        
         output$hist <- renderPlot({
             with(process(),{
-                if(n<=9){
-                    stop("Pro favor, lance no mínimo 30 vezes.")
+                if(n<=15){
+                    stop("Pro favor, lance no mínimo 15 vezes.")
                 }
                 par(mar=c(5,4,3,2), family="Palatino")
                 layout(matrix(c(1,2,1,3), 2, 2))
