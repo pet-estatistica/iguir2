@@ -36,7 +36,8 @@ shinyServer(
 
         ## Exibe o número de pontos no quadro
         output$npontos <- renderText({
-            length(val$x)
+            if(!val$z)  length(val$x)
+            else NULL
         })
         
         ## Limpa os objetos reativos estimulado pelo `input$clear`
@@ -51,8 +52,8 @@ shinyServer(
 
         ## Habilita exibição se houver mais de 19 pontos e se clicado em
         ## `input$result` 
-        observe({
-            if (input$result > 0 & length(val$x) > 19){
+        observeEvent(input$result, {
+            if (length(val$x) > 19){
                 val$z <- TRUE
             }
         })
