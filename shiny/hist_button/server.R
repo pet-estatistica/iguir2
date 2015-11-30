@@ -5,7 +5,7 @@ library(shiny)
 ## Carrega template das aplicações elaboradas pelo projeto iguiR2
 source("../template.R")
 
-ht <- hist(precip)
+ht <- hist(precip, plot = FALSE)
 
 shinyServer(
     function(input, output){

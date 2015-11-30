@@ -7,7 +7,7 @@ source("../template.R")
 
 x <- precip
 
-ht <- hist(x)
+ht <- hist(x, plot = FALSE)
 col <- rep("#3366CC", length(ht$counts))
 
 shinyServer(

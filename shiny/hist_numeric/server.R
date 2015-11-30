@@ -6,7 +6,7 @@ library(shiny)
 source("../template.R")
 
 x <- precip
-ht <- hist(x)
+ht <- hist(x, plot = FALSE)
 
 shinyServer(
     function(input, output){
