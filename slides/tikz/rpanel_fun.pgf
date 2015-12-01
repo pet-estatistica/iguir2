@@ -1,0 +1,57 @@
+\begin{tikzpicture}[
+  box/.style={
+    draw, rounded corners, inner sep=2ex
+  },
+  title/.style={
+    fill=white,
+    anchor=base,
+%     rounded corners, minimum height=1.8em
+  }
+]
+
+\node[box, anchor=north] (widgets) at (0,0) {
+\begin{minipage}{3cm}
+\tt rp.control\\
+rp.slider\\
+rp.doublebutton\\
+rp.button\\
+rp.checkbox\\
+rp.checkboxgroup\\
+rp.radiogroup\\
+rp.listbox\\
+rp.combo\\
+rp.textentry\\
+rp.text\\
+rp.messagebox\\
+rp.timer\\
+rp.do\\
+\ldots
+\end{minipage}
+}; 
+\node[title] at (widgets.north) {widgets};
+
+\node[box, anchor=north] (cartoons) at (4,0) {
+\begin{minipage}{3cm}
+\tt rp.ci\\
+rp.anova\\
+rp.ancova\\
+rp.regression\\
+rp.logistic\\
+rp.likelihood\\
+rp.surface\\
+rp.geosim\\
+rp.tables\\
+rp.power\\
+rp.plot3d\\
+rp.normal\\
+rp.rmplot\\
+rp.spacetime\\
+\ldots
+\end{minipage}
+}; 
+\node[title] at (cartoons.north) {cartoons};
+
+
+% \node[fill=white] at (quad.north) {oi};
+% 
+\end{tikzpicture}

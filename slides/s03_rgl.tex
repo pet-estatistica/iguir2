@@ -1,0 +1,73 @@
+\section{\texttt{rgl}}
+
+\subsection{Descrição}
+
+% ----------------------------------------------------------------------
+
+\begin{frame}
+
+  \texttt{rgl} é uma biblioteca de funções para visualização interativa
+  de gráficos em 3D.  \vspace{2em}
+  
+  \begin{itemize}
+  \item Autores: Daniel Adler, Duncan Murdoch, e outros.
+  \item Lançamento: 04-Mar-2004.
+  \item Versão: 0.95.1247.
+  \item URL:
+    \url{http://cran.r-project.org/web/packages/rgl/index.html}.
+  \end{itemize}
+
+\end{frame}
+
+% ----------------------------------------------------------------------
+
+\begin{frame}
+ 
+  \begin{itemize}
+  \item Funções inspiradas nas 2D, de primitivas à médio e alto nível.
+    \newline \input{./tikz/ex_rgl1.tex}
+  \item Representações em 3D de gráficos e de objetos geométricos
+    (cubos, elipses, etc).
+  \item A visualização em tela com OpenGL, em HTML com WebGL.
+  \item Controle com arrastos e cliques de mouse.
+  \end{itemize}
+  \vspace{2em}
+
+\end{frame}
+
+\frame{
+  \includegraphics{./tikz/rgl-2.pdf}
+}
+
+\subsection{Como usar}
+
+\begin{frame}
+  \begin{columns}
+    \column{0.70\textwidth} \input{./tikz/ex_rgl2.tex}
+    \column{0.29\textwidth}
+    \includegraphics[width=\linewidth]{./images/fig3d-1.png}\\
+    \includegraphics[width=\linewidth]{./images/fig3d-2.png}
+  \end{columns}
+\end{frame}
+
+% ----------------------------------------------------------------------
+
+\subsection{Exemplos}
+
+\begin{frame}
+
+  Praticando:
+  \begin{enumerate}
+  \item \href{run:./R/rgl/rgl.R}{R Script rgl}
+  \item \href{run:./rgl/RGL.html}{Galeria rgl iguir2}
+  \end{enumerate}
+
+  \vspace{0.5cm} Algumas aplicações com o rgl:
+  \begin{itemize}
+  \item
+    \href{http://cran.r-project.org/web/packages/rgl/vignettes/}{Galeria
+      do autor}
+  \item \href{http://www.r-bloggers.com/?s=rgl}{Busca no R Bloggers}
+  \end{itemize}
+
+\end{frame}

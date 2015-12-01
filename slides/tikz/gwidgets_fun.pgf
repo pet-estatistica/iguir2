@@ -1,0 +1,94 @@
+\begin{tikzpicture}[
+  box/.style={
+    draw, rounded corners, inner sep=2ex
+  },
+  title/.style={
+    fill=white,
+    anchor=base,
+%     rounded corners, minimum height=1.8em
+  }
+]
+
+\node[box, anchor=north] (widgets) at (0,0) {
+\begin{minipage}{3cm}
+\tt gslider\\
+gspinbutton\\
+gbutton\\
+gcheckbox\\
+gcheckboxgroup\\
+gradio\\
+gcombobox\\
+glistbox\\
+gtable\\
+gtext\\
+gedit\\
+\ldots
+\end{minipage}
+}; 
+\node[title] at (widgets.north) {widgets};
+
+\node[box, anchor=north] (containers) at (0,-6) {
+\begin{minipage}{3cm}
+\tt gwindow\\
+ggroup\\
+gframe\\
+glayout\\
+gexpandgroup\\
+gpanedgroup\\
+gnotebook
+\end{minipage}
+}; 
+\node[title] at (containers.north) {containers};
+
+\node[box, anchor=north] (handlers) at (8.5,0) {
+\begin{minipage}{4cm}
+\tt addHandlerChanged\\
+addHandlerClicked\\
+addHandlerDoubelclick\\
+addHandlerRightclick\\
+addHandlerKeystroke\\
+addHandlerMouseMotion\\
+addHandlerFocus\\
+addHandlerBlur\\
+addHandlerExpose\\
+addHandlerDestroy\\
+\ldots\\
+addHandler\\
+removeHandler\\
+blockHandler\\
+unblockHandler\\
+addPopupmenu
+add3rdMousePopupmenu\\
+\ldots
+\end{minipage}
+}; 
+\node[title] at (handlers.north) {handlers};
+
+\node[box, anchor=north] (methods) at (4,0) {
+\begin{minipage}{3cm}
+\tt svalue\\
+svalue<-\\
+size<-\\
+dispose\\
+enable\\
+enable<-\\
+visible\\
+visible<-\\
+update\\
+focus<-\\
+insert\\
+font<-\\
+\ldots\\
+length\\
+dim\\
+names\\
+dimnames\\
+\ldots
+\end{minipage}
+}; 
+\node[title] at (methods.north) {methods};
+
+
+% \node[fill=white] at (quad.north) {oi};
+% 
+\end{tikzpicture}

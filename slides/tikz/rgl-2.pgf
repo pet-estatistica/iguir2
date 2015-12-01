@@ -1,0 +1,60 @@
+\begin{tikzpicture}[
+  box/.style={
+    draw, rounded corners, inner sep=2ex
+  },
+  title/.style={
+    fill=white,
+    anchor=base,
+%     rounded corners, minimum height=1.8em
+  }
+]
+
+\node[box, anchor=north] (primi) at (0,0) {
+\begin{minipage}{3cm}
+\texttt{points3d()}\\
+\texttt{lines3d()}\\
+\texttt{segments3d()}\\
+\texttt{triangles3d()}\\
+\texttt{quads3d()}
+\end{minipage}
+}; 
+\node[title] at (primi.north) {Primitivas};
+
+\node[box, anchor=north] (secun) at (4,0) {
+\begin{minipage}{3cm}
+\texttt{text3d()}\\
+\texttt{texts3d()}\\
+\texttt{abclines3d()}\\
+\texttt{prites3d()}\\
+\texttt{particles3d()}\\
+\texttt{spheres3d()}\\
+\texttt{planes3d()}\\
+\texttt{clipplanes3d()}\\
+\texttt{surface3d()}\\
+\texttt{terrain3d()}
+\end{minipage}
+}; 
+\node[title] at (secun.north) {Construtoras};
+
+\node[box, anchor=north] (decor) at (8,0) {
+\begin{minipage}{3cm}
+\texttt{axes3d()}\\
+\texttt{axis3d()}\\
+\texttt{box3d()}\\
+\texttt{bbox3d()}\\
+\texttt{title3d()}\\
+\texttt{mtext3d()}\\
+\texttt{decorate3d()}\\
+\texttt{aspect3d()}\\
+\texttt{bg3d()}\\
+\texttt{bgplot3d()}\\
+\texttt{legend3d()}\\
+\texttt{grid3d()}
+\end{minipage}
+}; 
+\node[title] at (decor.north) {Decora\c{c}\~ao};
+
+
+% \node[fill=white] at (quad.north) {oi};
+% 
+\end{tikzpicture}
