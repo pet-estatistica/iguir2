@@ -1,0 +1,267 @@
+#!/bin/bash
+
+##======================================================================
+##                                                        Eduardo Junior
+##                                                    eduardo.jr@ufpr.br
+##                                                            13-11-2015
+##======================================================================
+## Facilitando a criacão e execução de aplicações shiny
+
+DIR=`pwd`
+SV=server.R
+UI=ui.R
+
+##======================================================================
+## Funções utilizadas
+
+_usage() {
+    cat <<EOF
+$*
+    Uso:    shinyApp <command> [<args>]
+
+        init: Inicia uma aplicação shiny no diretório atual
+		
+            -o : inicia os arquivos shiny em uma sessão emacs e 
+	    executa a função runApp, abrindo o navegador padrão
+
+            -t : cria os arquivos conforme template definido para 
+            o projeto IGUIR2. Obs.: Tenha em um diretório acima da
+            aplicação (cd ..) o arquivo template.R com função R
+            chamada template já definida.
+
+        run: Executa uma aplicação shiny, com função runApp
+	
+            -o : inicia os arquivos shiny em uma sessão emacs e 
+	    executa a função runApp, abrindo o navegador padrão
+
+	    diretório: informe o diretório da aplicação shiny
+
+    Example:
+
+	shinyApp init
+	shinyApp init -t
+	shinyApp init -o -t
+	shinyApp init -to
+	shinyApp run -o
+        shinyApp run ~/path -o
+
+EOF
+}
+
+build_App() {
+    if [ -e "$SV" ] || [ -e "$UI" ]; then
+        echo "O diretório já contém arquivos ui.R e/ou server.R"
+        echo -n "    Deseja sobrescrever? "
+        read ANSWER    
+        case "$ANSWER" in
+	    s | sim | y | yes) echo "";;
+	    n | não | no) exit 1;;
+	    * ) echo "    Responda com as palavres: yes ou no"
+                exit 1
+        esac
+    fi
+    ##-------------------------------------------
+    # Criando o server.R
+    echo "##-------------------------------------------" > server.R
+    echo "## server.R" >> server.R
+    echo "" >> server.R
+    echo "library(shiny)" >> server.R
+    echo "" >> server.R
+    echo "shinyServer(" >> server.R
+    echo "    function(input, output) {" >> server.R
+    echo "        " >> server.R
+    echo "    }" >> server.R
+    echo ")" >> server.R
+    ##-------------------------------------------
+    # Criando o ui.R
+    echo "##-------------------------------------------" > ui.R
+    echo "## ui.R" >> ui.R
+    echo "" >> ui.R
+    echo "library(shiny)" >> ui.R
+    echo "" >> ui.R
+    echo "shinyUI(" >> ui.R
+    echo "    fluidPage(" >> ui.R
+    echo "        " >> ui.R
+    echo "    )" >> ui.R
+    echo ")" >> ui.R
+    ##-------------------------------------------
+    # Verificando a execução
+    case $1 in
+        run)
+            echo "Criando ui.R e server.R em $DIR"
+            emacs server.R ui.R &
+            echo "Pressione ^C para interromper a aplicação"
+            Rscript -e "shiny::runApp(getwd(), launch.browser = TRUE)"
+            ;;
+        *) 
+            echo "Arquivos criados em $DIR"
+    esac
+}
+
+build_AppTemplate() {
+    if [ -e "$SV" ] || [ -e "$UI" ]; then
+        echo "O diretório já contém arquivos ui.R e/ou server.R"
+        echo -n "    Deseja sobrescrever? "
+        read ANSWER    
+        case "$ANSWER" in
+	    s | sim | y | yes) echo "";;
+	    n | não | no) exit 1;;
+	    * ) echo "    Responda com as palavres: yes ou no"
+                exit 1
+        esac
+    fi
+    if [ ! -e "../template.R" ]; then
+        echo "Arquivo template.R não existe! Favor defini-lo no diretório acima."
+        exit 1
+    fi
+    ##-------------------------------------------
+    # Criando o server.R
+    echo "##-------------------------------------------" > server.R
+    echo "## server.R" >> server.R
+    echo "" >> server.R
+    echo "library(shiny)" >> server.R
+    echo "" >> server.R
+    echo "## Carrega template das aplicações elaboradas pelo projeto iguiR2" >> server.R 
+    echo "source(\"../template.R\")" >> server.R
+    echo ""
+    echo "shinyServer(" >> server.R
+    echo "    function(input, output, session) {" >> server.R
+    echo "        ## Cabeçalho IGUIR2" >> server.R
+    echo "        output\$header <- renderPrint({" >> server.R
+    echo "            template(\"TEMA\")" >> server.R
+    echo "        })" >> server.R
+    echo "        " >> server.R
+    echo "        " >> server.R
+    echo "    }" >> server.R
+    echo ")" >> server.R
+    ##-------------------------------------------
+    # Criando o ui.R
+    echo "##-------------------------------------------" > ui.R
+    echo "## ui.R" >> ui.R
+    echo "" >> ui.R
+    echo "library(shiny)" >> ui.R
+    echo "" >> ui.R
+    echo "shinyUI(" >> ui.R
+    echo "    fluidPage(" >> ui.R
+    echo "        ## Cabeçalho IGUIR2" >> ui.R
+    echo "        htmlOutput(\"header\")" >> ui.R
+    echo "        " >> ui.R
+    echo "        " >> ui.R
+    echo "    )" >> ui.R
+    echo ")" >> ui.R
+    ##-------------------------------------------
+    # Verificando a execução
+    case $1 in
+        run)
+            echo "Criando ui.R e server.R em $DIR"
+            emacs server.R ui.R &
+            echo "Pressione ^C para interromper a aplicação"
+            Rscript -e "shiny::runApp(getwd(), launch.browser = TRUE)"
+            ;;
+        *) 
+            echo "Arquivos criados em $DIR"
+    esac
+}
+
+## Verificando quantidade de argumentos:
+if [ $# -eq 0 ] || [ $# -gt 3 ]; then
+    echo "Número de argumentos incorreto! Consulte shinyApp --help"
+    exit 1
+fi
+
+# Daria para usar `getopts` se não houvesse a necessidade de dois comandos
+# secundários, init e run. getopts é MUITO MUItO útil para opções do
+# tipo -*
+
+##======================================================================
+## Inicia o script
+echo "-------------------------------------------"
+
+if [ $1 = "init" ]; then
+    if [ $# -eq 1 ]; then
+        build_App 
+    elif [ $# -eq 2 ]; then
+        case $2 in
+            -h | --help) _usage
+                ;;
+            -o) build_App run
+                ;;
+            -t) build_AppTemplate
+                ;;
+            -ot | -to) build_AppTemplate run
+                ;;
+            * ) echo "Argumentos incorretos! Consulte shinyApp --help"
+                exit 1
+        esac
+    elif [ $# -eq 3 ]; then
+        if ([ $2 = "-t" ] && [ $3 = "-o" ]) || ([ $2 = "-o" ] && [ $3 = "-t" ]); then
+            build_AppTemplate run
+        else
+            echo "Argumentos inválidos! Consulte shinyApp --help"
+            exit 1
+        fi
+    fi
+elif [ $1 = "run" ]; then
+    if [ $# -eq 1 ]; then
+        echo "Executando a aplicação em $DIR"
+        echo "Pressione ^C para interromper a aplicação"
+        Rscript -e "shiny::runApp(getwd(), launch.browser = TRUE)"
+    elif [ $# -eq 2 ]; then
+        case $2 in
+            -h | --help) _usage
+                ;;
+            -o ) 
+                echo "Executando a aplicação e abrir arquivos no emacs"
+                emacs server.R ui.R &
+                echo "Pressione ^C para interromper a aplicação"
+                Rscript -e "shiny::runApp(getwd(), launch.browser = TRUE)"
+                ;;
+            *) 
+                if [ -d $2 ]; then  
+                    cd $2
+                    if [ ! -e "$SV" ] || [ ! -e "$UI" ]; then
+                        echo "Este diretório não contém uma aplicação shiny completa"
+                        echo "Verifique os arquivos server.R e ui.R em $2"
+                        exit 1
+                    fi
+                    echo "Executando a aplicação em $2"
+                    echo "Pressione ^C para interromper a aplicação"
+                    Rscript -e "shiny::runApp(getwd(), launch.browser = TRUE)"
+                else
+                    echo "Argumentos inválidos! Consulte shinyApp --help"
+                    exit 1
+                fi
+        esac
+    elif [ $# -eq 3 ]; then
+        if [ $2 = "-o" ] && [ -d $3 ]; then
+            echo "Executando a aplicação em $3"
+            cd $3
+            if [ ! -e "$SV" ] || [ ! -e "$UI" ]; then
+                echo "Este diretório não contém uma aplicação shiny completa"
+                echo "Verifique os arquivos server.R e ui.R em $3"
+                exit 1
+            fi
+            emacs server.R ui.R &
+            echo "Pressione ^C para interromper a aplicação"
+            Rscript -e "shiny::runApp(getwd(), launch.browser = TRUE)"
+        elif [ -d $2 ] && [ $3 = "-o" ]; then
+            echo "Executando a aplicação em $2"
+            cd $2
+            if [ ! -e "$SV" ] || [ ! -e "$UI" ]; then
+                echo "Este diretório não contém uma aplicação shiny completa"
+                echo "Verifique os arquivos server.R e ui.R em $2"
+                exit 1
+            fi
+            emacs server.R ui.R &
+            echo "Pressione ^C para interromper a aplicação"
+            Rscript -e "shiny::runApp(getwd(), launch.browser = TRUE)"
+        else
+            echo "Argumentos inválidos! Consulte shinyApp --help"
+            exit 1            
+        fi
+    fi
+elif [ $1 = "-h" ] || [ $1 = "--help" ]; then
+    _usage
+else
+    echo "Argumentos inválidos! Consulte shinyApp --help"
+fi
