@@ -85,6 +85,16 @@ build_App() {
     echo "    )" >> ui.R
     echo ")" >> ui.R
     ##-------------------------------------------
+    ## Criando o DESCRIPTION
+    cat > DESCRIPTION << EOL
+Title: Explorando interfaces gráficas interativas no R - 2
+Author: Eduardo E. Ribeiro Jr e Walmes M. Zeviani
+AuthorUrl: https://gitlab.c3sl.ufpr.br/pet-estatistica/iguir2
+License: GPL-3
+DisplayMode: Showcase
+Tags: iguir2
+Type: Shiny
+EOL
     # Verificando a execução
     case $1 in
         run)
