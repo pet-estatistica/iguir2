@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1224.8081"
+   height="543.10974"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="tipos_apps.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.75358744"
+     inkscape:cx="612.40142"
+     inkscape:cy="324.60717"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-left="0.5"
+     units="cm"
+     fit-margin-right="0.5"
+     fit-margin-bottom="1.6"
+     fit-margin-top="0.5"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-100.43971,-391.14566)">
+    <g
+       id="g4105">
+      <rect
+         y="431.51373"
+         x="119.15154"
+         height="128.83977"
+         width="191.6969"
+         id="rect2985"
+         style="fill:#37c837;fill-opacity:0.58695649;fill-rule:nonzero;stroke:#112b00;stroke-width:2;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2987"
+         y="424.78418"
+         x="124.5"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           id="tspan2995"
+           y="424.78418"
+           x="124.5"
+           sodipodi:role="line" /><tspan
+           id="tspan3021"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="452.28418"
+           x="124.5"
+           sodipodi:role="line">shinyUI(</tspan><tspan
+           id="tspan3001"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="479.78418"
+           x="124.5"
+           sodipodi:role="line">   ...</tspan><tspan
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           id="tspan2999"
+           y="507.28418"
+           x="124.5"
+           sodipodi:role="line">)</tspan></text>
+      <rect
+         y="625.08514"
+         x="119.15154"
+         height="128.83977"
+         width="191.6969"
+         id="rect2985-7"
+         style="fill:#37c837;fill-opacity:0.58695649;fill-rule:nonzero;stroke:#112b00;stroke-width:2;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text2987-7"
+         y="618.35559"
+         x="124.5"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           id="tspan2995-7"
+           y="618.35559"
+           x="124.5"
+           sodipodi:role="line" /><tspan
+           id="tspan3021-5"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="645.85559"
+           x="124.5"
+           sodipodi:role="line">shinyServer(</tspan><tspan
+           id="tspan3001-7"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="673.35559"
+           x="124.5"
+           sodipodi:role="line">   ...</tspan><tspan
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           id="tspan2999-6"
+           y="700.85559"
+           x="124.5"
+           sodipodi:role="line">)</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3053"
+         y="423.56219"
+         x="194.95999"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.58823529;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           y="423.56219"
+           x="199.95999"
+           id="tspan3055"
+           sodipodi:role="line">./app2files/ui.R </tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3053-1"
+         y="617.13361"
+         x="214.95999"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.58823529;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           y="617.13361"
+           x="219.95999"
+           id="tspan3055-6"
+           sodipodi:role="line">./app2files/server.R </tspan></text>
+    </g>
+    <g
+       id="g4123"
+       transform="translate(-2.2208604,0)">
+      <rect
+         y="432.36548"
+         x="387.01401"
+         height="322.14407"
+         width="408.14032"
+         id="rect2985-0"
+         style="fill:#37c837;fill-opacity:0.58823532000000001;fill-rule:nonzero;stroke:#112b00;stroke-width:2;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3868"
+         y="452.28421"
+         x="393.51071"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="452.28421"
+           x="393.51071"
+           id="tspan3870"
+           sodipodi:role="line">ui &lt;- fluidPage(</tspan><tspan
+           id="tspan3878"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="479.78421"
+           x="393.51071"
+           sodipodi:role="line">   ...</tspan><tspan
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           id="tspan3872"
+           y="507.28421"
+           x="393.51071"
+           sodipodi:role="line">)</tspan><tspan
+           id="tspan3880"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="534.78418"
+           x="393.51071"
+           sodipodi:role="line" /><tspan
+           id="tspan3882"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="562.28418"
+           x="393.51071"
+           sodipodi:role="line">server &lt;- function(input, output){</tspan><tspan
+           id="tspan3886"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="589.78418"
+           x="393.51071"
+           sodipodi:role="line">   ...</tspan><tspan
+           id="tspan3884"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="617.28418"
+           x="393.51071"
+           sodipodi:role="line">}</tspan><tspan
+           id="tspan3888"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="644.78418"
+           x="393.51071"
+           sodipodi:role="line" /><tspan
+           id="tspan3890"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="672.28418"
+           x="393.51071"
+           sodipodi:role="line">shinyApp(ui = ui, server = server)</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3053-5"
+         y="423.56219"
+         x="381.97073"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.58823529;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           style="text-align:start;text-anchor:start"
+           y="423.56219"
+           x="381.97073"
+           id="tspan3055-3"
+           sodipodi:role="line">./app1file/app.R </tspan></text>
+    </g>
+    <g
+       id="g4138"
+       transform="translate(-4.6713521e-6,0)">
+      <rect
+         y="432.6994"
+         x="864.10059"
+         height="443.85196"
+         width="442.43698"
+         id="rect2985-0-9"
+         style="fill:#c83737;fill-opacity:0.58695649;fill-rule:nonzero;stroke:#501616;stroke-width:2;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3868-1"
+         y="452.28421"
+         x="868.26337"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="452.28421"
+           x="868.26337"
+           id="tspan3870-1"
+           sodipodi:role="line">---</tspan><tspan
+           id="tspan3971"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="479.78421"
+           x="868.26337"
+           sodipodi:role="line">runtime: shiny</tspan><tspan
+           id="tspan3973"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="507.28421"
+           x="868.26337"
+           sodipodi:role="line">output: html_document</tspan><tspan
+           id="tspan3975"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="534.78418"
+           x="868.26337"
+           sodipodi:role="line">---</tspan><tspan
+           id="tspan3977"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="562.28418"
+           x="868.26337"
+           sodipodi:role="line" /><tspan
+           id="tspan3890-7"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="589.78418"
+           x="868.26337"
+           sodipodi:role="line">```{r}</tspan><tspan
+           id="tspan4039"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="617.28418"
+           x="868.26337"
+           sodipodi:role="line">ui &lt;- fluidPage(</tspan><tspan
+           id="tspan4041"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="644.78418"
+           x="868.26337"
+           sodipodi:role="line">   ...</tspan><tspan
+           id="tspan4043"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="672.28418"
+           x="868.26337"
+           sodipodi:role="line">)</tspan><tspan
+           id="tspan4045"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="699.78418"
+           x="868.26337"
+           sodipodi:role="line" /><tspan
+           id="tspan4047"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="727.28418"
+           x="868.26337"
+           sodipodi:role="line">server &lt;- function(input, output){</tspan><tspan
+           id="tspan4049"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="754.78418"
+           x="868.26337"
+           sodipodi:role="line">   ...</tspan><tspan
+           id="tspan4051"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="782.28418"
+           x="868.26337"
+           sodipodi:role="line">}</tspan><tspan
+           id="tspan4053"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="809.78418"
+           x="868.26337"
+           sodipodi:role="line" /><tspan
+           id="tspan4055"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="837.28418"
+           x="868.26337"
+           sodipodi:role="line">shinyApp(ui = ui, server = server)</tspan><tspan
+           id="tspan4037"
+           style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           y="864.78418"
+           x="868.26337"
+           sodipodi:role="line">```</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3053-5-1"
+         y="422.84219"
+         x="858.72339"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.58823529;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           style="text-align:start;text-anchor:start"
+           y="422.84219"
+           x="858.72339"
+           id="tspan3055-3-6"
+           sodipodi:role="line">./relatorio.Rmd </tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="264.39984"
+       y="780.74243"
+       id="text4057"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4059"
+         x="264.39984"
+         y="780.74243" /><tspan
+         sodipodi:role="line"
+         x="264.39984"
+         y="810.31744"
+         id="tspan3039"
+         style="font-size:24px">&gt; shiny::runApp(&quot;app2files/&quot;)</tspan><tspan
+         sodipodi:role="line"
+         x="264.39984"
+         y="840.31744"
+         id="tspan4063"
+         style="font-size:24px">&gt; shiny::runApp(&quot;app1file/&quot;)</tspan><tspan
+         sodipodi:role="line"
+         x="264.39984"
+         y="870.31744"
+         id="tspan3043"
+         style="font-size:24px">&gt; shiny::shinyAppDir(&quot;app2files/&quot;)</tspan><tspan
+         sodipodi:role="line"
+         x="264.39984"
+         y="900.31744"
+         id="tspan4065"
+         style="font-size:24px">&gt; rmarkdown::run(&quot;./relatorio.Rmd&quot;)</tspan></text>
+  </g>
+</svg>
