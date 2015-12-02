@@ -1,0 +1,323 @@
+---
+title: Shiny
+subtitle: A web application framework for R
+output: 
+  ioslides_presentation:
+    logo: images/logo.png
+    highlight: pygments
+    smaller: yes
+    transition: slower
+    widescreen: yes
+    css: ./images/io2013.css
+---
+
+```{r, echo = FALSE}
+library(shiny)
+```
+
+## Produto do RStudio
+
+### Shiny Server
+
+* Software (serviço remoto)
+    * Versão *Open Source*
+    * Versão Comercial *Pro*
+<br><br>
+
+### Shiny apps
+
+* Serviço remoto para aplicações
+    * Versão *free*
+    * Versão Comercial (*Starter, Basic, Standard, Professional*)
+
+## Sítio do shiny
+<center>
+<img src="images/shinyhome.svg"  width="800px">
+</center>
+
+## Shiny Server
+<center>
+<img src="images/shinyserver.svg"  width="800px">
+</center>
+ 
+## Shiny apps
+<center>
+<img src="images/shinyapps.svg"  width="800px">
+</center>
+
+## Pacote do R
+
+### Repositórios
+<br>
+
+* Versão estável no CRAN
+     * Atualmente versão 0.12.2 (09/10/2014)
+     * Primeira versão 0.2.3 (01/12/2012)
+<br><br>
+
+* Versão em desenvolvimento no GitHub
+     * *Initial commit* por Joe Cheng (20/06/2012)
+
+<!-- ## CRAN -->
+<!-- <center> -->
+<!-- <img src="images/shinypackage.svg"  width="800px"> -->
+<!-- </center> -->
+<!--  -->
+<!-- ## GitHub -->
+<!-- <center> -->
+<!-- <img src="images/shinygithub.svg"  width="800px"> -->
+<!-- </center> -->
+
+## 
+<center>
+<img src="images/ideia.svg"  width="800px">
+</center>
+
+## 
+<center>
+<img src="images/ideia0.svg"  width="800px">
+</center>
+
+## 
+<center>
+<img src="images/ideia0a.svg"  width="800px">
+</center>
+
+# Como funciona?
+
+## Reatividade
+
+<br>
+
+ > #### Propriedade de reação à estímulos do usuário
+
+<br>
+
+* Aplicativos para criação de GUI's (Graphical User Interfaces)
+  trabalham com valores reativos a ações do usuário
+
+* Alguns pacotes em R
+     * **rpanel**
+     * **gWidgets**
+     * **shiny**
+ 
+##
+<center>
+<img src="images/reactive0.png"  width="800px">
+</center>
+
+##
+<center>
+<img src="images/reactive1.png"  width="800px">
+</center>
+
+##
+<center>
+<img src="images/reactive2.png"  width="800px">
+</center>
+
+## 
+<center>
+<img src="images/ideia2.svg"  width="800px">
+</center>
+
+# Construindo um aplicativo shiny
+
+## 
+<center>
+<img src="images/tipos_apps.svg"  width="1000px">
+</center>
+
+## 
+<center>
+<img src="images/plain0.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain11.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain1.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain2.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain21.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain22.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain3.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain31.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain32.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain33.svg"  width="900px">
+</center>
+
+
+## 
+<center>
+<img src="images/plain4.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain41.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain42.svg"  width="900px">
+</center>
+
+## 
+<center>
+<img src="images/plain43.svg"  width="900px">
+</center>
+
+## Regras essenciais
+<br>
+
+> ### 1. **Salve os _outups_**
+
+<br>
+
+> * <center><img src="images/rule1.svg"  width="900px"></center>
+
+## Regras essenciais
+<br>
+
+> ### 2. **Renderize as saídas**
+
+<br>
+
+> * <center><img src="images/rule2.svg"  width="900px"></center>
+
+
+## Regras essenciais
+<br>
+
+> ### 3. **Acesse os _inputs_**
+
+<br>
+
+> * <center><img src="images/rule3.svg"  width="900px"></center>
+
+##
+<br>
+
+> * <center><img src="images/shinyfunctions.png"  width="900px"></center>
+
+# Editores
+
+## RStudio
+<center>
+<img src="images/rstudio.svg"  width="800px">
+</center>
+
+## RStudio
+<center>
+<img src="images/rstudio2.svg"  width="800px">
+</center>
+
+## Emacs
+<center>
+<img src="images/emacs1.svg"  width="800px">
+</center>
+
+# Praticando 
+
+## 
+
+# Compartilhando seus apps
+
+##
+### shinyapps.io
+
+[Getting started](http://shiny.rstudio.com/articles/shinyapps.html)
+```{r, eval = FALSE}
+## Instale o devtools
+install.packages('devtools')
+
+## Instale o rsconnetc
+devtools::install_github('rstudio/rsconnect')
+
+## Adicione o token, obtido pelo site
+shinyapps::setAccountInfo(name = 'username',
+			  token = '.....',
+			  secret = '<SECRET>')
+
+## Envie sua aplicação
+rsconnetc::deployApp("./apps/")
+
+```
+### Servidor particular
+
+* [Shiny Server Product](https://www.rstudio.com/products/shiny/download-server/)
+* [Shiny Server Development](https://github.com/rstudio/shiny-server)
+
+# Potencialize seus apps
+
+## Pacotes adicionais
+<br>
+
+> ### shinythemes 
+[rstudio/shinythemes](http://rstudio.github.io/shinythemes/)
+
+<br>
+
+> ### shinydashboard
+[rstudio/shinydashbord](https://rstudio.github.io/shinydashboard/)
+
+## Integrações
+<br>
+
+* `shiny + googleVis`
+* `shiny + rgl` *(webGL)*
+* `shinyGlobe` *(webGl Globe)*
+* `shiny + rCharts`
+* `shiny + DT`
+
+# Procure mais
+
+##
+
+### Dever de casa
+* [Tutorial shiny - RStudio](http://shiny.rstudio.com/tutorial/)
+    - Lessons
+    - Vídeo *How to start shiny*
+    - Articles
+* [curso iguiR - RBras/Seagro](http://www.leg.ufpr.br/iguiR)
+* [Examples do RStudio](https://github.com/rstudio/shiny-examples)
+
+### Deu problema?
+* [stackoverflow](http://stackoverflow.com/questions/tagged/shiny)
+* [Lista *Shiny - Web Framework for Shiny*](https://groups.google.com/forum/#!forum/shiny-discuss)
+* [Google](https://www.google.com/)
+
+# Obrigado!
+
