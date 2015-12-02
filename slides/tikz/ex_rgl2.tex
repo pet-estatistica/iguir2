@@ -1,0 +1,27 @@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(rgl)}
+
+\hlcom{## Diagrama de dispersão.}
+\hlkwd{with}\hlstd{(rock,} \hlkwd{plot}\hlstd{(}\hlkwc{x}\hlstd{=area,} \hlkwc{y}\hlstd{=peri))}           \hlcom{## graphics}
+\hlkwd{with}\hlstd{(rock,} \hlkwd{plot3d}\hlstd{(}\hlkwc{x}\hlstd{=area,} \hlkwc{y}\hlstd{=peri,} \hlkwc{z}\hlstd{=perm))} \hlcom{## rgl}
+
+\hlstd{fun} \hlkwb{<-} \hlkwa{function}\hlstd{(}\hlkwc{x}\hlstd{,} \hlkwc{y}\hlstd{)\{}
+    \hlkwd{sin}\hlstd{(}\hlkwd{sqrt}\hlstd{(x}\hlopt{^}\hlnum{2}\hlopt{+}\hlstd{y}\hlopt{^}\hlnum{2}\hlstd{))}\hlopt{/}\hlkwd{sqrt}\hlstd{(x}\hlopt{^}\hlnum{2}\hlopt{+}\hlstd{y}\hlopt{^}\hlnum{2}\hlstd{)}
+\hlstd{\}}
+
+\hlstd{x} \hlkwb{<-} \hlstd{y} \hlkwb{<-} \hlkwd{seq}\hlstd{(}\hlopt{-}\hlnum{8}\hlstd{,} \hlnum{8}\hlstd{,} \hlkwc{by}\hlstd{=}\hlnum{0.25}\hlstd{)}
+\hlstd{z} \hlkwb{<-} \hlkwd{outer}\hlstd{(x, y, fun)}
+
+\hlcom{## Superfície.}
+\hlkwd{persp}\hlstd{(}\hlkwc{x}\hlstd{=x,} \hlkwc{y}\hlstd{=y,} \hlkwc{z}\hlstd{=z)}   \hlcom{## graphics}
+\hlkwd{persp3d}\hlstd{(}\hlkwc{x}\hlstd{=x,} \hlkwc{y}\hlstd{=y,} \hlkwc{z}\hlstd{=z)} \hlcom{## rgl}
+
+\hlcom{## Não fechar a janela do openGL.}
+\hlkwd{snapshot3d}\hlstd{(}\hlstr{"fig3d-1.png"}\hlstd{)}
+\hlkwd{rgl.postscript}\hlstd{(}\hlkwc{filename}\hlstd{=}\hlstr{"fig3d.pdf"}\hlstd{,} \hlkwc{fmt}\hlstd{=}\hlstr{"pdf"}\hlstd{)}
+\hlkwd{writeWebGL}\hlstd{()} \hlcom{## exporta para webGL.}
+\end{alltt}
+\end{kframe}
+\end{knitrout}

@@ -1,3 +1,10 @@
-.Rproj.user
-.Rhistory
-.RData
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+
+*.Rproj.user
+*.Rhistory
+*.RData

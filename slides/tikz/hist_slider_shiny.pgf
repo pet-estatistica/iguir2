@@ -1,0 +1,104 @@
+\tikzstyle{every picture}+=[remember picture]
+\newcommand{\NANN}[2]{% caixa alta para facilitar encontrar.
+  \tikz[baseline] {%
+    \node[
+      anchor=base,%
+      inner sep=0pt,%
+      outer sep=0pt,%
+      text opacity=1,%
+    ] (#1) {#2};%
+  }%
+}
+
+\tikzset{
+  >=stealth,
+  epath/.style={draw, <->, shorten <=1pt, shorten >=1pt},
+  fpath/.style={draw, color=gray, rounded corners=2pt, shorten <=3pt, shorten >=3pt},
+  cir/.style={draw, circle, fill, inner sep=0.5pt, text=white},
+  dir/.style={near start, right, font=\footnotesize},
+}
+
+\newif\ifopacity
+\opacitytrue  %% Descomente para texto transparente.
+%\opacityfalse %% Ou descomente para texto forte.
+
+\ifopacity
+  \tikzset{
+     nodeR/.style={text opacity=0.2},
+     fpath/.append style={color=white}}
+\else
+  \tikzset{
+     nodeR/.style={text opacity=1}}
+\fi	
+
+\begin{tikzpicture}
+
+\node[nodeR] (slider) at (0,0)
+{
+
+\begin{minipage}{10cm}
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+
+## server.R ---------------------------------
+
+\hlkwd{require}\hlstd{(shiny)\NANN{gw1}{\phantom{1}}}
+
+\hlstd{x} \hlkwb{<-} \hlstd{precip\NANN{pr1}{\phantom{1}}}
+\hlstd{a} \hlkwb{<-} \hlkwd{extendrange}\hlstd{(x,} \hlkwc{f}\hlstd{=}\hlnum{0.05}\hlstd{)\NANN{pr2}{\phantom{1}}}
+
+\hlkwd{\NANN{ss1}{shinyServer}}\hlstd{(}\hlkwa{function}\hlstd{(}\hlkwc{\NANN{in1}{input}}\hlstd{,} \hlkwc{\NANN{ou1}{output}}\hlstd{)\{\NANN{fc1}{\phantom{1}}}
+        \hlstd{\NANN{ou2}{output}}\hlopt{$}\hlstd{\NANN{hr1}{hist.reactive}} \hlkwb{<-} \hlkwd{\NANN{rp1}{renderPlot}}\hlstd{(\{}
+            \hlstd{bks} \hlkwb{<-} \hlkwd{seq}\hlstd{(a[}\hlnum{1}\hlstd{], a[}\hlnum{2}\hlstd{],}
+                       \hlkwc{length.out}\hlstd{=\NANN{in2}{input}}\hlopt{$}\hlstd{\NANN{nc1}{nclass}}\hlopt{+}\hlnum{1}\hlstd{)}
+            \hlkwd{hist}\hlstd{(x,} \hlkwc{breaks}\hlstd{=bks}\hlstd{)}
+        \hlstd{\})}
+    \hlstd{\})\NANN{fc2}{\phantom{1}}}
+
+## ui.R -------------------------------------
+
+\hlkwd{\NANN{ss2}{shinyUI}}\hlstd{(}\hlkwd{fluidPage}\hlstd{(\NANN{wg1}{\phantom{1}}}
+    \hlkwd{sidebarPanel}\hlstd{(}
+        \hlkwd{\NANN{si1}{sliderInput}}\hlstd{(}\hlkwc{\NANN{ss43}{inputId}}\hlstd{=}\hlstr{"\NANN{nc2}{nclass}"}\hlstd{,}
+                    \hlkwc{label}\hlstd{=}\hlstr{"N\'umero de classes:"}\hlstd{,}
+                    \hlkwc{min}\hlstd{=}\hlnum{1}\hlstd{,} \hlkwc{max}\hlstd{=}\hlnum{30}\hlstd{,} \hlkwc{step}\hlstd{=}\hlnum{1}\hlstd{,} \hlkwc{value}\hlstd{=}\hlnum{10}\hlstd{)}\hlstd{),}
+    \hlkwd{mainPanel}\hlstd{(}
+        \hlkwd{\NANN{rp2}{plotOutput}}\hlstd{(}\hlstr{"\NANN{hr2}{hist.reactive}"}\hlstd{)}\hlstd{)}
+    \hlstd{)}\hlstd{)\NANN{wg2}{\phantom{1}}}
+
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\end{minipage}
+
+}; %% \node
+
+\path[fpath] (gw1) -- ($(gw1)+(1,0)$) node[dir, right, at end] {Pacote};
+
+\path[fpath] (pr1) -- ($(pr1)+(4,0)$) |-
+  node[dir] {Objetos} (pr2);
+
+\path[fpath] (fc1) -- ($(fc1)+(3,0)$) |-
+  node[dir, text width=1cm] {Fun\c{c}\~ao\\ reativa} (fc2);
+
+\path[fpath] (wg1) -- ($(wg1)+(6,0)$) |-
+  node[dir, text width=1cm] {Interface\\ gr\'{a}fica} (wg2);
+
+\ifopacity
+\path[blue, epath] (hr1) to[out=-120, in=150]
+  node[cir, pos=0.4] {1} (hr2);
+
+\path[red, epath] (nc1) to[out=-90, in=90]
+  node[cir, pos=0.4] {2} (nc2);
+
+% \path[green!50!black, epath] (rp1) to[out=-150, in=150]
+%   node[cir, pos=0.4] {3} (rp2);
+% 
+% \path[orange, epath] (in1) to[out=60, in=120] (in2);
+% 
+% \path[orange, epath] (ou1) to[out=120, in=60] (ou2);
+\fi
+
+\end{tikzpicture}

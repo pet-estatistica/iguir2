@@ -1,0 +1,54 @@
+\begin{tikzpicture}[
+  node distance=0.5cm,
+  box/.style={
+    draw, rounded corners, inner sep=2ex
+  },
+  title/.style={
+    fill=white,
+    anchor=west,
+%     rounded corners, minimum height=1.8em
+  }
+]
+
+\node[box, anchor=north] (n1) at (0,0) {
+\begin{minipage}{5cm}
+Hans Rosling no TED\\
+grÃ¡ficos interativos
+\end{minipage}
+}; 
+\node[title] at (n1.north west) {2006};
+
+\node[box, below=of n1] (n2) {
+\begin{minipage}{5cm}
+Google compra GapMinder\\
+faz a Google Charts API
+\end{minipage}
+}; 
+\node[title] at (n2.north west) {2007};
+
+\node[box, below=of n2] (n3) {
+\begin{minipage}{5cm}
+Sebasti\'an Per\'es\\
+R/Rmetrics Whorkshop\\
+Google Motion Charts com o \texttt{R.rsp}
+\end{minipage}
+}; 
+\node[title] at (n3.north west) {2010};
+
+\node[box, below=of n3] (n4) {
+\begin{minipage}{5cm}
+ComeÃ§a o \texttt{googleVis}
+\end{minipage}
+}; 
+\node[title] at (n4.north west) {Agosto de 2010};
+
+\node[box, below=of n4] (n5) {
+\begin{minipage}{5cm}
+Primeira vers\~ao
+\end{minipage}
+}; 
+\node[title] at (n5.north west) {Dezembro de 2010};
+
+
+
+\end{tikzpicture}

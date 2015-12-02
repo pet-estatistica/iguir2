@@ -1,0 +1,78 @@
+\tikzstyle{every picture}+=[remember picture]
+\newcommand{\NANN}[2]{% caixa alta para facilitar encontrar.
+  \tikz[baseline] {%
+    \node[
+      anchor=base,%
+      inner sep=0pt,%
+      outer sep=0pt,%
+      text opacity=1,%
+    ] (#1) {#2};%
+  }%
+}
+
+\tikzset{
+  >=stealth,
+  epath/.style={draw, <->, shorten <=1pt, shorten >=1pt},
+  fpath/.style={draw, color=gray, rounded corners=2pt, shorten <=3pt, shorten >=3pt},
+  cir/.style={draw, circle, fill, inner sep=0.5pt, text=white},
+  dir/.style={near start, right, font=\footnotesize},
+}
+
+\newif\ifopacity
+% \opacitytrue  %% Descomente para texto transparente.
+% \opacityfalse %% Ou descomente para texto forte.
+
+\ifopacity
+  \tikzset{
+     nodeR/.style={text opacity=0.2},
+     fpath/.append style={color=white}}
+\else
+  \tikzset{
+     nodeR/.style={text opacity=1}}
+\fi	
+
+\begin{tikzpicture}
+
+\node[nodeR] (slider) at (0,0)
+{
+
+\begin{minipage}{10cm}
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(googleVis)\NANN{gw1}{\phantom{1}}}
+
+\hlstd{\NANN{x1}{x}} \hlkwb{<-} \hlkwd{\NANN{x2}{as.data.frame}}\hlstd{(precip)}
+
+\hlstd{graf} \hlkwb{<-} \hlkwd{\NANN{gv1}{gvisHistogram}}\hlstd{(\NANN{x3}{x},}
+                      \hlkwc{\NANN{op1}{option}}\hlstd{=}\hlkwd{\NANN{op2}{list}}\hlstd{(}
+                         \hlkwc{\NANN{op3}{\phantom{1}}title}\hlstd{=}\hlstr{"Precipita\c{c}\~ao"}\hlstd{,}
+                          \hlkwc{vAxis}\hlstd{=}\hlstr{"\{title:'Frequ\^encia'\}"}\hlstd{,}
+                          \hlkwc{hAxis}\hlstd{=}\hlstr{"\{title:'Precipita\c{c}\~ao'\}"}\hlstd{,}
+                          \hlkwc{colors}\hlstd{=}\hlstr{"['red']"}\hlstd{,}
+                          \hlkwc{legend}\hlstd{=}\hlstr{"none"}\hlstd{,}
+                          \hlkwc{hAxis.gridlines.count}\hlstd{=}\hlnum{10}\hlstd{)) \hspace{4ex}\NANN{op4}{\phantom{1}}}
+
+\hlkwd{\NANN{gv2}{print}}\hlstd{(graf)}
+\hlkwd{\NANN{gv3}{plot}}\hlstd{(graf)}
+
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\end{minipage}
+
+}; %% \node
+
+% \path[fpath] (gw1) -- ($(gw1)+(1,0)$) node[dir, right, at end] {Pacote};
+ 
+\ifopacity
+% \path[blue, epath] (x3) to[out=0, in=-90]
+%    ($(x3)+(1,1)$) node[text=black] {aas};
+\fi
+
+% \begin{scope}[on background layer]
+%   \node[fill=yellow!30, fit=(op3.east)(op4)] {};
+% \end{scope}
+
+\end{tikzpicture}

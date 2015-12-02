@@ -1,0 +1,80 @@
+\tikzstyle{every picture}+=[remember picture]
+\newcommand{\NANN}[2]{% caixa alta para facilitar encontrar.
+  \tikz[baseline] {%
+    \node[
+      anchor=base,%
+      inner sep=0pt,%
+      outer sep=0pt,%
+      text opacity=1,%
+    ] (#1) {#2};%
+  }%
+}
+
+\tikzset{
+  >=stealth,
+  epath/.style={draw, <->, shorten <=3pt, shorten >=3pt},
+  fpath/.style={draw, color=gray, rounded corners=2pt, shorten <=3pt, shorten >=3pt},
+  cir/.style={draw, circle, fill, inner sep=0.5pt, text=white},
+  dir/.style={near start, right, font=\footnotesize},
+}
+
+\newif\ifopacity
+\opacitytrue  %% Descomente para texto transparente.
+%\opacityfalse %% Ou descomente para texto forte.
+
+\ifopacity
+  \tikzset{
+     nodeR/.style={text opacity=0.2},
+     fpath/.append style={color=white}}
+\else
+  \tikzset{
+     nodeR/.style={text opacity=1}}
+\fi	
+
+\begin{tikzpicture}
+
+\node[nodeR] (slider) at (0,0)
+{
+
+\begin{minipage}{10cm}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\begin{alltt}
+\hlkwd{require}\hlstd{(animation)}
+
+\hlstd{x} \hlkwb{<-} \hlstd{precip}
+\hlstd{a} \hlkwb{<-} \hlkwd{extendrange}\hlstd{(x)}
+
+\hlstd{\NANN{n1}{\hlkwd{ani.options}\hlstd{(}\hlkwc{interval}\hlstd{=}\hlnum{0.3}\hlstd{)}}}
+\hlstd{\NANN{n2}{\hlkwa{for}\hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlnum{30}\hlstd{)}}}\hlstd{\{}
+    \hlstd{bks} \hlkwb{<-} \hlkwd{seq}\hlstd{(a[}\hlnum{1}\hlstd{], a[}\hlnum{2}\hlstd{],} \hlkwc{length.out}\hlstd{=i}\hlopt{+}\hlnum{1}\hlstd{)\NANN{n4}{\phantom{1}}}
+    \hlkwd{hist}\hlstd{(x,} \hlkwc{breaks}\hlstd{=bks)}
+    \hlstd{\NANN{n3}{\hlkwd{ani.pause}\hlstd{()}}}
+\hlstd{\}\NANN{n5}{\phantom{1}}}
+
+\hlkwd{saveGIF}\hlstd{(\{}
+   \hlstd{\NANN{n6}{\phantom{1}}}\hlkwa{for}\hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlnum{30}\hlstd{)}\hlstd{\{}
+        \hlstd{bks} \hlkwb{<-} \hlkwd{seq}\hlstd{(a[}\hlnum{1}\hlstd{], a[}\hlnum{2}\hlstd{],} \hlkwc{length.out}\hlstd{=i}\hlopt{+}\hlnum{1}\hlstd{)\NANN{n7}{\phantom{1}}}
+        \hlkwd{hist}\hlstd{(x,} \hlkwc{breaks}\hlstd{=bks)}
+    \hlstd{\}\NANN{n8}{\phantom{1}}}
+\hlstd{\},} \hlkwc{interval}\hlstd{=}\hlnum{0.3}\hlstd{)}
+\end{alltt} 
+\end{knitrout}
+\end{minipage}
+}; %% \node
+
+% \path[fpath] (gw1) -- ($(gw1)+(1,0)$) node[dir, right, at end] {Pacote};
+
+\ifopacity
+\path[blue, epath] (n2) to[out=0, in=180]
+   ($(n2)+(4,-1)$) node[anchor=west, text=black, text width=11ex] {sequ\^encia\\ de estados};
+\path[red, epath] (n1) to[out=0, in=0]
+   (n3);
+\fi
+
+% \begin{scope}[on background layer]
+%   \node[fill=yellow!30, fit=(n2)(n4)(n5)] {};
+%   \node[fill=yellow!30, fit=(n6)(n7)(n8)] {};
+% \end{scope}
+
+\end{tikzpicture}

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   inkscape:export-filename="/home/walmes/GitHub/iguiR/images/shiny_docs.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   sodipodi:docname="shiny_docs.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3807">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3809" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop3811" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3807"
+       id="linearGradient3813"
+       x1="730.95911"
+       y1="51.683503"
+       x2="885.59111"
+       y2="51.683503"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="371.25984"
+     inkscape:cy="915.23722"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:snap-midpoints="true"
+     inkscape:object-paths="false"
+     inkscape:window-width="1024"
+     inkscape:window-height="551"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="111.07536"
+       y="174.4151"
+       id="text3793"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3795"
+         x="111.07536"
+         y="174.4151">runApp(iguir)</tspan><tspan
+         sodipodi:role="line"
+         x="111.07536"
+         y="194.4151"
+         id="tspan3815">runUrl()</tspan><tspan
+         sodipodi:role="line"
+         x="111.07536"
+         y="214.4151"
+         id="tspan3817">runGitHub()</tspan><tspan
+         sodipodi:role="line"
+         x="111.07536"
+         y="234.4151"
+         id="tspan3819">runGist()</tspan></text>
+    <g
+       id="g3858"
+       transform="translate(0,-11.315766)">
+      <g
+         id="g3849">
+        <rect
+           style="fill:#bec1fc;stroke:#000000;stroke-width:0.44561177;stroke-opacity:1"
+           id="rect2985-5"
+           width="95.115883"
+           height="54.296272"
+           x="140.97026"
+           y="44.961483" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           x="144.74745"
+           y="57.150677"
+           id="text3755-3"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3757-5"
+             x="144.74745"
+             y="57.150677">shinyServer(</tspan><tspan
+             sodipodi:role="line"
+             x="144.74745"
+             y="72.150681"
+             id="tspan3759-3">   ...</tspan><tspan
+             sodipodi:role="line"
+             x="144.74745"
+             y="87.150681"
+             id="tspan3761-6">)</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           x="138.63748"
+           y="41.328899"
+           id="text3797-1"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3799-6"
+             x="138.63748"
+             y="41.328899">./iguir/server.R</tspan></text>
+      </g>
+      <g
+         id="g3840">
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           x="27.952394"
+           y="41.328899"
+           id="text3797"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3799"
+             x="27.952394"
+             y="41.328899">./iguir/ui.R</tspan></text>
+        <rect
+           style="fill:#bec1fc;stroke:#000000;stroke-width:0.44561177;stroke-opacity:1"
+           id="rect2985-5-8"
+           width="95.115883"
+           height="54.296272"
+           x="30.299204"
+           y="44.214046" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           x="34.076397"
+           y="56.40324"
+           id="text3755"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3757"
+             x="34.076397"
+             y="56.40324">shinyUI(</tspan><tspan
+             sodipodi:role="line"
+             x="34.076397"
+             y="71.403244"
+             id="tspan3759">   ...</tspan><tspan
+             sodipodi:role="line"
+             x="34.076397"
+             y="86.403244"
+             id="tspan3761">)</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g3924"
+       transform="translate(-30.957149,-104.28571)">
+      <rect
+         y="137.93143"
+         x="294.83661"
+         height="136.44418"
+         width="162.99579"
+         id="rect2985-5-84"
+         style="fill:#9dde67;stroke:#000000;stroke-width:0.92472124;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3755-3-1"
+         y="150.12062"
+         x="298.6138"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           y="150.12062"
+           x="298.6138"
+           id="tspan3757-5-4"
+           sodipodi:role="line">UI &lt;- shinyUI(</tspan><tspan
+           id="tspan3759-3-4"
+           y="165.12062"
+           x="298.6138"
+           sodipodi:role="line">   ...</tspan><tspan
+           id="tspan3761-6-1"
+           y="180.12062"
+           x="298.6138"
+           sodipodi:role="line">)</tspan><tspan
+           id="tspan3912"
+           y="195.12062"
+           x="298.6138"
+           sodipodi:role="line" /><tspan
+           id="tspan3914"
+           y="210.12062"
+           x="298.6138"
+           sodipodi:role="line">SV &lt;- shinyServer(</tspan><tspan
+           id="tspan3916"
+           y="225.12062"
+           x="298.6138"
+           sodipodi:role="line">   ...</tspan><tspan
+           id="tspan3918"
+           y="240.12062"
+           x="298.6138"
+           sodipodi:role="line">)</tspan><tspan
+           id="tspan3920"
+           y="255.12062"
+           x="298.6138"
+           sodipodi:role="line" /><tspan
+           id="tspan3922"
+           y="270.12061"
+           x="298.6138"
+           sodipodi:role="line">shinyApp(ui=UI, server=SV)</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text3797-1-2"
+         y="134.29884"
+         x="292.50385"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         xml:space="preserve"><tspan
+           y="134.29884"
+           x="292.50385"
+           id="tspan3799-6-7"
+           sodipodi:role="line">./iguir/app.R</tspan></text>
+    </g>
+    <g
+       id="g3924-7"
+       transform="translate(-272.15763,101.78541)">
+      <g
+         id="g4006">
+        <rect
+           style="fill:#df8f87;stroke:#000000;stroke-width:1.21037591;stroke-opacity:1"
+           id="rect2985-5-84-4"
+           width="162.99579"
+           height="233.76198"
+           x="727.18188"
+           y="-68.139694" />
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           x="730.95911"
+           y="-61.234634"
+           id="text3755-3-1-4"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3757-5-4-4"
+             x="730.95911"
+             y="-61.234634"
+             style="fill:#000000;fill-opacity:1">---</tspan><tspan
+             id="tspan4002"
+             sodipodi:role="line"
+             x="730.95911"
+             y="-46.234634"
+             style="fill:#000000;fill-opacity:1">runtime: shiny</tspan><tspan
+             id="tspan4004"
+             sodipodi:role="line"
+             x="730.95911"
+             y="-31.234634"
+             style="fill:#000000;fill-opacity:1">output: html_document</tspan><tspan
+             id="tspan4000"
+             sodipodi:role="line"
+             x="730.95911"
+             y="-16.234634"
+             style="fill:#000000;fill-opacity:1">---</tspan><tspan
+             id="tspan3996"
+             sodipodi:role="line"
+             x="730.95911"
+             y="-1.2346344"
+             style="fill:#000000;fill-opacity:1" /><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="13.765366"
+             id="tspan3035"
+             style="fill:#000000;fill-opacity:1">```{r}</tspan><tspan
+             id="tspan3998"
+             sodipodi:role="line"
+             x="730.95911"
+             y="28.765366"
+             style="fill:#000000;fill-opacity:1">UI &lt;- shinyUI(</tspan><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="43.765366"
+             id="tspan3759-3-4-9"
+             style="fill:#000000;fill-opacity:1">   ...</tspan><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="58.765366"
+             id="tspan3761-6-1-2"
+             style="fill:#000000;fill-opacity:1">)</tspan><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="73.765366"
+             id="tspan3912-0"
+             style="fill:#000000;fill-opacity:1" /><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="88.765366"
+             id="tspan3914-4"
+             style="fill:#000000;fill-opacity:1">SV &lt;- shinyServer(</tspan><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="103.76537"
+             id="tspan3916-3"
+             style="fill:#000000;fill-opacity:1">   ...</tspan><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="118.76537"
+             id="tspan3918-7"
+             style="fill:#000000;fill-opacity:1">)</tspan><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="133.76537"
+             id="tspan3920-4"
+             style="fill:#000000;fill-opacity:1" /><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="148.76537"
+             id="tspan3922-7"
+             style="fill:#000000;fill-opacity:1">shinyApp(ui=UI, server=SV)</tspan><tspan
+             sodipodi:role="line"
+             x="730.95911"
+             y="163.76537"
+             id="tspan3037"
+             style="fill:#000000;fill-opacity:1">```</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+           x="724.84912"
+           y="-71.772278"
+           id="text3797-1-2-1"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3799-6-7-6"
+             x="724.84912"
+             y="-71.772278">./iguir/relatorio.Rmd</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

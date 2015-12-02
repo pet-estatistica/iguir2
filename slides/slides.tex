@@ -1,0 +1,265 @@
+%%======================================================================
+
+\documentclass[10pt, aspectratio=169, 
+    serif, mathserif, professionalfont, table, svgnames]{beamer}
+
+%%----------------------------------------------------------------------
+%% Incluídos pelo knitr.
+
+\usepackage[]{graphicx}
+\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the
+%% margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+  \linewidth
+  \else
+  \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+%\definecolor{fgcolor}{rgb}{0.5, 0.5, 0.5}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+  \def\at@end@of@kframe{}%
+  \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+\begin{minipage}{\columnwidth}%
+  \fi\fi%
+  \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+    \colorbox{shadecolor}{##1}\hskip-\fboxsep
+    % There is no \\@totalrightmargin, so:
+    \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+  \MakeFramed {\advance\hsize-\width
+    \@totalleftmargin\z@ \linewidth\hsize
+    \@setminipage}}%
+{\par\unskip\endMakeFramed%
+  \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in
+                              % TeX
+
+\usepackage{alltt}
+
+%% Tamanho de fonte e distância entre linhas.
+\renewenvironment{knitrout}{
+  \footnotesize\renewcommand{\baselinestretch}{0.75}
+}{}
+
+%%----------------------------------------------------------------------
+%% Pacotes padrões.
+
+%% Fontes.
+\usepackage{palatino}
+\usepackage{eulervm}
+\usepackage[none]{ubuntu}
+\renewcommand{\ttdefault}{ubuntumono}
+\renewcommand{\ttfamily}{\fontUbuntuMono}
+
+%% Verbatim na fonte Ubuntu Mono.
+\usepackage{verbatim}
+\makeatletter
+\def\verbatim@font{\small\fontUbuntuMono}
+\makeatother
+
+% Esses pacotes dão clash.
+\usepackage{xcolor} %% opções no \documentclass{} para evitar clash.
+\definecolor{mycolor}{rgb}{0.13,0.53,0.53}
+\definecolor{mycolor2}{rgb}{0.725,0,0.18}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks, allcolors=.,
+  urlcolor=mycolor2, runcolor=orange}
+
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amsfonts, amssymb, amsxtra, amsthm, icomma}
+\usepackage{geometry, calc, setspace, indentfirst}
+\usepackage{multicol, multirow}
+\usepackage{enumerate}
+% \usepackage{paralist} %% compact{item,enum}. Não usar em beamer.
+\usepackage{float}
+\usepackage[hang]{caption}
+\captionsetup{font=footnotesize, labelfont=footnotesize, labelsep=period}
+
+%% Texto no corpo do beamer justificado.
+\usepackage{ragged2e}
+\justifying
+
+%% Notas de afazeres.
+\usepackage[color=green]{todonotes}
+\presetkeys{todonotes}{inline}{}
+
+%%-----------------------------------------------------------------------------
+
+%% A lot of options: http://latex-community.org/forum/viewtopic.php?f=55&t=17646
+\useoutertheme[width=60pt, height=30pt, right,
+  hideothersubsections]{sidebar}
+\setbeamercolor{structure}{fg=mycolor}
+
+\makeatletter
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{sections/subsections in toc}[ball]{}
+\setbeamertemplate{section in sidebar right}[sections numbered]
+
+%% http://tex.stackexchange.com/questions/250836/reduce-fontsize-beamer-sidebar
+\setbeamerfont{title in sidebar}{size=\fontsize{6}{1}\selectfont}
+\setbeamerfont{section in sidebar}{size=\fontsize{6}{7}\selectfont}
+\setbeamerfont{subsection in sidebar}{size=\fontsize{5}{5}\selectfont}
+
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{frametitle continuation}{\gdef\beamer@frametitle{}}
+\setbeamertemplate{navigation symbols}{} %% Retira a barra de navegação.
+% \setbeamertemplate{blocks}[rounded][shadow=FALSE]
+% \setbeamercolor{block title}{fg=structure, bg=mycolor!20!white}
+\makeatother
+
+% http://tex.stackexchange.com/questions/109816/automatic-frame-titles-subtitles-with-condition
+\makeatletter
+\CheckCommand*\beamer@checkframetitle{%
+  \@ifnextchar\bgroup\beamer@inlineframetitle{}}
+\renewcommand*\beamer@checkframetitle{%
+  \global\let\beamer@frametitle\relax\@ifnextchar%
+  \bgroup\beamer@inlineframetitle{}}
+\makeatother
+
+\addtobeamertemplate{frametitle}{
+  \ifx\insertframetitle\empty
+    \ifx\insertframesubtitle\empty
+      \ifx\insertsubsection\empty 
+        \frametitle{\insertsectionhead}
+      \else
+        \frametitle{\insertsubsectionhead}
+        \framesubtitle{\insertsectionhead}
+      \fi  
+    \else     
+    \fi  
+  \else
+  \fi
+}{}
+
+%%----------------------------------------------------------------------
+
+% \usebackgroundtemplate{
+%   \includegraphics[width=\paperwidth]{./images/ufpr_bg3.jpg}
+% }
+
+\AtBeginSection[]{
+  \begin{frame}[c, allowframebreaks]
+    \frametitle{\phantom{1}}
+    \framesubtitle{\phantom{1}}
+    \begin{center}
+      \textcolor{mycolor}{\thesection} \\ \vspace{0.3cm}
+      \parbox{0.6\textwidth}{
+        \centering \textcolor{mycolor}{\LARGE \insertsection}}\\
+    \end{center}
+  \end{frame}
+}
+
+%% Spacing between items (itemize)
+\let\olditem\item
+\renewcommand{\item}{%
+  \olditem\vspace{6pt}}
+
+%%----------------------------------------------------------------------
+%% Definições dos proprietários.
+
+\title[Explorando interfaces gráficas com o R]{
+  \LARGE Explorando interfaces gráficas com o R}
+\author[]{\small
+  Prof. Dr. Walmes M. Zeviani\\
+  Eduardo E. Ribeiro Jr
+}
+
+\institute[UFPR]{
+  Laboratório de Estatística e Geoinformação \\
+  Programa de Educação Tutorial\\
+  Departamento de Estatística \\
+  Universidade Federal do Paraná}
+\date{}
+\logo{\includegraphics[width=1.4cm]{./images/ufpr_logo.jpg}}
+
+%%======================================================================
+
+\begin{document}
+
+%\begin{comment}
+\frame{
+  \vspace{-1.0cm}
+  \titlepage
+  \vspace{-1.6cm}
+  \begin{center}
+    \href{http://www.leg.ufpr.br}{www.leg.ufpr.br} -
+    \texttt{walmes@ufpr.br}\\
+    \href{http://www.pet.est.ufpr.br}{www.pet.est.ufpr.br} -
+    \texttt{edujrrib@gmail.com}
+  \end{center}
+}
+
+\begin{frame}{Disponibilização}
+
+  \begin{minipage}[c]{0.1\linewidth}
+    \begin{center}
+      \includegraphics[scale=0.07]{./images/gitlab-logo.png}\\
+      \vspace{0.3cm}
+    \end{center}
+  \end{minipage}
+  \hfill % Final de fig1 e inicio de fig2
+  \begin{minipage}[c]{0.85\linewidth}
+    \texttt{\url{https://gitlab.c3sl.ufpr.br/pet-estatistica/iguir2}}\\
+    (sujeito a atualização)
+  \end{minipage}
+
+  \vspace{0.3cm}
+  {\tt
+    \textcolor{mycolor2}{I}nteractive
+    \textcolor{mycolor2}{G}raphical
+    \textcolor{mycolor2}{U}ser
+    \textcolor{mycolor2}{I}nterface in
+    \textcolor{mycolor2}{R} -
+  }\href{https://gitlab.c3sl.ufpr.br/pet-estatistica/iguir2}{
+    \texttt{iguir2}}\\
+  Segunda edição
+\end{frame}
+
+%%======================================================================
+
+\input{s01_introducao.tex}
+
+\begin{frame}{Conteúdo}
+  \begin{multicols}{2}
+    \small{\tableofcontents}
+  \end{multicols}
+\end{frame}
+
+\input{s02_animation.tex}
+\input{s03_rgl.tex}
+\input{s04_googleVis.tex}
+\input{s05_gWidgets.tex}
+\input{s06_rpanel.tex}
+\input{s07_shiny.tex}
+\input{s08_conclusoes.tex}
+
+\end{document}

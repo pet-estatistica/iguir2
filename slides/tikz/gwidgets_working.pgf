@@ -1,0 +1,81 @@
+\tikzset{
+  level 1/.style={
+    level distance=2cm,
+    sibling distance=1.5cm},
+  bag/.style={
+    minimum width=5em,
+    minimum height=3em,
+    inner sep=10pt,
+    text centered,
+    anchor=west,
+    fill=gray!50, rounded corners},
+}
+
+% \begin{tikzpicture}[grow=right, ->, >=stealth']
+% \node[bag, fill=gray!20] (R) at (0,0) {\includegraphics[width=1cm]{/home/walmes/Dropbox/tikz/Rlogo.png}};
+% \node[bag, right=of R] (gW) {gWidgets};
+% \node[bag, right=of gW] (gWxxx) {gWidgetsXYZ}
+%   child {
+%     node[bag] (n4) {rJava}
+%   }
+%   child {
+%     node[bag] (n3) {qtbase}
+%   }
+%   child {
+%     node[bag] (n2) {RGtk2}
+%   }
+%   child {
+%     node[bag] (n1) {tcltk}
+%   };
+% \node[bag, right=3.5cm of gWxxx, text width=2cm] (sis) {sistema\\ operacional};
+% \draw (R) -- (gW);
+% \draw (gW) -- (gWxxx);
+% \path[draw] (n1) -- (sis);
+% \path[draw] (n2) -- (sis);
+% \path[draw] (n3) -- (sis);
+% \path[draw] (n4) -- (sis);
+% \end{tikzpicture}
+% 
+% \begin{tikzpicture}[grow=right, ->, >=stealth']
+% \node[bag, fill=gray!20] (R) at (0,0) {\includegraphics[width=1cm]{/home/walmes/Dropbox/tikz/Rlogo.png}};
+% \node[bag, right=of R] (gW) {gWidgets}
+%   child {
+%     node[bag, text width=8em] (n2) {gWidgetsRGtk2}
+%   }
+%   child {
+%     node[bag, text width=8em] (n1) {gWidgetstcltk}
+%   };
+% \node[bag, right=of n1] (o1) {tcltk};
+% \node[bag, right=of n2] (o2) {RGtk2};
+% \node[bag, right=8.5cm of gW, text width=2cm] (sis) {sistema\\ operacional};
+% 
+% \draw (R) -- (gW);
+% \path[draw] (n1) -- (o1);
+% \path[draw] (n2) -- (o2);
+% \path[draw] (o1) -- (sis);
+% \path[draw] (o2) -- (sis);
+% \end{tikzpicture}
+
+\begin{tikzpicture}[
+  ->, >=stealth',
+  rect/.style={
+    fill=gray!20,
+    rectangle split,
+    rectangle split parts=2,
+    draw,
+    text width=2.75cm,
+    text centered,
+  }
+]
+% \node[bag] (n1) {gWidgets\\ gbutton};
+
+\node[rect] (n1) {gWidgets \nodepart{second} gbutton};
+\node[rect, right=of n1] (n2) {gWidgetsRGtk2 \nodepart{second} .gbutton};
+\node[rect, right=of n2] (n3) {RGtk2 \nodepart{second} gtkButtonNew};
+\node[rect, right=of n3] (n4) {GTK \nodepart{second} gtk\_button\_new};
+
+\path[draw] (n1) -- (n2);
+\path[draw] (n2) -- (n3);
+\path[draw] (n3) -- (n4);
+
+\end{tikzpicture}

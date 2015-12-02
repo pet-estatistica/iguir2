@@ -1,0 +1,35 @@
+\vspace{-0.5cm}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(animation)}
+
+\hlstd{x} \hlkwb{<-} \hlstd{precip}
+\hlstd{a} \hlkwb{<-} \hlkwd{extendrange}\hlstd{(x)}
+
+\hlkwd{ani.options}\hlstd{(}\hlkwc{interval} \hlstd{=} \hlnum{0.3}\hlstd{)}
+\hlkwa{for}\hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlnum{30}\hlstd{)\{}
+    \hlstd{bks} \hlkwb{<-} \hlkwd{seq}\hlstd{(a[}\hlnum{1}\hlstd{], a[}\hlnum{2}\hlstd{],} \hlkwc{length.out} \hlstd{= i} \hlopt{+} \hlnum{1}\hlstd{)}
+    \hlkwd{hist}\hlstd{(x,} \hlkwc{breaks} \hlstd{= bks)}
+    \hlkwd{ani.pause}\hlstd{()}
+\hlstd{\}}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\pause
+
+\vspace{-0.4cm}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{saveGIF}\hlstd{(\{}
+    \hlkwa{for}\hlstd{(i} \hlkwa{in} \hlnum{1}\hlopt{:}\hlnum{30}\hlstd{)\{}
+        \hlstd{bks} \hlkwb{<-} \hlkwd{seq}\hlstd{(a[}\hlnum{1}\hlstd{], a[}\hlnum{2}\hlstd{],}
+                   \hlkwc{length.out} \hlstd{= i} \hlopt{+} \hlnum{1}\hlstd{)}
+        \hlkwd{hist}\hlstd{(x,} \hlkwc{breaks} \hlstd{= bks)}
+        \hlkwd{ani.pause}\hlstd{()}
+    \hlstd{\}}
+\hlstd{\},} \hlkwc{interval} \hlstd{=} \hlnum{0.3}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}

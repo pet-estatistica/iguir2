@@ -1,0 +1,29 @@
+%\vspace{-1.2cm}
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{require}\hlstd{(googleVis)}
+
+\hlstd{x} \hlkwb{<-} \hlkwd{as.data.frame}\hlstd{(precip)}
+
+\hlstd{graf} \hlkwb{<-} \hlkwd{gvisHistogram}\hlstd{(x,}
+                      \hlkwc{option} \hlstd{=} \hlkwd{list}\hlstd{(}
+                          \hlkwc{title} \hlstd{=} \hlstr{"Precipitação"}\hlstd{,}
+                          \hlkwc{vAxis} \hlstd{=} \hlstr{"\{title:'Frequência'\}"}\hlstd{,}
+                          \hlkwc{hAxis} \hlstd{=} \hlstr{"\{title:'Precipitação'\}"}\hlstd{,}
+                          \hlkwc{colors} \hlstd{=} \hlstr{"['red']"}\hlstd{,}
+                          \hlkwc{legend} \hlstd{=} \hlstr{"none"}\hlstd{,}
+                          \hlkwc{hAxis.gridlines.count} \hlstd{=} \hlnum{10}\hlstd{))}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\pause
+\begin{knitrout}\footnotesize
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{print}\hlstd{(graf)}
+
+\hlkwd{plot}\hlstd{(graf)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
