@@ -249,10 +249,6 @@ library(shiny)
 <img src="images/emacs1.svg"  width="800px">
 </center>
 
-# Praticando 
-
-## 
-
 # Compartilhando seus apps
 
 ##
@@ -302,10 +298,6 @@ rsconnetc::deployApp("./apps/")
 * `shiny + rCharts`
 * `shiny + DT`
 
-# Procure mais
-
-##
-
 ### Dever de casa
 * [Tutorial shiny - RStudio](http://shiny.rstudio.com/tutorial/)
     - Lessons
@@ -318,6 +310,8 @@ rsconnetc::deployApp("./apps/")
 * [stackoverflow](http://stackoverflow.com/questions/tagged/shiny)
 * [Lista *Shiny - Web Framework for Shiny*](https://groups.google.com/forum/#!forum/shiny-discuss)
 * [Google](https://www.google.com/)
+
+# Vamos à galeria IGUIR2
 
 # Obrigado!
 
