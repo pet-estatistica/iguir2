@@ -1,0 +1,170 @@
+\documentclass[a4paper]{article}
+
+%-----------------------------------------------------------------------
+%% Incluídos pelo knitr.
+
+\usepackage[]{graphicx}
+\usepackage[]{color}
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+%\definecolor{fgcolor}{rgb}{0.5, 0.5, 0.5}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+%%-----------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amsfonts,mathrsfs,amssymb,amsthm,icomma}
+\usepackage{geometry, calc, color, setspace, indentfirst}
+  \geometry{hmargin={1.7cm,1.7cm}, vmargin={1.7cm,1.7cm}}
+
+\usepackage{wrapfig}
+\usepackage{boxedminipage}
+
+\usepackage{enumerate}
+\usepackage{paralist}
+
+\usepackage{float}
+\usepackage[hang]{caption}
+\usepackage{comment}
+
+\usepackage{multicol}
+\usepackage{multirow} % para tabelas
+\usepackage{pbox}     % quebra de linhas em tabela
+\usepackage{colortbl}
+
+% \usepackage[table, usenames, dvipsnames]{xcolor}
+\usepackage{fancyvrb} % permite vebatim dentro de fbox{}
+\usepackage[svgnames]{xcolor}
+\usepackage[colorlinks, citecolor=DarkRed, linkcolor=DarkGreen,
+              urlcolor=DarkBlue]{hyperref} 
+
+\usepackage{palatino}
+\usepackage{eulervm}
+\usepackage[scaled=0.8]{beramono}
+
+\usepackage{hyperref}
+
+\usepackage[final]{probsoln}
+\setkeys{probsoln}{fragile} % para permitir verbatim no \defproblem{}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.pathmorphing, backgrounds, fit,
+  positioning, calc, trees}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\newtheoremstyle{exercicio} % Configurando um novo estilo de teorema para exercícios
+                {3pt}       % Space above
+                {3pt}       % Space below
+                {\upshape}  % Body font
+                {}          % Indent amount (5pt)
+                {}          %\bfseries\scshape
+                {.}         % Punctuation after theorem head (:;?)
+                {.5em}      % Space after theorem head
+                {}          % Theorem head spec (can be left empty, meaning `normal')
+\theoremstyle{exercicio}
+\newtheorem{ex}{}[]         % {Exercício}[section]
+
+%-----------------------------------------------------------------------------
+
+% Linha horizontal divisória.
+\newcommand{\HRule}{
+  \noindent\rule{\linewidth}{0.2mm}
+}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+% Nome da solução: solução, resposta, resultado.
+\renewcommand{\solutionname}{Soluções}
+
+% Fomatação/estilo como vai aparecer escrito.
+\renewenvironment{solution}{
+  \begin{center}
+  \rule{0.7\linewidth}{0.2mm}\\
+  \tiny{Solução}
+  \end{center}
+}{}
+
+% Ambiente para enumerate em linha centralizado.
+\newenvironment{clist}{
+  \begin{center}
+    \begin{inparaenum}[a)]
+    }{
+    \end{inparaenum}
+  \end{center}
+}
+
+%-----------------------------------------------------------------------
+\input{grr}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+  {\Large Lista de exercícios}\\ \today\\ GRR: \grr{}
+\end{center}
+
+\begin{center}
+  \noindent\rule{0.8\linewidth}{0.2mm}\\
+  \vspace*{-1em}
+  \noindent\rule{0.5\linewidth}{0.2mm}
+\end{center}
+
+\loadallproblems[ex]{exercGRR}
+
+\foreachproblem[ex]{
+  \begin{ex}
+    \label{prob:\thisproblemlabel}
+    \thisproblem
+  \end{ex}
+  \HRule
+}
+
+\end{document}
+\endinput
