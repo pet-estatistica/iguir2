@@ -1,0 +1,151 @@
+---
+runtime: shiny
+output: html_document
+---
+
+```{r, include=FALSE, purl=FALSE}
+##----------------------------------------------------------------------
+## Definções do knitr. Não rodar.
+
+require(knitr)
+opts_chunk$set(
+    cache=FALSE,
+    tidy=FALSE,
+    fig.width=8,
+    fig.height=4.5,
+    fig.align="center",
+    dpi=100,
+    dev="png",
+    dev.args=list(png=list(family="Palatino", type="cairo"))
+    )
+options(width=90)
+
+```
+
+****
+
+<center>
+<h1><em>Web scrap</em> em cifras de música</h1>
+
+Eduardo E. Ribeiro Jr e Walmes M. Zeviani
+</center>
+
+****
+
+```{r, echo=FALSE, message=FALSE}
+##----------------------------------------------------------------------
+
+library(shiny)
+library(XML)
+library(lattice)
+library(latticeExtra)
+
+# url <- "http://www.cifraclub.com.br/banda-malta/"
+
+extractChordsFromMusic <- function(url){
+    rl <- readLines(con=url, encoding="utf-8")
+    h <- htmlTreeParse(rl, asText=TRUE, useInternalNodes=TRUE,
+                       encoding="utf-8")
+    d <- getNodeSet(doc=h, fun=xmlValue,
+                    path="//div[@class='cifra_cnt cifra-mono']//pre//b")
+    d <- unlist(d)
+    d <- length(unique(d))
+    return(d)
+}
+
+## extractChordsFromMusic(
+##     "http://www.cifraclub.com.br/chico-buarque/trocando-em-miudos/")
+
+getMusicUrlArtist <- function(url){
+    pr <- readLines(con=url)
+    h <- htmlTreeParse(file=pr, asText=TRUE,
+                       useInternalNodes=TRUE,
+                       encoding="utf-8")
+    e <- getNodeSet(doc=h, fun=xmlValue,
+                    path="//h1[@class='titulo']//a[@href]")
+    e <- unlist(e)
+    lc <- xpathApply(
+        doc=h,
+        path="//ul[@class=\"art_musics js-art_songs\"]//li[@class=\"js-art_song \"]//a[@class=\"art_music-link\"]",
+        fun=xmlGetAttr, name="href")
+    lc <- unlist(lc)
+    attr(lc, which="artist") <- e
+    return(lc)
+}
+
+## getMusicUrlArtist(
+##     "http://www.cifraclub.com.br/chico-buarque/")
+
+ui <- shinyUI(
+    fluidPage(
+        verticalLayout(
+            helpText(
+                "Forneça no campo abaixo a url",
+                "da página do artista do ",
+                HTML("<a href='http://www.cifraclub.com.br'>cifraclub.com</a>")),
+            textInput(inputId="ARTIST_URL",
+                      label="url do artista",
+                      value="http://www.cifraclub.com.br/banda-malta/",
+                      width=600),
+            submitButton("Processar"),
+            hr(),
+            tabsetPanel(
+                tabPanel("plot",
+                         plotOutput("DIST_CHORD")),
+                tabPanel("summary",
+                         verbatimTextOutput("SESSION"))
+            )
+        )
+    )
+)
+
+sv <- shinyServer(
+    function(input, output){
+        webScrap <- reactive({
+            urls <- getMusicUrlArtist(input$ARTIST_URL)
+            artist <- attr(urls, "artist")
+            report <- c(
+                "--------------------------------------------------",
+                sprintf("Artista: %s", artist),
+                sprintf("Canções encontradas: %d", length(urls)))
+                urls <- paste0("http://www.cifraclub.com.br",
+                               urls)
+                systim <- system.time(
+                    chords <- sapply(urls,
+                                     FUN=extractChordsFromMusic))
+                chords <- chords[chords>=2]
+                stats <- EnvStats::summaryFull(chords)
+                return(list(chords=chords, artist=artist,
+                            systim=systim, report=report, stats=stats))
+            })
+        output$DIST_CHORD <- renderPlot({
+            chords <- webScrap()$chords
+            artist <- webScrap()$artist
+            p1 <- ecdfplot(
+                ~chords, col=1,
+                xlab="Número de acordes distintos",
+                ylab="Distribuição acumulada de frequência relativa",
+                main=artist)
+                p2 <- densityplot(~chords, n=512, from=2, col=1,
+                                  xlab="Número de acordes distintos",
+                                  ylab="Densidade empírica",
+                                  main=artist)
+                                  plot(p1, split=c(1,1,2,1), more=TRUE)
+                                  plot(p2, split=c(2,1,2,1))
+        })
+        output$SESSION <- renderPrint({
+            cat(webScrap()$report,
+                "\n--------------------------------------------------",
+                "Tempo de processamento:",
+                capture.output(webScrap()$systim),
+                "\n--------------------------------------------------",
+                "Estatísticas sobre acordes nas canções:",
+                capture.output(webScrap()$stats)[2:15],
+                sep="\n")
+        })
+    }    
+)
+
+shinyApp(ui=ui, server=sv)
+
+```
