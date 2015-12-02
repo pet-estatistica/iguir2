@@ -1,0 +1,93 @@
+\begin{defproblem}{comparMultDBC_GRR_}
+  
+<<include=FALSE>>=
+##-------------------------------------------
+## Definições do knitr.
+
+opts_chunk$set(
+    cache=FALSE,
+    tidy=FALSE,
+    fig.keep="last",
+    ## fig.show="hide",
+    echo=FALSE,
+    message=FALSE,
+    error=FALSE,
+    warning=FALSE,
+    results="hide",
+    fig.width=5,
+    fig.height=4,
+    pointsize=10,
+    out.width="7cm",
+    fig.align="center",
+    ## fig.pos="H",
+    dev.args=list(pdf=list(family="Palatino"))
+)
+
+##-------------------------------------------
+## Geração dos dados.
+
+set.seed(_GRR_)
+
+pre <- "http://www.leg.ufpr.br/~walmes/data/"
+dbc <- c("pimentel_colesterol.txt",
+         "pimentel_mandioca.txt",
+         "pimentel_aradura.txt",
+         "ramalho_consorcio.txt",
+         "ramalho_arroz1.txt")
+url <- sample(dbc, size=1)
+
+link <- paste0("http://www.leg.ufpr.br/~walmes/data/",
+               gsub(x=url, pattern="[_]", replacement="\\\\_"))
+
+url <- paste0(pre, url)
+
+pcm <- c("de Duncan",
+         "t (LSD)",
+         "t (LSD) com proteção de Bonferroni",
+         "de Tukey (HSD)",
+         "de Student-Newman-Keuls (SNK)")
+pcm <- sample(pcm, size=1)
+alpha <- sample(c(5,10), size=1)
+
+##-------------------------------------------
+## Solução.
+
+@   
+  
+\noindent Carregue os dados obtidos de um experimento realizado em
+delineamento de blocos casualizados. Os dados estão disponíveis pelo
+endereço abaixo. Os dados estão em arquivo texto com delimitador de
+campos tabulação, separador decimal vírgula e primeira linha sendo o
+cabeçalho. Dentro do arquivo as primeiras linhas foram comentadas e
+apresentam uma descrição dos dados, como nome das variáveis,
+responsáveis ou fonte.
+
+\begin{center}
+  \url{\Sexpr{link}}
+\end{center}
+
+\begin{compactenum}
+  \item Importe os dados e faça uma análise exploratória.
+  \item Escreva o modelo estatístico justificado pelo delineamento e
+    suas pressuposições.
+  \item Ajuste o modelo aos dados e faça uma verificação sobre a
+    adequação dos pressupostos. Havendo fuga dos pressupostos, tome
+    medidas para adequá-los.
+  \item Obtenha o quadro de análise de variância, descreva as hipóteses
+    que estão sendo avaliadas e interprete os resultados.
+  \item Aplique o teste de comparações múltiplas \Sexpr{pcm} ao nível
+    nominal de significância de \Sexpr{alpha}\% e interprete os
+    resultados.
+  \item Apresente os resultados em um gráficos de segmentos com o
+    intervalo de confiança de \Sexpr{100-alpha}\% para a média de cada
+    nível do fator estudado. Dê ao gráfico legendas apropriadas conforme
+    a descrição contida no arquivo importado.
+\end{compactenum}
+
+\begin{onlysolution}
+\begin{solution}
+  \textcolor{A fazer.}
+\end{solution}
+\end{onlysolution}
+
+\end{defproblem}

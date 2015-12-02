@@ -1,0 +1,18 @@
+\documentclass{article}
+
+\begin{document}
+
+<<include=FALSE>>=
+library(xtable)
+@
+
+<<>>=
+load("image.RData")
+str(x)
+@
+
+<<results="asis">>=
+xtable(x, caption="Tabela dos dados analizados.")
+@
+
+\end{document}
