@@ -1,9 +1,15 @@
+##-------------------------------------------
+## ui.R
+
 ##----------------------------------------------------------------------
 ## Upload e Download.
 
 library(shiny)
 
 shinyUI(fluidPage(
+        ## Cabeçalho IGUIR2
+        htmlOutput("header"),
+
     titlePanel("Uploading Files"),
     sidebarLayout(
         sidebarPanel(

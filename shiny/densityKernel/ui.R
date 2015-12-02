@@ -1,9 +1,15 @@
+##-------------------------------------------
+## ui.R
+
 library(shiny)
 
 kernels <- eval(formals(density.default)$kernel)
 
 shinyUI(
     fluidPage(
+        ## Cabeçalho IGUIR2
+        htmlOutput("header"),
+
         titlePanel("Gráfico de densidade Kernel"),
         sidebarLayout(
             sidebarPanel(

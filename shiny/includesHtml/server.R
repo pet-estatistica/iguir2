@@ -1,7 +1,16 @@
+##-------------------------------------------
+## server.R
+
 library(shiny)
+## Carrega template das aplicações elaboradas pelo projeto iguiR2
+source("../template.R")
 
 shinyServer(
     function(input, output) {
+        ## Cabeçalho IGUIR2
+        output$header <- renderPrint({
+            template("TEMA")
+        })
         output$TEXT <- renderPrint(
             cat(paste0(
                 '<style> p { line-height: ',

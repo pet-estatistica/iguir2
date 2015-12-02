@@ -1,10 +1,19 @@
+##-------------------------------------------
+## server.R
+
 library(shiny)
+## Carrega template das aplicações elaboradas pelo projeto iguiR2
+source("../template.R")
 
 apropos("^update[A-Z]", ignore.case=FALSE)
 
 get("cars")
 
 shinyServer(function(input, output, session){
+        ## Cabeçalho IGUIR2
+        output$header <- renderPrint({
+            template("TEMA")
+        })
     observe({
         da <- get(input$DATASET)    
         updateSelectInput(session,

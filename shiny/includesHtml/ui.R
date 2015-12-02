@@ -1,9 +1,15 @@
+##-------------------------------------------
+## ui.R
+
 library(markdown)
 
 # http://www.w3schools.com/cssref/tryit.asp?filename=trycss_line-height
 
 shinyUI(
     fluidPage(
+        ## Cabeçalho IGUIR2
+        htmlOutput("header"),
+
     titlePanel("Título da aplicação"),
     navlistPanel(
         tabPanel(title="A",

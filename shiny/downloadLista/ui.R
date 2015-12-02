@@ -1,3 +1,6 @@
+##-------------------------------------------
+## ui.R
+
 require(shiny)
 
 choi <- setdiff(x=list.files(pattern="\\.Rnw$"),
@@ -6,6 +9,9 @@ choi <- gsub(x=choi, pattern="\\.Rnw$", replacement="")
 
 shinyUI(
     fluidPage(
+        ## Cabeçalho IGUIR2
+        htmlOutput("header"),
+
         titlePanel("Baixe sua lista de exercícios"),
         verticalLayout(
             textInput(inputId="GRR",

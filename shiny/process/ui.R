@@ -1,7 +1,13 @@
+##-------------------------------------------
+## ui.R
+
 library(shiny)
 
 shinyUI(
     fluidPage(
+        ## Cabeçalho IGUIR2
+        htmlOutput("header"),
+
         titlePanel("Download do relatório"),
         sidebarLayout(
             sidebarPanel(

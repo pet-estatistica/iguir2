@@ -1,8 +1,14 @@
+##-------------------------------------------
+## ui.R
+
 library(shiny)
 
 ds <- c("swiss", "cars", "longley", "iris", "rock")
 
 shinyUI(fluidPage(
+        ## Cabeçalho IGUIR2
+        htmlOutput("header"),
+
     titlePanel("Regressão Polinomial"),
     p("CE 064 - Ferramentas para documentos dinâmicos reproduzíveis - 2015/2"),
     hr(),
