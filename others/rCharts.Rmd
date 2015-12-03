@@ -1,0 +1,166 @@
+---
+title: IGUIR2 - Galeria rCharts
+author: Eduardo E. Ribeiro Jr \& Walmes M. Zeviani
+output:
+    html_document:
+      css: ../galery.css
+      toc: yes
+---
+
+```{r setup, include = FALSE}
+##-------------------------------------------
+## Do documento
+library(knitr)
+opts_chunk$set(
+    echo = TRUE,
+    message = FALSE,
+    warning = FALSE,
+    results = "asis",
+    tidy = FALSE)
+
+library(rCharts)
+## Para renderização rCharts
+options(
+  rcharts.mode = 'iframesrc', 
+  rcharts.cdn = TRUE,
+  RCHART_WIDTH = 800,
+  RCHART_HEIGHT = 400
+)
+```
+> Criar, customizar e publicar visulizações interativas _JavaScript_
+com o R, utilizando a sintaxe _lattice_
+> (R)
+
+## Instalação ##
+
+https://github.com/ramnathv/rCharts  
+http://ramnathv.github.io/rCharts/
+
+```{r, eval=FALSE}
+library(devtools)
+install_github('rCharts', 'ramnathv')
+library(rCharts)
+```
+
+## Exemplos ##
+
+```{r, results = "markup"}
+## Conjunto de dados utilizado, obtido via webScraping
+da <- read.table("pajero-dakar.csv", header = TRUE, sep = ";")
+da$lvalor <- log10(da$valor)
+da$cor <- tolower(da$cor)
+da$motor <- as.factor(paste0("v", da$cilindradas * 1000))
+str(da)
+
+```
+
+### Gráfico de setores (_pieChart_) ###
+
+```{r, fig.height = 8, fig.width = 8}
+##-------------------------------------------
+rp <- nPlot(~ cor, data = da[order(da$cor),], type = 'pieChart')
+rp$chart(color = c("blue", "#D0D0D0", "#5C5C5C", "gold", "orange",
+                   "brown", "#949494", "black", "green", "red",
+                   "#6B1010"))
+rp
+```
+
+
+```{r, echo = TRUE}
+##-------------------------------------------
+## Recategorizando as cores
+da$cor[!(da$cor %in% c("branco", "preto", "prata"))] <- "vários"
+```
+
+### Gráfico de barras (_BarChart_) ###
+
+```{r, include = FALSE}
+da[da$ano == 2016, ]$ano <- 2015
+da$cor[!(da$cor %in% c("branco", "preto", "prata"))] <- "vários"
+```
+
+```{r}
+##-------------------------------------------
+resumo <- with(da, aggregate(lvalor, by = list(anuncio, cor),
+                             FUN = function(x) length(x)))
+rp <- nPlot(x ~ Group.1, group = "Group.2",
+            data = resumo, type = "multiBarChart")
+rp$chart(color = c("#D0D0D0", "#5C5C5C", "black", "#1F77B4"))
+rp
+```
+
+### Gráfico de área (_AreaChart_) ###
+
+```{r}
+##-------------------------------------------
+dn <- density(da$lvalor)
+rp <- nPlot(y ~ x, data = data.frame(x = dn$x, y = dn$y), 
+            type = 'stackedAreaChart')
+rp$xAxis(axisLabel = "Logaritmo dos valores (R$) dos veículos")
+rp
+```
+
+### Gráfico de dispersão (_rPlot_) ###
+
+```{r}
+##-------------------------------------------
+rp <- rPlot(lvalor ~ km | anuncio, data = da,
+            type = "point", color = "motor")
+rp$guides(
+    x = list(title = "Quilômetros rodados" ),
+    y = list(title = "Logaritmo de base 10 dos valores dos veículos (R$)"),
+    color = list(
+        scale = "#! function(value){
+                color_mapping = {v3200: 'black', v3500:'#949494'}
+                return color_mapping[value];
+                } !#", title = "Motor"))
+rp$set(title = paste("Dispersão dos logaritmo dos preços com relação",
+                      "aos quilômetros rodados"))
+rp
+```
+
+### Adicionando Controladores (_addControls_) ###
+
+```{r}
+##-------------------------------------------
+rp <- rPlot(lvalor ~ km, data = da,
+            type = "point", color = "motor")
+rp$addControls("x", value = "km",
+               values = c("km", "ano"))
+rp$addControls("y", value = "lvalor",
+               values = c("lvalor", "valor", "nfotos"))
+rp$addControls("color", value = "motor",
+               values = c("motor", "cambio", "anuncio", "cor", "estado"))
+rp$set(dom = 'chartcontrols')
+rp
+```
+<style>#iframe-chartcontrols{height: 400px; width: 1000px}</style>
+
+```{r}
+##-------------------------------------------
+da$lvalorCateg <- cut(da$lvalor, 5)
+resumo <- with(da,
+               aggregate(
+                   lvalor,
+                   by = list(lvalorCateg, cambio, anuncio),
+                   FUN = function(x) length(x)))
+names(resumo) <- c("lvalorCateg", "Cambio", "Anunciante", "Freq")
+
+rp <- nPlot(Freq ~ lvalorCateg, group = "Cambio", data = resumo,
+      type = "multiBarChart", id = 'chartfilter')
+rp$addFilters("Anunciante")
+rp$set(dom = 'chartfilter')
+rp
+```
+<style>#iframe-chartfilter{height: 700px;  width:900px}</style>
+
+## Referências ##
+
+*  [*Web Scraping* Corrida São Silveste](http://blog.leg.ufpr.br/archives/250)
+Tutorial de *Web Scraping* pelo Blog do LEG
+* [*Web Scraping* em cifras de música](http://blog.leg.ufpr.br/archives/195)
+Tutorial de *Web Scraping* pelo Blog do LEG
+* [rCharts.io](http://ramnathv.github.io/rCharts/)
+Página do pacote **rCharts**
+* [NVD3 with rCharts](http://ramnathv.github.io/posts/rcharts-nvd3/)
+Post com exemplos NVD3 do **rCharts** (função `nPlot(...)`)

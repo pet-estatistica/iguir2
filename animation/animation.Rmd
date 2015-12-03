@@ -1,0 +1,255 @@
+---
+title: IGUIR2 - Galeria Animation
+author: Eduardo E. Ribeiro Jr \& Walmes M. Zeviani
+output:
+    html_document:
+      css: ../galery.css
+      toc: yes
+---
+
+```{r setup, include=FALSE}
+library(animation)
+library(knitr)
+```
+
+> Galeria de animações em estatística e utilitários para a criação de animações em R  
+> (Yihui Xie)
+
+## Instalação
+
+[http://cran.r-project.org/web/packages/animation](http://cran.r-project.org/web/packages/animation)  
+[https://github.com/yihui/animation](https://github.com/yihui/animation)
+
+```{r, eval=FALSE}
+install.packages("animation")
+require(animation)
+```
+
+## Animações disponíveis
+
+* `bisection.method()`
+* `boot.iid()`
+* `boot.lowess()`
+* `brownian.motion()`
+* `BM.circle()`
+* `g.brownian.motion()`
+* `buffon.needle()`
+* `clt.ani()`
+* `conf.int()`
+* `cv.ani()`
+* `flip.coin()`
+* `grad.desc()`
+* `kmeans.ani()`
+* `knn.ani()`
+* `least.squares()`
+* `lln.ani()`
+* `MC.hitormiss()`
+* `MC.samplemean()`
+* `mwar.ani()`
+* `newton.method()`
+* `price.ani()`
+* `quincunx()`
+* `sample.cluster()`
+* `sample.simple()`
+* `sample.strat()`
+* `sample.system()`
+* `sample.ratio()`
+* `sim.qqnorm()`
+
+## Exemplos
+
+### Intervalos de Confiança
+```{r, eval=TRUE, echo=TRUE, message=FALSE}
+## Demonstração do conceito de intervalos de confiança
+saveHTML(conf.int(),
+         autobrowse = FALSE,
+         img.name = "confint",
+         imgdir = "confint",
+         interval = 0.1,
+         htmlfile = "confint.html",
+         verbose = FALSE)
+```
+<center>
+<iframe src="confint.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+</center>
+
+### Lançamento de uma moeda
+```{r, eval=TRUE, echo=TRUE, message=FALSE}
+## Demonstração a convergência do lançamento de uma moeda
+saveHTML(flip.coin(),
+         autobrowse = FALSE,
+         img.name = "flipcoin",
+         imgdir = "flipcoin",
+         interval = 0.1,
+         htmlfile = "flipcoin.html",
+         verbose = FALSE)
+```
+<center>
+<iframe src="flipcoin.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+</center>
+
+### Algoritmo de agrupamento K-Means
+```{r, eval=TRUE, echo=TRUE, message=FALSE}
+## Demonstração do conceito do algoritmo de agrupamento K-means 
+saveHTML(kmeans.ani(),
+         autobrowse = FALSE,
+         img.name = "kmeans",
+         imgdir = "kmeans",
+         interval = 0.1,
+         htmlfile = "kmeans.html",
+         verbose = FALSE)
+```
+<center>
+<iframe src="kmeans.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+</center>
+
+### Método de mínimos quadrados
+```{r, eval=TRUE, echo=TRUE, message=FALSE}
+## Demonstração do método de mínimos quadrados
+saveHTML(least.squares(),
+         autobrowse = FALSE,
+         img.name = "leastsquares",
+         imgdir = "leastsquares",
+         interval = 0.1,
+         htmlfile = "leastsquares.html",
+         verbose = FALSE)
+```
+<center>
+<iframe src="leastsquares.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+</center>
+
+### Tábua de Galton (quincunx)
+```{r, eval=TRUE, echo=TRUE, message=FALSE}
+## Demonstração da tábua de galton (Binomial -> Normal)
+saveHTML(quincunx(),
+         autobrowse = FALSE,
+         img.name = "quincunx",
+         imgdir = "quincunx",
+         interval = 0.1,
+         nmax = 200 + 15 -2,
+         htmlfile = "quincunx.html",
+         verbose = FALSE)
+```
+<center>
+<iframe src="quincunx.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+</center>
+
+### Integração via _Sample Mean Monte Carlo_
+```{r, eval=TRUE, echo=TRUE, message=FALSE}
+## Demonstração do método de integração numérica via simulação Monte Carlo
+saveHTML(MC.samplemean(),
+         autobrowse = FALSE,
+         img.name = "mcsample",
+         imgdir = "mcsample",
+         interval = 0.1,
+         htmlfile = "mcsample.html",
+         verbose = FALSE)
+```
+<center>
+<iframe src="mcsample.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+</center>
+
+### Método de _Newton-Raphson_
+```{r, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+f <- quote(sin(x)-x^2/16)        # expressão da função, queremos obter a raíz
+fx0 <- function(x){ eval(f) }    # função
+f1 <- D(f,"x")                   # expressão da derivada
+fx1 <- function(x){ eval(f1) }   # função
+
+i <- 1       # valor inicial para o passo
+dif <- 10    # valor inical para a diferença entre duas avaliações
+tol <- 10^-9 # diferência mínima entre duas avaliações (tolerância)
+dif <- 100   # número máximo de passos
+x <- -7      # valor inicial para a raiz
+
+while(i<100 & dif>tol){
+  x[i+1] <- x[i]-fx0(x[i])/fx1(x[i])
+  dif <- abs(x[i+1]-x[i])
+  i <- i+1
+}
+
+## Demostração do algoritmo Newton-Raphson para otimização de função 
+saveHTML({
+  for(j in 2:i){
+    curve(fx0, -10, 10, main=paste("passo ", j-1, ", (x = ",
+                                   round(x[j],2), ")", sep=""))
+    abline(h=0, lty=2)
+    arrows(x[j-1], fx0(x[j-1]), x[j], fx0(x[j]), length=0.1, col=3, lwd=2)
+    abline(v=x[j], h=fx0(x[j]), lty=3, col=2)
+  }
+  abline(v=x[i], h=fx0(x[i]), col=2, lwd=2)
+  text(0, -3, label="CONVERGIU!", cex=2)
+  ani.pause() },
+  autobrowse = FALSE,
+  img.name = "newton",
+  imgdir = "newton",
+  interval = 0.1,
+  htmlfile = "newton.html",
+  verbose = FALSE)
+```
+<center>
+<iframe src="newton.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+</center>
+
+### Regressão Segmentada
+```{r, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
+
+df02 <- structure(list( x = c(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8,
+    0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2), Y1 = c(5.5,
+    7.2, 10.4, 7.4, 7.2, 9.1, 15.9, 12.7, 11.3, 14.4, 14.8, 17.1, 31.4,
+    17.5, 27.6, 19.6, 27.1, 21, 33.8, 30.2, 45.1), Y2 = c(0.8, 1.5, 2.6,
+    1.5, 1.4, 2.1, 3.9, 3.3, 3, 3.9, 4.2, 4.8, 6.9, 5.5, 7.3, 6.7, 8.2,
+    8.1, 10.2, 10.7, 12.8)), .Names = c("x", "Y1", "Y2"), class =
+    "data.frame", row.names = c(NA, -21L))
+
+newdata <- seq(0, 2, len = 1000)
+seq.b <- seq(0, 2, 0.05)
+desvios <- rep(NA, length(seq.b))
+
+## Demostração de uma regressão segmentada com diferentes pontos de
+## quebra 
+saveHTML(
+    for(i in 1:length(seq.b)){
+        b <- seq.b[i]
+        m0 <- lm(Y1 ~ x + I(pmax(x - b, 0)), data = df02)
+        beta <- coefficients(m0)
+
+        desvios[i] <- sum(residuals(m0)^2)
+        
+        cols <- c(rep(3, sum(df02$x < seq.b[i])),
+                  rep(4, sum(df02$x > seq.b[i] | df02$x == seq.b[i])))
+        
+        par(mfrow = c(1, 2))
+        plot(Y1 ~ x, data = df02, pch = 19, col = cols); grid()
+
+        if(b == 0){
+            abline(a = coef(m0)[1], b = coef(m0)[2], col = 4, lwd = 2)
+        }
+        if(b == 2){
+            abline(a = coef(m0)[1], b = coef(m0)[2], col = 3, lwd = 2)
+        }
+        if(b != 0 & b != 2){
+            curve(beta[1] + beta[2] * x, from = 0, to = b,
+                  col = 3, add = TRUE)
+        
+            curve(beta[1] + beta[2] * b + (beta[3] + beta[2]) * (x - b),
+                  from = b, to = 2,
+                  col = 4, lwd = 2, add = TRUE)
+        }
+        
+        plot(seq.b, desvios, type = "o", pch = 19, xlab = "Pontos de Quebra"); grid()
+        ani.pause()
+    },
+    autobrowse = FALSE,
+    img.name = "piecewise",
+    imgdir = "piecewise",
+    interval = 0.1,
+    htmlfile = "piecewise.html",
+    verbose = FALSE)
+```
+
+<iframe src="piecewise.html" width=100% height = 700 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"> </iframe>
+
+## Referências
+1. [http://vis.supstat.com/](http://vis.supstat.com/categories.html#animation-ref)
+2. [http://www.jstatsoft.org/v53/i01/paper](http://www.jstatsoft.org/v53/i01/paper)

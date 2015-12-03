@@ -1,0 +1,183 @@
+---
+title: IGUIR2 - Galeria rgl
+author: Eduardo E. Ribeiro Jr \& Walmes M. Zeviani
+output:
+    html_document:
+      css: ../galery.css
+      toc: yes
+---
+
+```{r setup, include=FALSE}
+require(knitr)
+source("setup.R")
+knit_hooks$set(webgl = hook_webgl)
+```
+
+> Visualização 3D interativas utilizando _OpenGL_  
+> (Duncan Murdoch)  
+
+## Instalação
+
+[http://cran.r-project.org/web/packages/rgl/](http://cran.r-project.org/web/packages/rgl/)  
+[https://github.com/trestletech/rgl](https://github.com/trestletech/rgl)
+
+```{r, eval=FALSE}
+install.packages("rgl")
+require(rgl)
+```
+
+## Exemplos
+
+### Gráfico de dispersão
+
+```{r, rgl = TRUE, fig.width=10}
+##--------------------------------------------
+x <- sort(rnorm(100))
+y <- rnorm(100)
+z <- rnorm(100) + atan2(x,y)
+
+mfrow3d(2, 2)
+plot3d(x, y, z, col=rainbow(100),
+       type = "p",
+       main = "Pontos")
+
+next3d()
+plot3d(x, y, z, col=rainbow(100),
+       type = "l",
+       main = "Linhas")
+
+next3d()
+plot3d(x, y, z, col=rainbow(100),
+       type = "s",
+       main = "Esferas")
+
+next3d()
+plot3d(x, y, z, col=rainbow(100),
+       type = "h",
+       main = "Segmentos")
+```
+
+### Superfícies
+
+```{r, rgl = TRUE, fig.width=10}
+dnorm2d <- function(x, y){
+     mvtnorm::dmvnorm(x = cbind(x, y), sigma = diag(2))
+}
+
+X <- seq(-4, 4, length = 20)
+Y <- seq(-4, 4, length = 20)
+fxy <- outer(X, Y, dnorm2d)
+
+persp3d(X, Y, fxy, col = "red", alpha = 0.7, aspect = c(1, 1, 0.5),
+        axes = T, xlab = "X", ylab = "Y", zlab = "fXY",
+        color = "seagreen")
+box3d()
+```
+
+### Elementos adicionais
+
+```{r, rgl = TRUE, fig.width=10}
+##--------------------------------------------
+mfrow3d(2, 2)
+
+##--------------------------------------------
+## Pontos
+xy <- mvtnorm::rmvnorm(300, sigma = diag(2))
+x <- xy[ ,1]; y <- xy[ ,2]
+
+persp3d(X, Y, fxy, col = "red", alpha = 0.7, aspect = c(1, 1, 0.5),
+        axes = T, xlab = "X", ylab = "Y", zlab = "fXY",
+        color = "seagreen", main = "Pontos")
+points3d(xy[, 1], xy[, 2], 0, col = 1, cex = 2)
+next3d()
+
+##--------------------------------------------
+## Planos
+quantil <- mvtnorm::qmvnorm(0.80, sigma = diag(2))$quantile
+
+persp3d(X, Y, fxy, col = "red", alpha = 0.7, aspect = c(1, 1, 0.5),
+        axes = T, xlab = "X", ylab = "Y", zlab = "fXY",
+        color = "seagreen", main = "Planos")
+planes3d(0, 0, -1, d = dnorm2d(quantil, quantil),
+         color = "gray70")
+planes3d(0, 1, 0, d = 0, color = "gray90")
+planes3d(1, 0, 0, d = 0, color = "gray90")
+next3d()
+
+##--------------------------------------------
+## Segmentos
+persp3d(X, Y, fxy, col = "red", alpha = 0.7, aspect = c(1, 1, 0.5),
+        axes = T, xlab = "X", ylab = "Y", zlab = "fXY",
+        color = "seagreen", main = "Segmentos")
+segments3d(x, y, 0)
+next3d()
+
+##--------------------------------------------
+## Adicionando texto
+persp3d(X, Y, fxy, col = "red", alpha = 0.7, aspect = c(1, 1, 0.5),
+        axes = T, xlab = "X", ylab = "Y", zlab = "fXY",
+        color = "seagreen", main = "Texto")
+text3d(-2, 2, 0.1, "Distribuição Normal Bivariada")
+```
+
+### Regressão Múltipla
+
+```{r, rgl = TRUE, fig.width=10}
+x <- rnorm(100)
+y <- rnorm(100)
+z <- 0.2*x - 0.3*y + rnorm(100, sd = 0.3)
+fit <- lm(z ~ x + y)
+plot3d(x, y, z, type = "s", col = "red", size = 1)
+coefs <- coef(fit)
+a <- coefs["x"]
+b <- coefs["y"]
+c <- -1
+d <- coefs["(Intercept)"]
+planes3d(a, b, c, d, alpha = 0.5)
+```
+
+### Controladores Web
+Em páginas html ainda se pode adicionar controladores para os gráficos exibidos em _WebGL_. As funções que permitem a inclusão de controladores são:
+
+* `propertySlider()`:	Deslizador numérico
+* `clipplaneSlider()`	Deslizador para um plano de corte
+* `subsetSlider()`	Deslizador de seleção
+* `toggleButton()`	Botão de alteração de itens
+* `propertySetter()`	Botão de alteração de propriedades
+
+
+
+```{r toggle, rgl = TRUE, rgl.keepopen = TRUE}
+sphereid <- with(subset(iris, Species == "setosa"), 
+     spheres3d(Sepal.Length, Sepal.Width, Petal.Length, 
+                  col=as.numeric(Species),
+                  radius = 0.211))
+with(subset(iris, Species == "versicolor"), 
+     spheres3d(Sepal.Length, Sepal.Width, Petal.Length, 
+               col=as.numeric(Species),
+     	       radius = 0.211))
+with(subset(iris, Species == "virginica"), 
+     spheres3d(Sepal.Length, Sepal.Width, Petal.Length, 
+               col=as.numeric(Species),
+     	       radius = 0.211))
+aspect3d(1,1,1)
+decorate3d()
+subid <- currentSubscene3d()
+```
+
+```{r results="asis", echo=TRUE, eval=FALSE}
+toggleButton(sphereid, label = "setosa", prefix = "toggle", subscene = subid)
+toggleButton(sphereid+1, label = "versicolor", prefix = "toggle", subscene = subid)
+toggleButton(sphereid+2, label = "virginica", prefix = "toggle", subscene = subid)
+```
+
+```{r results="asis", echo=FALSE}
+toggleButton(sphereid, label = "setosa", prefix = "toggle", subscene = subid)
+toggleButton(sphereid+1, label = "versicolor", prefix = "toggle", subscene = subid)
+toggleButton(sphereid+2, label = "virginica", prefix = "toggle", subscene = subid)
+```
+
+## Referências
+
+1. [http://cran.r-project.org/web/packages/rgl/vignettes/rgl.html](http://cran.r-project.org/web/packages/rgl/vignettes/rgl.html)
+
