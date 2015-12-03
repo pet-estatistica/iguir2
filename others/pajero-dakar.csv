@@ -1,0 +1,669 @@
+valor;nfotos;cilindradas;cor;km;cambio;ano;anuncio;cidade;estado
+73900;8;3.5;Prata;92000;Automática;2012;Veículo de loja;Ribeirão Preto;SP
+78990;6;3.5;Branco;50451;Automática;2012;Veículo de loja;Rio de Janeiro;RJ
+82780;8;3.2;Preto;125000;Automática;2010;Veículo de loja;Campinas;SP
+87900;8;3.2;Branco;96000;Automática;2010;Veículo de loja;Salvador;BA
+87990;8;3.2;Prata;84900;Manual;2009;Veículo de loja;Osasco;SP
+88790;8;3.2;Prata;114000;Automática;2010;Veículo de loja;Santo André;SP
+89500;8;3.5;Preto;70000;Automática;2012;Veículo de loja;São José dos Campos;SP
+89900;8;3.5;Branco;70000;Automática;2011;Veículo de loja;São Paulo;SP
+89999;8;3.2;Branco;112000;Automática;2010;Veículo de loja;São Paulo;SP
+95900;8;3.2;Prata;94000;Automática;2010;Veículo de loja;Bragança Paulista;SP
+98000;8;3.2;Preto;72000;Automática;2009;Veículo de loja;São Paulo;SP
+98500;7;3.5;Preto;67000;Automática;2011;Veículo de loja;Juiz de Fora;MG
+108850;8;3.2;Preto;62785;Automática;2010;Veículo de loja;São Bernardo do Campo;SP
+109800;8;3.2;Cinza;80000;Automática;2011;Veículo de loja;São Paulo;SP
+109900;8;3.2;Prata;56000;Automática;2011;Veículo de loja;Belo Horizonte;MG
+109900;8;3.2;Prata;67000;Automática;2011;Veículo de loja;Belo Horizonte;MG
+112900;8;3.2;Prata;62000;Automática;2012;Veículo de loja;Limeira;SP
+118850;8;3.2;Branco;28983;Automática;2012;Veículo de loja;São Bernardo do Campo;SP
+119900;8;3.2;Branco;54000;Automática;2012;Veículo de loja;São Paulo;SP
+128000;7;3.5;Branco;3800;Automática;2015;Veículo de loja;Uberlândia;MG
+128800;8;3.2;Cinza;49216;Automática Sequencial;2013;Veículo de loja;São Paulo;SP
+129980;8;3.2;Prata;22000;Automática;2013;Veículo de loja;Campinas;SP
+77000;8;3.2;Preto;149258;Automática;2009;Veículo de concessionária;São Paulo;SP
+142990;8;3.2;Indefinida;0;Automática;2015;Veículo de loja;São Paulo;SP
+144990;8;3.2;Prata;21000;Automática;2014;Veículo de loja;Rio de Janeiro;RJ
+155000;8;3.2;Cinza;9900;Automática;2014;Veículo de loja;Contagem;MG
+168990;8;3.2;Indefinida;0;Automática;2015;Veículo de loja;São Paulo;SP
+85000;8;3.5;Prata;45183;Automática;2011;Veículo de concessionária;São Paulo;SP
+86900;6;3.5;Preto;51000;Automática;2011;Veículo de concessionária;Belo Horizonte;MG
+89900;8;3.5;Prata;30000;Automática;2011;Veículo de concessionária;Guarulhos;SP
+92900;6;3.5;Prata;29000;Automática;2013;Veículo de concessionária;Natal;RN
+94790;8;3.2;Preto;71000;Automática;2010;Veículo de concessionária;Santos;SP
+94900;8;3.2;Prata;1e+05;Automática;2011;Veículo de concessionária;São José do Rio Preto;SP
+98890;7;3.2;Prata;1e+05;Automática;2012;Veículo de concessionária;São José do Rio Preto;SP
+98900;8;3.2;Preto;73000;Automática;2011;Veículo de concessionária;São Paulo;SP
+99900;8;3.5;Prata;38000;Automática;2012;Veículo de concessionária;Belo Horizonte;MG
+103890;8;3.5;Prata;27390;Automática;2013;Veículo de concessionária;Americana;SP
+106500;8;3.5;Prata;30000;Automática;2013;Veículo de concessionária;Belo Horizonte;MG
+109900;6;3.2;Branco;89000;Automática;2011;Veículo de concessionária;Curitiba;PR
+110900;8;3.2;Cinza;69768;Automática;2013;Veículo de concessionária;Guarulhos;SP
+111990;8;3.2;Branco;83700;Automática;2012;Veículo de concessionária;São Paulo;SP
+113990;7;3.2;Prata;34120;Automática;2013;Veículo de concessionária;Ipatinga;MG
+116990;8;3.2;Cinza;40000;Automática;2014;Veículo de concessionária;Goiânia;GO
+117000;8;3.5;Branco;27753;Automática;2014;Veículo de concessionária;Guarulhos;SP
+117000;8;3.2;Preto;33000;Automática;2013;Veículo de concessionária;Belo Horizonte;MG
+117900;8;3.5;Preto;17000;Automática;2014;Veículo de concessionária;Santos;SP
+119900;8;3.5;Preto;16500;Automática;2014;Veículo de concessionária;Praia Grande;SP
+139900;7;3.2;Preto;22000;Automática;2013;Veículo de concessionária;Uberlândia;MG
+144900;8;3.2;Prata;25000;Automática;2014;Veículo de concessionária;Jundiaí;SP
+146000;8;3.2;Marrom;48000;Automática;2014;Veículo de concessionária;Franca;SP
+147720;8;3.5;Marrom;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+147720;8;3.2;Preto;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+150890;7;3.2;Preto;8000;Automática;2014;Veículo de concessionária;São Paulo;SP
+155490;6;3.5;Branco;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+155490;6;3.5;Branco;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+155490;6;3.5;Prata;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+172890;8;3.2;Preto;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+181990;6;3.2;Branco;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+81900;8;3.2;Preto;87000;Automática;2009;Veículo de particular;Paulínia;SP
+83200;6;3.5;Preto;58000;Automática;2011;Veículo de particular;Rio de Janeiro;RJ
+84900;8;3.2;Preto;98000;Automática;2009;Veículo de particular;Rio de Janeiro;RJ
+85000;8;3.5;Preto;59000;Automática;2012;Veículo de particular;São Paulo;SP
+85900;8;3.5;Prata;46000;Automática;2011;Veículo de particular;Imbituva;PR
+86000;8;3.2;Cinza;86178;Automática;2010;Veículo de particular;Campo Limpo Paulista;SP
+87500;8;3.5;Preto;32000;Automática;2013;Veículo de particular;Santo André;SP
+88000;7;3.2;Preto;84000;Automática;2012;Veículo de particular;Itu;SP
+88700;8;3.2;Branco;110000;Automática;2010;Veículo de particular;São Paulo;SP
+89000;7;3.5;Branco;30000;Automática;2013;Veículo de particular;Rio de Janeiro;RJ
+89500;8;3.2;Prata;119000;Automática;2009;Veículo de particular;Campos dos Goytacazes;RJ
+89900;8;3.5;Verde;49600;Automática Sequencial;2010;Veículo de particular;São Paulo;SP
+92000;7;3.2;Prata;75111;Automática;2010;Veículo de particular;Jacarezinho;PR
+92000;8;3.5;Prata;35000;Automática;2011;Veículo de particular;São Paulo;SP
+92900;8;3.2;Prata;120000;Automática;2009;Veículo de particular;Fortaleza;CE
+92900;8;3.2;Prata;116000;Automática;2010;Veículo de particular;Londrina;PR
+93000;6;3.2;Preto;90000;Automática;2010;Veículo de particular;São Caetano do Sul;SP
+93600;8;3.2;Prata;68320;Automática;2009;Veículo de particular;São Paulo;SP
+94000;6;3.2;Cinza;91000;Automática;2011;Veículo de particular;São Paulo;SP
+95000;8;3.2;Cinza;180000;Automática;2011;Veículo de particular;São Luís;MA
+95000;8;3.5;Branco;36000;Automática;2012;Veículo de particular;São Paulo;SP
+95000;8;3.5;Cinza;33000;Automática;2011;Veículo de particular;Cotia;SP
+95000;8;3.2;Preto;68000;Automática;2009;Veículo de particular;São Paulo;SP
+95500;7;3.2;Preto;85000;Automática Sequencial;2011;Veículo de particular;São Paulo;SP
+95500;8;3.2;Cinza;103100;Automática;2011;Veículo de particular;São Paulo;SP
+95500;7;3.2;Prata;81200;Automática;2011;Veículo de particular;Rio de Janeiro;RJ
+95800;8;3.5;Branco;78500;Automática;2012;Veículo de particular;Pato Branco;PR
+96000;8;3.5;Preto;23000;Automática;2012;Veículo de particular;São Paulo;SP
+96500;8;3.5;Prata;83458;Automática;2011;Veículo de particular;Campinas;SP
+97400;7;3.5;Branco;48000;Automática;2013;Veículo de particular;Jundiaí;SP
+98000;7;3.2;Prata;57000;Automática;2010;Veículo de particular;São Paulo;SP
+98900;6;3.2;Preto;32000;Automática;2011;Veículo de particular;São Paulo;SP
+99000;6;3.5;Cinza;30000;Automática;2013;Veículo de particular;São Paulo;SP
+99500;6;3.2;Branco;70000;Automática;2011;Veículo de particular;Limeira;SP
+99900;8;3.5;Prata;31000;Automática;2013;Veículo de particular;Jundiaí;SP
+100500;8;3.2;Preto;44000;Automática;2013;Veículo de particular;Rio de Janeiro;RJ
+101500;8;3.2;Preto;80600;Automática;2011;Veículo de particular;Catanduva;SP
+103000;8;3.5;Preto;19400;Automática;2013;Veículo de particular;São Paulo;SP
+103000;7;3.2;Cinza;64000;Automática;2012;Veículo de particular;São Paulo;SP
+104799;7;3.2;Branco;94000;Automática;2012;Veículo de particular;São Joaquim da Barra;SP
+104800;8;3.2;Cinza;63000;Automática;2012;Veículo de particular;São Paulo;SP
+105000;6;3.2;Verde;47600;Automática;2011;Veículo de particular;Rio de Janeiro;RJ
+105000;8;3.2;Branco;51324;Automática;2012;Veículo de particular;Santo André;SP
+105000;7;3.5;Preto;30300;Automática;2012;Veículo de particular;São Paulo;SP
+105000;8;3.2;Preto;120000;Automática;2010;Veículo de particular;São José do Rio Preto;SP
+105000;8;3.2;Branco;52000;Automática;2013;Veículo de particular;Três Rios;RJ
+105000;8;3.5;Branco;30000;Automática;2013;Veículo de particular;Santana de Parnaíba;SP
+106000;6;3.5;Prata;11000;Automática;2013;Veículo de particular;Botucatu;SP
+106900;8;3.2;Branco;49529;Automática;2011;Veículo de particular;Governador Valadares;MG
+108000;8;3.2;Cinza;58000;Automática;2012;Veículo de particular;Rio de Janeiro;RJ
+109000;8;3.2;Prata;51000;Automática;2013;Veículo de particular;São Paulo;SP
+109990;8;3.2;Prata;90000;Automática;2011;Veículo de particular;Petrópolis;RJ
+110000;8;3.2;Prata;52000;Automática Sequencial;2011;Veículo de particular;Atibaia;SP
+110000;8;3.2;Preto;78000;Automática;2012;Veículo de particular;Pouso Alegre;MG
+110500;8;3.2;Branco;13395;Automática;2013;Veículo de particular;São Paulo;SP
+113000;8;3.2;Branco;38500;Automática;2013;Veículo de particular;Rio de Janeiro;RJ
+113500;8;3.2;Branco;26500;Automática;2013;Veículo de particular;Campos dos Goytacazes;RJ
+115000;8;3.2;Preto;55000;Automática;2012;Veículo de particular;Rio de Janeiro;RJ
+120999;8;3.2;Prata;43000;Automática;2013;Veículo de particular;Suzano;SP
+122000;8;3.2;Prata;55000;Automática;2012;Veículo de particular;Jundiaí;SP
+130000;8;3.2;Prata;48000;Automática;2014;Veículo de particular;Guarulhos;SP
+135990;8;3.5;Branco;4980;Automática;2014;Veículo de particular;São Paulo;SP
+138900;8;3.2;Prata;24000;Automática;2014;Veículo de particular;Salvador;BA
+145900;6;3.2;Prata;26000;Automática;2013;Veículo de particular;Rio de Janeiro;RJ
+155000;8;3.2;Prata;34000;Automática;2012;Veículo de particular;São Paulo;SP
+156900;8;3.2;Branco;17000;Automática;2014;Veículo de particular;São Paulo;SP
+159000;8;3.2;Prata;111111;Automática;2015;Veículo de particular;Belo Horizonte;MG
+170000;8;3.5;Cinza;5000;Automática;2015;Veículo de particular;São Paulo;SP
+180000;7;3.2;Preto;17500;Automática;2012;Veículo de particular;São Paulo;SP
+137990;8;3.5;Marrom;NA;Automática;2014;Veículo de loja;Itajaí;SC
+99900;8;3.5;Prata;NA;Automática;2011;Veículo de concessionária;Caxias do Sul;RS
+101890;6;3.2;Preto;NA;Automática;2011;Veículo de concessionária;Rio de Janeiro;RJ
+92990;5;3.2;Prata;108000;Automática;2010;Veículo de loja;Osasco;SP
+99900;5;3.2;Preto;92000;Automática;2010;Veículo de loja;Bento Gonçalves;RS
+105900;4;3.5;Preto;21800;Automática;2012;Veículo de loja;Jundiaí;SP
+95900;5;3.2;Prata;63000;Automática;2011;Veículo de concessionária;Maceió;AL
+107500;4;3.2;Prata;82000;Automática;2013;Veículo de concessionária;Guarulhos;SP
+140300;5;3.2;Preto;26900;Automática;2013;Veículo de concessionária;Rio Verde;GO
+155490;4;3.5;Preto;0;Automática;2015;Veículo de concessionária;Santos;SP
+155490;4;3.2;Preto;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+181990;5;3.2;Branco;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+77900;4;3.2;Preto;101457;Automática;2009;Veículo de particular;São Paulo;SP
+87000;4;3.5;Prata;36000;Automática;2013;Veículo de particular;São José dos Campos;SP
+89000;5;3.5;Prata;43000;Automática;2012;Veículo de particular;São Paulo;SP
+89000;4;3.2;Prata;144000;Automática;2009;Veículo de particular;Chapecó;SC
+90000;5;3.5;Preto;14550;Automática;2013;Veículo de particular;Rio de Janeiro;RJ
+92000;5;3.5;Preto;60500;Automática;2012;Veículo de particular;São Paulo;SP
+95000;5;3.2;Branco;83000;Automática;2009;Veículo de particular;São Paulo;SP
+95500;5;3.2;Branco;101000;Automática;2011;Veículo de particular;São Paulo;SP
+99000;5;3.2;Prata;51000;Manual;2012;Veículo de particular;Catalão;GO
+1e+05;3;3.5;Marrom;43000;Automática;2012;Veículo de particular;São Bernardo do Campo;SP
+103000;3;3.2;Branco;42600;Automática;2011;Veículo de particular;Recife;PE
+103000;4;3.2;Prata;1e+05;Automática;2011;Veículo de particular;São Paulo;SP
+105000;5;3.2;Branco;106000;Automática;2012;Veículo de particular;João Pessoa;PB
+107000;5;3.2;Cinza;90000;Automática;2010;Veículo de particular;São Paulo;SP
+110000;5;3.2;Prata;60000;Automática;2011;Veículo de particular;Fortaleza;CE
+110000;5;3.5;Cinza;34000;Automática;2012;Veículo de particular;São Paulo;SP
+135000;5;3.2;Preto;93000;Automática;2013;Veículo de particular;Goiânia;GO
+135000;5;3.2;Branco;77000;Automática;2011;Veículo de particular;Curitiba;PR
+140000;4;3.2;Cinza;25000;Automática;2014;Veículo de particular;São Paulo;SP
+143900;4;3.2;Preto;8000;Automática;2014;Veículo de particular;São Paulo;SP
+84999;4;3.2;Preto;NA;Automática;2009;Veículo de loja;Santo Antônio de Jesus;BA
+112900;3;3.2;Prata;NA;Automática;2012;Veículo de concessionária;Rio de Janeiro;RJ
+119900;1;3.2;Preto;30000;Automática;2012;Veículo de concessionária;Passos;MG
+105900;2;3.2;Prata;73000;Automática;2012;Veículo de particular;Jaguariúna;SP
+115000;1;3.5;Preto;11000;Automática;2014;Veículo de particular;Jundiaí;SP
+115900;2;3.5;Branco;21809;Automática;2014;Veículo de particular;São Paulo;SP
+125000;2;3.2;Branco;42000;Automática;2013;Veículo de particular;Jaraguá do Sul;SC
+112900;1;3.2;Preto;NA;Automática;2012;Veículo de concessionária;Rio de Janeiro;RJ
+99900;0;3.2;Preto;76000;Automática;2012;Veículo de loja;Florianópolis;SC
+155490;0;3.2;Branco;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+98000;0;3.2;Preto;60000;Manual;2010;Veículo de particular;Jaboatão dos Guararapes;PE
+117000;9;3.2;Prata;74000;Automática;2012;Veículo de particular;Mirassol;SP
+76780;8;3.2;Preto;1e+05;Automática;2009;Veículo de loja;Campinas;SP
+78000;8;3.2;Preto;120000;Automática;2009;Veículo de loja;São Paulo;SP
+81000;7;3.2;Prata;112000;Automática;2009;Veículo de loja;Florianópolis;SC
+83900;8;3.5;Preto;46769;Automática;2011;Veículo de loja;Vinhedo;SP
+85000;8;3.2;Branco;150000;Automática;2010;Veículo de loja;São Paulo;SP
+86900;7;3.2;Prata;94000;Manual;2011;Veículo de loja;Recife;PE
+92900;8;3.2;Prata;80000;Automática;2009;Veículo de loja;Curitiba;PR
+92900;8;3.2;Preto;99000;Automática;2009;Veículo de loja;Serra;ES
+92900;8;3.2;Prata;75000;Automática;2011;Veículo de loja;Rio de Janeiro;RJ
+94000;7;3.2;Prata;95300;Automática;2010;Veículo de loja;São Carlos;SP
+98900;8;3.5;Branco;30000;Automática;2013;Veículo de loja;Recife;PE
+99900;8;3.2;Prata;66000;Automática;2010;Veículo de loja;Belém;PA
+99900;7;3.2;Verde;122000;Manual;2011;Veículo de loja;Irati;PR
+99900;8;3.2;Branco;114034;Automática;2012;Veículo de loja;Ribeirão Preto;SP
+99900;8;3.2;Prata;92400;Automática;2012;Veículo de loja;Petrópolis;RJ
+103890;8;3.5;Prata;27390;Automática;2013;Veículo de loja;Americana;SP
+105000;6;3.5;Prata;30000;Automática;2013;Veículo de loja;Itatiba;SP
+108000;7;3.2;Cinza;62000;Automática;2011;Veículo de loja;Belo Horizonte;MG
+109800;8;3.2;Cinza;80000;Automática;2011;Veículo de loja;São Paulo;SP
+109900;8;3.2;Branco;19916;Automática;2012;Veículo de loja;Belo Horizonte;MG
+109990;8;3.2;Preto;28000;Automática;2013;Veículo de loja;São Paulo;SP
+110000;8;3.2;Prata;40570;Manual;2013;Veículo de loja;Curitiba;PR
+110000;8;3.2;Branco;75000;Automática;2012;Veículo de loja;Macaé;RJ
+115100;8;3.2;Branco;42000;Automática Sequencial;2013;Veículo de loja;Goiânia;GO
+119888;6;3.2;Branco;29000;Automática;2012;Veículo de loja;Joinville;SC
+119900;8;3.2;Prata;18724;Automática;2013;Veículo de loja;Recife;PE
+119900;6;3.2;Prata;67000;Automática;2012;Veículo de loja;Mossoró;RN
+123000;8;3.2;Branco;32500;Automática;2013;Veículo de loja;Taubaté;SP
+123900;7;3.5;Branco;15640;Automática;2014;Veículo de loja;Jundiaí;SP
+124900;7;3.2;Prata;19500;Automática;2012;Veículo de loja;Recife;PE
+124900;7;3.2;Preto;70000;Automática;2011;Veículo de loja;Rio de Janeiro;RJ
+131999;8;3.2;Branco;64000;Automática;2013;Veículo de loja;Goiânia;GO
+132900;8;3.2;Branco;32700;Automática;2013;Veículo de loja;Sorocaba;SP
+139800;8;3.2;Branco;29000;Automática;2014;Veículo de loja;Goiânia;GO
+139990;7;3.2;Prata;9000;Automática;2013;Veículo de loja;Jaraguá do Sul;SC
+142900;8;3.2;Branco;39600;Automática;2014;Veículo de loja;Campinas;SP
+158900;7;3.2;Marrom;23000;Automática;2014;Veículo de loja;Recife;PE
+165000;6;3.2;Preto;37000;Automática;2013;Veículo de loja;Belém;PA
+73200;6;3.5;Preto;103000;Automática;2012;Veículo de concessionária;Barueri;SP
+79900;8;3.2;Preto;105273;Automática;2009;Veículo de concessionária;Sorocaba;SP
+80000;8;3.5;Branco;94000;Automática;2011;Veículo de concessionária;São Paulo;SP
+82900;7;3.2;Prata;1e+05;Automática;2010;Veículo de concessionária;Salvador;BA
+84000;8;3.5;Branco;44000;Automática;2011;Veículo de concessionária;São Paulo;SP
+87900;6;3.5;Prata;84232;Automática;2011;Veículo de concessionária;Curitiba;PR
+95500;8;3.2;Preto;90000;Automática;2011;Veículo de concessionária;Fortaleza;CE
+95800;8;3.5;Preto;45000;Automática;2012;Veículo de concessionária;São Bernardo do Campo;SP
+95900;8;3.2;Prata;90000;Automática;2010;Veículo de concessionária;Salvador;BA
+97900;8;3.5;Cinza;29730;Automática;2013;Veículo de concessionária;São Paulo;SP
+99800;8;3.2;Prata;66000;Manual;2012;Veículo de concessionária;São José;SC
+99990;6;3.5;Prata;42000;Automática;2012;Veículo de concessionária;Limeira;SP
+99990;8;3.2;Preto;39600;Automática;2013;Veículo de concessionária;São Paulo;SP
+1e+05;8;3.2;Prata;84000;Automática Sequencial;2011;Veículo de concessionária;Patos de Minas;MG
+103900;8;3.2;Branco;24882;Automática;2013;Veículo de concessionária;São Paulo;SP
+103990;8;3.5;Prata;41363;Automática;2012;Veículo de concessionária;São Paulo;SP
+104800;8;3.2;Preto;87000;Automática Sequencial;2010;Veículo de concessionária;São José;SC
+104900;8;3.2;Branco;90000;Automática;2012;Veículo de concessionária;Salvador;BA
+105000;8;3.2;Branco;170000;Automática;2012;Veículo de concessionária;Patos de Minas;MG
+105990;8;3.2;Branco;75618;Automática;2012;Veículo de concessionária;São Paulo;SP
+109990;8;3.2;Prata;52222;Automática;2011;Veículo de concessionária;Juiz de Fora;MG
+115840;8;3.5;Prata;27200;Automática;2011;Veículo de concessionária;São Paulo;SP
+117800;8;3.2;Preto;70000;Automática;2012;Veículo de concessionária;São José;SC
+127840;8;3.5;Marrom;12500;Automática;2014;Veículo de concessionária;São Paulo;SP
+135900;6;3.5;Prata;6002;Automática;2014;Veículo de concessionária;Curitiba;PR
+155490;8;3.5;Preto;0;Automática;2015;Veículo de concessionária;Americana;SP
+155490;6;3.2;Branco;0;Automática;2015;Veículo de concessionária;Americana;SP
+155490;8;3.2;Cinza;0;Automática;2015;Veículo de concessionária;Rio de Janeiro;RJ
+155900;8;3.2;Branco;23500;Automática;2014;Veículo de concessionária;Curitiba;PR
+181990;8;3.2;Preto;0;Automática;2015;Veículo de concessionária;Americana;SP
+181990;8;3.2;Prata;0;Automática;2015;Veículo de concessionária;Rio de Janeiro;RJ
+183990;8;3.2;Branco;0;Automática;2015;Veículo de concessionária;Americana;SP
+183990;6;3.2;Preto;0;Automática;2015;Veículo de concessionária;Rio de Janeiro;RJ
+75000;8;3.5;Prata;67000;Automática;2011;Veículo de particular;Caxias do Sul;RS
+80000;6;3.2;Prata;63000;Automática;2009;Veículo de particular;Rio de Janeiro;RJ
+85000;8;3.2;Preto;115000;Manual;2009;Veículo de particular;Fraiburgo;SC
+89000;7;3.2;Preto;1e+05;Automática;2009;Veículo de particular;Santa Cruz;RN
+94900;8;3.2;Preto;65000;Automática;2009;Veículo de particular;São Paulo;SP
+99800;7;3.2;Preto;69000;Automática;2010;Veículo de particular;São Caetano do Sul;SP
+105000;6;3.2;Prata;67707;Automática;2011;Veículo de particular;Vitória da Conquista;BA
+106000;8;3.2;Prata;16500;Automática Sequencial;2013;Veículo de particular;São Bernardo do Campo;SP
+108000;7;3.2;Preto;55000;Automática;2011;Veículo de particular;Contagem;MG
+150000;8;3.2;Preto;13000;Automática Sequencial;2014;Veículo de particular;Cotia;SP
+106900;8;3.2;Prata;NA;Automática;2011;Veículo de loja;Fortaleza;CE
+119900;8;3.2;Prata;NA;Automática;2013;Veículo de loja;Cocal do Sul;SC
+94900;7;3.5;Branco;NA;Automática;2012;Veículo de concessionária;Uberaba;MG
+110000;8;3.2;Preto;NA;Automática;2013;Veículo de particular;São José do Rio Preto;SP
+99900;4;3.2;Preto;74000;Automática;2012;Veículo de loja;Sumaré;SP
+110000;5;3.2;Prata;126000;Automática;2011;Veículo de loja;São Paulo;SP
+119900;5;3.2;Preto;46000;Automática;2012;Veículo de loja;Ponta Grossa;PR
+151490;5;3.2;Branco;0;Automática;2015;Veículo de loja;Sinop;MT
+90000;5;3.2;Preto;93488;Automática;2010;Veículo de concessionária;Teresina;PI
+83900;5;3.5;Branco;120000;Automática;2011;Veículo de concessionária;Jundiaí;SP
+1e+05;5;3.2;Cinza;108025;Automática;2011;Veículo de concessionária;Teresina;PI
+94990;5;3.2;Prata;82218;Automática;2010;Veículo de concessionária;Limeira;SP
+115000;5;3.2;Prata;35853;Automática;2012;Veículo de concessionária;Maceió;AL
+149900;4;3.2;Preto;29000;Automática;2014;Veículo de concessionária;Jundiaí;SP
+155490;4;3.5;Prata;0;Automática;2015;Veículo de concessionária;Rio de Janeiro;RJ
+77500;4;3.2;Prata;155000;Automática;2009;Veículo de particular;São Bernardo do Campo;SP
+104700;5;3.5;Prata;12000;Automática;2012;Veículo de particular;São Paulo;SP
+108500;4;3.2;Prata;43000;Automática;2012;Veículo de particular;São Paulo;SP
+125990;5;3.2;Branco;107000;Automática;2013;Veículo de particular;Brasília;DF
+127900;4;3.2;Prata;19500;Automática;2013;Veículo de particular;Campinas;SP
+105000;5;3.2;Branco;NA;Automática;2012;Veículo de loja;Lucas do Rio Verde;MT
+134800;3;3.2;Branco;NA;Automática;2014;Veículo de loja;Goiânia;GO
+109990;5;3.2;Prata;NA;Automática;2012;Veículo de concessionária;Passos;MG
+146000;1;3.2;Prata;51000;Automática;2014;Veículo de concessionária;Franca;SP
+83000;1;3.2;Preto;1e+05;Automática;2009;Veículo de particular;São Paulo;SP
+104990;0;3.2;Branco;120633;Automática;2011;Veículo de loja;Americana;SP
+109900;0;3.2;Prata;40000;Automática;2013;Veículo de loja;Rio de Janeiro;RJ
+154990;0;3.2;Branco;7000;Automática;2014;Veículo de concessionária;Limeira;SP
+104900;0;3.2;Prata;100;Automática;2011;Veículo de concessionária;Joinville;SC
+144990;0;3.2;Branco;0;Automática;2015;Veículo de concessionária;Recife;PE
+126800;0;3.2;Preto;39500;Automática;2013;Veículo de particular;Rio de Janeiro;RJ
+117000;0;3.2;Preto;35000;Automática;2013;Veículo de concessionária;São Paulo;SP
+109000;0;3.2;Cinza;NA;Automática;2012;Veículo de loja;São José;SC
+135000;0;3.2;Prata;NA;Automática;2013;Veículo de loja;Mossoró;RN
+77900;6;3.5;Prata;61773;Automática;2011;Veículo de particular;São Paulo;SP
+76000;6;3.2;Preto;149000;Automática;2009;Veículo de particular;Contagem;MG
+79800;7;3.2;Branco;90000;Manual;2012;Veículo de particular;Uberaba;MG
+85000;8;3.5;Branco;37500;Automática;2011;Veículo de particular;São Paulo;SP
+89900;7;3.5;Prata;60000;Automática;2011;Veículo de particular;São Paulo;SP
+91000;8;3.2;Preto;69000;Automática;2011;Veículo de particular;Natal;RN
+94700;7;3.5;Branco;31000;Automática;2013;Veículo de particular;São Paulo;SP
+95000;8;3.2;Prata;103000;Automática;2010;Veículo de particular;Belo Horizonte;MG
+95000;8;3.2;Prata;100;Automática;2010;Veículo de particular;Belo Horizonte;MG
+96000;8;3.2;Preto;64278;Automática;2011;Veículo de particular;Natal;RN
+99000;8;3.5;Branco;52700;Automática;2012;Veículo de particular;São José do Rio Preto;SP
+105000;6;3.2;Prata;21000;Automática;2013;Veículo de particular;São Paulo;SP
+109990;6;3.2;Preto;78000;Automática;2011;Veículo de particular;Florianópolis;SC
+116000;8;3.2;Prata;125000;Automática;2012;Veículo de particular;Rio de Janeiro;RJ
+116000;8;3.2;Branco;23000;Automática;2013;Veículo de particular;Rio de Janeiro;RJ
+119900;8;3.2;Preto;31700;Automática;2012;Veículo de particular;Rio de Janeiro;RJ
+75900;8;3.5;Prata;98000;Automática;2011;Veículo de concessionária;Jundiaí;SP
+78000;6;3.2;Branco;86959;Automática;2010;Veículo de concessionária;Maceió;AL
+79990;8;3.2;Cinza;133700;Automática;2009;Veículo de concessionária;São Paulo;SP
+87990;8;3.2;Preto;92375;Automática;2009;Veículo de concessionária;Porto Alegre;RS
+89900;8;3.5;Branco;42000;Automática;2012;Veículo de concessionária;Rio de Janeiro;RJ
+92800;6;3.2;Prata;110000;Automática;2010;Veículo de concessionária;Guarulhos;SP
+94900;8;3.5;Prata;35500;Automática;2012;Veículo de concessionária;Maringá;PR
+96990;8;3.2;Prata;73236;Automática;2009;Veículo de concessionária;São Paulo;SP
+1e+05;6;3.2;Cinza;62000;Automática;2011;Veículo de concessionária;Fortaleza;CE
+105000;8;3.2;Prata;52000;Automática;2011;Veículo de concessionária;Fortaleza;CE
+105900;7;3.2;Preto;55000;Automática;2012;Veículo de concessionária;Salvador;BA
+108900;7;3.2;Branco;100;Automática;2012;Veículo de concessionária;Uberlândia;MG
+109000;8;3.2;Prata;68243;Automática;2013;Veículo de concessionária;Linhares;ES
+114900;7;3.2;Preto;100;Automática;2012;Veículo de concessionária;Uberlândia;MG
+114900;7;3.2;Preto;100;Automática;2013;Veículo de concessionária;Uberlândia;MG
+123990;8;3.2;Prata;0;Manual;2014;Veículo de concessionária;Cascavel;PR
+120000;7;3.2;Preto;54002;Automática;2012;Veículo de concessionária;Garanhuns;PE
+124800;8;3.2;Preto;40188;Automática;2012;Veículo de concessionária;Brasília;DF
+125990;6;3.2;Branco;63000;Automática;2013;Veículo de concessionária;Palmas;TO
+128490;8;3.2;Prata;36823;Automática;2013;Veículo de concessionária;Guarulhos;SP
+129990;6;3.2;Prata;36000;Automática;2013;Veículo de concessionária;Guarulhos;SP
+137800;8;3.2;Prata;30000;Automática;2014;Veículo de concessionária;Salvador;BA
+134990;8;3.5;Branco;10000;Automática;2014;Veículo de concessionária;Vitória;ES
+139990;7;3.2;Prata;84828;Automática;2012;Veículo de concessionária;Palmas;TO
+142900;7;3.2;Preto;22000;Automática;2013;Veículo de concessionária;Uberlândia;MG
+141900;6;3.2;Prata;100;Automática;2013;Veículo de concessionária;Uberaba;MG
+146900;8;3.2;Preto;50380;Automática;2012;Veículo de concessionária;São Paulo;SP
+155490;8;3.5;Branco;0;Automática;2015;Veículo de concessionária;São José do Rio Preto;SP
+155490;8;3.2;Prata;0;Automática;2015;Veículo de concessionária;São José do Rio Preto;SP
+155900;7;3.2;Marrom;13000;Automática;2014;Veículo de concessionária;Uberlândia;MG
+152000;6;3.2;Prata;24866;Automática;2014;Veículo de concessionária;Maceió;AL
+160990;7;3.2;Branco;30000;Automática;2014;Veículo de concessionária;Goiânia;GO
+155490;8;3.5;Preto;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+168840;8;3.5;Marrom;12000;Automática;2014;Veículo de concessionária;São Paulo;SP
+172990;8;3.2;Indefinida;0;Automática;2015;Veículo de concessionária;Campinas;SP
+179990;7;3.2;Cinza;0;Automática;2015;Veículo de concessionária;Uberlândia;MG
+176840;8;3.5;Marrom;12000;Automática;2014;Veículo de concessionária;São Paulo;SP
+183990;8;3.2;Cinza;0;Automática;2015;Veículo de concessionária;São José do Rio Preto;SP
+181990;8;3.2;Marrom;0;Automática;2015;Veículo de concessionária;Juiz de Fora;MG
+181990;7;3.2;Prata;0;Automática;2015;Veículo de concessionária;São Paulo;SP
+74000;6;3.5;Cinza;62900;Automática;2011;Veículo de loja;Sete Lagoas;MG
+76700;6;3.2;Preto;127000;Automática;2009;Veículo de loja;Patos de Minas;MG
+76800;8;3.2;Preto;79173;Automática;2009;Veículo de loja;Ribeirão Preto;SP
+76900;8;3.2;Branco;132000;Automática;2009;Veículo de loja;Cuiabá;MT
+77800;8;3.5;Verde;70000;Automática;2011;Veículo de loja;São Paulo;SP
+77800;8;3.5;Verde;70000;Automática;2011;Veículo de loja;São Paulo;SP
+78500;8;3.5;Prata;59000;Automática;2012;Veículo de loja;Niterói;RJ
+79900;8;3.5;Prata;84000;Automática;2011;Veículo de loja;Olímpia;SP
+79999;8;3.2;Preto;98000;Automática;2009;Veículo de loja;São Bernardo do Campo;SP
+81900;7;3.2;Preto;145000;Automática;2009;Veículo de loja;Rio de Janeiro;RJ
+83900;8;3.2;Preto;70326;Automática;2009;Veículo de loja;Goiânia;GO
+84600;8;3.2;Branco;104000;Manual;2012;Veículo de loja;São Paulo;SP
+84900;7;3.2;Preto;160000;Automática Sequencial;2009;Veículo de loja;Rio das Ostras;RJ
+84990;6;3.5;Cinza;106524;Automática;2011;Veículo de loja;Poços de Caldas;MG
+84990;8;3.5;Preto;63900;Automática;2011;Veículo de loja;Curitiba;PR
+85900;8;3.2;Prata;116000;Automática;2009;Veículo de loja;Brasília;DF
+86700;8;3.5;Azul;41000;Automática;2013;Veículo de loja;Rio de Janeiro;RJ
+86900;8;3.2;Prata;99000;Manual;2010;Veículo de loja;Curitiba;PR
+86900;8;3.5;Branco;55000;Automática;2012;Veículo de loja;São Paulo;SP
+86990;8;3.5;Preto;42001;Automática;2012;Veículo de loja;Piracicaba;SP
+87900;6;3.5;Prata;44000;Automática;2012;Veículo de loja;Rio de Janeiro;RJ
+87990;7;3.2;Preto;86521;Automática;2010;Veículo de loja;Porto Alegre;RS
+88000;6;3.5;Prata;63993;Automática;2012;Veículo de loja;São Paulo;SP
+88900;8;3.5;Branco;37443;Automática;2011;Veículo de loja;Salvador;BA
+88900;8;3.2;Preto;120000;Automática;2010;Veículo de loja;Juiz de Fora;MG
+89000;8;3.2;Preto;70326;Automática;2009;Veículo de loja;Goiânia;GO
+89900;8;3.2;Preto;153000;Automática;2009;Veículo de loja;Boituva;SP
+89900;8;3.5;Cinza;65000;Automática;2011;Veículo de loja;Belo Horizonte;MG
+89900;8;3.5;Prata;60376;Automática;2013;Veículo de loja;Manaus;AM
+89900;8;3.2;Preto;80000;Automática;2009;Veículo de loja;Santo André;SP
+90000;8;3.2;Preto;131263;Automática;2009;Veículo de loja;Garanhuns;PE
+90000;7;3.2;Prata;1e+05;Automática;2009;Veículo de loja;Rio Claro;SP
+90000;8;3.5;Prata;57000;Automática;2011;Veículo de loja;São Paulo;SP
+91900;8;3.5;Preto;31216;Automática;2013;Veículo de loja;São Paulo;SP
+91890;8;3.2;Cinza;110000;Automática;2010;Veículo de loja;Guarulhos;SP
+91900;8;3.5;Branco;32000;Automática;2012;Veículo de loja;Porto Alegre;RS
+92900;7;3.2;Prata;118214;Automática;2010;Veículo de loja;Osasco;SP
+92500;8;3.5;Prata;30600;Automática;2013;Veículo de loja;Belo Horizonte;MG
+92800;8;3.2;Prata;85000;Automática;2010;Veículo de loja;Curitiba;PR
+92900;8;3.2;Preto;1111;Automática;2009;Veículo de loja;Fortaleza;CE
+92900;7;3.5;Preto;24000;Automática;2011;Veículo de loja;Curitiba;PR
+92900;8;3.2;Branco;102000;Automática;2010;Veículo de loja;Belo Horizonte;MG
+93990;8;3.2;Preto;62300;Automática;2011;Veículo de loja;Curitiba;PR
+94900;8;3.2;Preto;67000;Automática;2011;Veículo de loja;Volta Redonda;RJ
+95000;6;3.2;Preto;85000;Automática;2010;Veículo de loja;Salto;SP
+95000;7;3.2;Preto;148000;Automática;2010;Veículo de loja;Ituverava;SP
+95000;7;3.2;Cinza;64000;Automática;2012;Veículo de loja;Campo Grande;MS
+95800;8;3.2;Prata;117735;Manual;2011;Veículo de loja;Porto Velho;RO
+95000;6;3.2;Preto;87000;Automática;2010;Veículo de loja;Dourados;MS
+95000;7;3.2;Branco;1e+05;Automática;2011;Veículo de loja;São José do Rio Preto;SP
+96900;8;3.2;Vinho;74000;Automática;2011;Veículo de loja;Goiânia;GO
+96000;6;3.2;Branco;56000;Automática;2011;Veículo de loja;Campinas;SP
+96800;8;3.2;Preto;85000;Automática;2009;Veículo de loja;Araucária;PR
+96900;8;3.2;Branco;88000;Manual;2012;Veículo de loja;Belo Horizonte;MG
+97000;8;3.5;Branco;63000;Automática;2011;Veículo de loja;Fortaleza;CE
+97000;7;3.2;Cinza;68300;Automática;2011;Veículo de loja;Belo Horizonte;MG
+97000;8;3.2;Prata;99200;Automática;2010;Veículo de loja;Taubaté;SP
+97800;8;3.2;Preto;126000;Automática;2010;Veículo de loja;Araraquara;SP
+97900;7;3.2;Preto;67800;Automática;2011;Veículo de loja;Vitória;ES
+97900;7;3.5;Prata;101000;Automática;2011;Veículo de loja;Blumenau;SC
+97900;8;3.2;Branco;121000;Automática;2010;Veículo de loja;Curitiba;PR
+98000;8;3.2;Branco;154700;Automática;2010;Veículo de loja;Birigui;SP
+96000;8;3.5;Preto;102000;Automática;2011;Veículo de loja;Mogi das Cruzes;SP
+98900;8;3.2;Branco;52000;Automática;2011;Veículo de loja;Goiânia;GO
+98900;8;3.5;Preto;27954;Automática;2012;Veículo de loja;Osasco;SP
+99000;8;3.2;Preto;1e+05;Automática;2013;Veículo de loja;Caxias do Sul;RS
+99000;7;3.2;Branco;152300;Automática;2012;Veículo de loja;Fernandópolis;SP
+98990;6;3.2;Preto;138000;Automática;2011;Veículo de loja;Cachoeirinha;RS
+99000;6;3.2;Branco;94000;Automática;2011;Veículo de loja;Niterói;RJ
+99000;8;3.2;Branco;50000;Automática;2011;Veículo de loja;Recife;PE
+99000;7;3.2;Preto;95000;Automática;2009;Veículo de loja;União da Vitória;PR
+99000;7;3.2;Prata;130000;Automática;2012;Veículo de loja;Porto Alegre;RS
+97500;8;3.5;Prata;54000;Automática;2012;Veículo de loja;Curitiba;PR
+99000;7;3.2;Branco;68000;Automática;2012;Veículo de loja;Campo Grande;MS
+99900;6;3.2;Branco;41000;Automática;2012;Veículo de loja;Niterói;RJ
+99800;8;3.2;Prata;129000;Automática;2010;Veículo de loja;Piracicaba;SP
+99900;7;3.2;Branco;54000;Automática;2013;Veículo de loja;Rio de Janeiro;RJ
+99900;8;3.2;Preto;92000;Automática Sequencial;2010;Veículo de loja;São José dos Pinhais;PR
+99900;7;3.2;Branco;54000;Manual;2013;Veículo de loja;Rio de Janeiro;RJ
+99990;8;3.2;Preto;96000;Automática;2010;Veículo de loja;Blumenau;SC
+1e+05;8;3.2;Prata;71000;Automática;2009;Veículo de loja;Belém;PA
+100990;8;3.5;Prata;27000;Automática;2013;Veículo de loja;São Paulo;SP
+101900;7;3.2;Prata;94000;Automática;2009;Veículo de loja;Jundiaí;SP
+103900;8;3.2;Prata;66261;Automática;2011;Veículo de loja;Uberlândia;MG
+104000;8;3.2;Prata;72000;Automática;2011;Veículo de loja;São Paulo;SP
+104800;8;3.2;Prata;113000;Automática;2013;Veículo de loja;São Paulo;SP
+104900;8;3.2;Prata;44303;Automática;2012;Veículo de loja;Vila Velha;ES
+104990;8;3.5;Branco;61535;Automática;2012;Veículo de loja;São José dos Campos;SP
+105000;7;3.2;Branco;121400;Automática;2010;Veículo de loja;Itápolis;SP
+105000;7;3.2;Cinza;81900;Automática;2011;Veículo de loja;Jundiaí;SP
+105000;6;3.2;Branco;83500;Manual;2010;Veículo de loja;Ponta Grossa;PR
+105000;8;3.2;Prata;43000;Automática;2012;Veículo de loja;Divinópolis;MG
+106900;8;3.2;Prata;138000;Automática;2012;Veículo de loja;Bragança Paulista;SP
+106900;8;3.2;Preto;87313;Automática;2012;Veículo de loja;São Paulo;SP
+106999;7;3.2;Cinza;60000;Automática;2013;Veículo de loja;Atibaia;SP
+107000;8;3.2;Preto;84700;Automática;2011;Veículo de loja;Sinop;MT
+108000;6;3.5;Branco;100;Automática;2011;Veículo de loja;Panambi;RS
+107990;8;3.2;Preto;38136;Automática;2011;Veículo de loja;Recife;PE
+108000;7;3.2;Prata;100;Automática;2010;Veículo de loja;Jales;SP
+108000;8;3.2;Cinza;70000;Automática;2012;Veículo de loja;Belém;PA
+108790;8;3.2;Preto;53455;Automática;2012;Veículo de loja;Rio de Janeiro;RJ
+108900;7;3.2;Prata;61000;Automática;2013;Veículo de loja;São José do Rio Preto;SP
+109900;8;3.2;Branco;42653;Automática;2013;Veículo de loja;Goiânia;GO
+109890;8;3.2;Preto;87272;Automática;2011;Veículo de loja;Brasília;DF
+109900;8;3.2;Preto;108000;Automática;2011;Veículo de loja;Ponta Grossa;PR
+109900;8;3.2;Preto;73720;Automática;2013;Veículo de loja;Rio Verde;GO
+109900;6;3.2;Prata;94000;Automática;2010;Veículo de loja;Blumenau;SC
+109900;8;3.2;Prata;61164;Automática;2013;Veículo de loja;São José do Rio Preto;SP
+109990;8;3.2;Prata;29000;Automática;2012;Veículo de loja;São Paulo;SP
+109990;8;3.2;Prata;67000;Automática;2011;Veículo de loja;Campinas;SP
+110000;8;3.2;Preto;98000;Automática;2012;Veículo de loja;Serra;ES
+110000;8;3.2;Preto;42000;Automática;2012;Veículo de loja;Barretos;SP
+112000;8;3.2;Prata;63000;Automática;2011;Veículo de loja;Indaial;SC
+113000;8;3.2;Cinza;71000;Automática;2012;Veículo de loja;Ponta Grossa;PR
+114900;8;3.2;Preto;45600;Automática;2013;Veículo de loja;Rio de Janeiro;RJ
+114900;8;3.2;Branco;96196;Automática;2011;Veículo de loja;Blumenau;SC
+114900;8;3.2;Preto;57900;Automática;2012;Veículo de loja;Curitiba;PR
+115000;7;3.2;Branco;59000;Automática;2013;Veículo de loja;Paraíso do Tocantins;TO
+115000;6;3.2;Prata;58350;Automática;2011;Veículo de loja;Nova Petrópolis;RS
+115900;8;3.2;Preto;40000;Automática;2013;Veículo de loja;Niterói;RJ
+115900;8;3.2;Preto;90000;Automática;2011;Veículo de loja;Pato Branco;PR
+115900;8;3.2;Preto;71250;Automática;2012;Veículo de loja;Curitiba;PR
+116500;8;3.2;Prata;37000;Automática;2013;Veículo de loja;São Paulo;SP
+116900;8;3.2;Preto;67000;Automática;2011;Veículo de loja;Uberaba;MG
+116900;8;3.2;Prata;37000;Manual;2013;Veículo de loja;Belo Horizonte;MG
+117900;8;3.2;Preto;29000;Automática;2013;Veículo de loja;Rio de Janeiro;RJ
+118890;8;3.2;Branco;64515;Automática;2013;Veículo de loja;São Paulo;SP
+119000;8;3.2;Branco;43000;Automática;2012;Veículo de loja;Sorocaba;SP
+119890;8;3.2;Preto;40181;Automática;2012;Veículo de loja;Brasília;DF
+119900;8;3.2;Prata;39500;Automática;2013;Veículo de loja;Boituva;SP
+119900;6;3.2;Prata;40000;Automática;2013;Veículo de loja;Boituva;SP
+119999;8;3.2;Prata;51220;Automática;2013;Veículo de loja;São Paulo;SP
+119990;7;3.2;Branco;48000;Automática;2012;Veículo de loja;Salvador;BA
+119999;8;3.2;Prata;48400;Automática;2012;Veículo de loja;José Bonifácio;SP
+120000;8;3.2;Cinza;5000;Manual;2014;Veículo de loja;Itu;SP
+122000;8;3.2;Cinza;45000;Automática;2013;Veículo de loja;Itapema;SC
+122300;8;3.2;Branco;66000;Automática;2013;Veículo de loja;Goiânia;GO
+124000;6;3.2;Branco;40000;Automática;2013;Veículo de loja;Fortaleza;CE
+125000;8;3.2;Branco;3230;Manual;2013;Veículo de loja;Goiânia;GO
+125000;8;3.5;Cinza;15000;Automática;2014;Veículo de loja;São Paulo;SP
+125900;8;3.2;Prata;21000;Automática;2014;Veículo de loja;Curitiba;PR
+128990;8;3.2;Branco;62000;Automática;2013;Veículo de loja;Belo Horizonte;MG
+129000;6;3.2;Prata;19000;Automática;2014;Veículo de loja;Natal;RN
+129900;8;3.2;Branco;48000;Automática;2012;Veículo de loja;Francisco Beltrão;PR
+132990;7;3.2;Branco;21366;Automática;2014;Veículo de loja;Amparo;SP
+133500;8;3.2;Branco;16769;Automática;2014;Veículo de loja;Pouso Alegre;MG
+133900;8;3.2;Branco;17000;Automática;2014;Veículo de loja;Ribeirão Preto;SP
+135999;8;3.2;Branco;26000;Automática;2013;Veículo de loja;São José do Rio Preto;SP
+138900;8;3.2;Prata;34000;Automática Sequencial;2012;Veículo de loja;Porto Alegre;RS
+139900;8;3.2;Preto;33023;Automática;2014;Veículo de loja;Arapiraca;AL
+140000;8;3.2;Branco;20559;Automática;2012;Veículo de loja;Jaraguá do Sul;SC
+141000;7;3.2;Prata;26000;Automática;2013;Veículo de loja;Rio de Janeiro;RJ
+143900;6;3.2;Preto;26000;Automática;2013;Veículo de loja;Teresópolis;RJ
+149900;7;3.2;Branco;10000;Automática;2014;Veículo de loja;Jundiaí;SP
+146900;6;3.2;Preto;21000;Automática;2014;Veículo de loja;Rio de Janeiro;RJ
+155000;8;3.2;Preto;12500;Automática;2014;Veículo de loja;Itu;SP
+155000;6;3.2;Preto;10000;Automática;2014;Veículo de loja;Fortaleza;CE
+155000;8;3.2;Branco;8700;Automática;2014;Veículo de loja;Miguel Pereira;RJ
+155900;7;3.2;Prata;3000;Automática;2014;Veículo de loja;Fortaleza;CE
+159990;6;3.2;Preto;0;Manual;2015;Veículo de loja;Recife;PE
+160500;8;3.2;Prata;20000;Automática;2014;Veículo de loja;Nhandeara;SP
+168500;6;3.2;Indefinida;0;Automática;2015;Veículo de loja;Araruama;RJ
+172000;8;3.2;Prata;31000;Automática;2013;Veículo de loja;São Paulo;SP
+177990;6;3.2;Branco;0;Automática Sequencial;2015;Veículo de loja;Sinop;MT
+181990;8;3.2;Indefinida;0;Automática;2015;Veículo de loja;Dourados;MS
+220000;8;3.2;Cinza;8000;Automática;2015;Veículo de loja;Curitiba;PR
+240000;6;3.2;Preto;0;Automática Sequencial;2014;Veículo de loja;São Paulo;SP
+205000;7;3.2;Cinza;0;Automática;2015;Veículo de loja;São Paulo;SP
+214999;8;3.2;Preto;0;Automática;2014;Veículo de loja;São Paulo;SP
+75900;6;3.2;Prata;90000;Automática;2009;Veículo de loja;São Paulo;SP
+205000;7;3.2;Cinza;0;Automática;2015;Veículo de loja;São Paulo;SP
+78999;8;3.2;Branco;85000;Manual;2012;Veículo de particular;Niterói;RJ
+125000;8;3.2;Branco;53000;Automática;2013;Veículo de loja;Curitiba;PR
+92800;7;3.2;Preto;154000;Automática;2010;Veículo de loja;São José do Rio Preto;SP
+96900;7;3.2;Preto;NA;Automática;2010;Veículo de concessionária;Uberaba;MG
+99900;6;3.2;Branco;NA;Automática;2011;Veículo de concessionária;Goiânia;GO
+99900;6;3.2;Preto;NA;Automática;2013;Veículo de concessionária;Rio de Janeiro;RJ
+104900;8;3.2;Prata;NA;Automática;2010;Veículo de concessionária;Caxias do Sul;RS
+104990;8;3.2;Prata;NA;Automática;2012;Veículo de concessionária;Goiânia;GO
+110900;8;3.2;Verde;NA;Automática;2011;Veículo de concessionária;Caxias do Sul;RS
+114900;8;3.2;Prata;NA;Automática;2011;Veículo de concessionária;Caxias do Sul;RS
+79900;6;3.2;Prata;NA;Automática;2009;Veículo de loja;São Gonçalo;RJ
+87500;8;3.2;Branco;NA;Manual;2012;Veículo de loja;Belo Horizonte;MG
+88890;8;3.2;Cinza;NA;Automática;2009;Veículo de loja;Curitiba;PR
+89900;8;3.2;Branco;NA;Automática;2009;Veículo de loja;Porto Alegre;RS
+90000;6;3.2;Prata;NA;Automática;2009;Veículo de loja;Uberlândia;MG
+91500;8;3.5;Branco;NA;Automática;2011;Veículo de loja;Fazenda Rio Grande;PR
+92900;8;3.2;Branco;NA;Manual;2012;Veículo de loja;Belo Horizonte;MG
+95000;8;3.2;Branco;NA;Manual;2012;Veículo de loja;Belo Horizonte;MG
+105000;8;3.2;Prata;NA;Automática Sequencial;2010;Veículo de loja;Itajaí;SC
+105000;8;3.2;Branco;NA;Automática;2011;Veículo de loja;Porto Alegre;RS
+110000;8;3.2;Prata;NA;Automática;2012;Veículo de loja;Rio de Janeiro;RJ
+115000;8;3.2;Prata;NA;Automática;2013;Veículo de loja;São Paulo;SP
+115000;7;3.2;Branco;NA;Automática;2011;Veículo de loja;Içara;SC
+121900;6;3.2;prata;NA;Manual;2012;Veículo de loja;João Pessoa;PB
+137990;8;3.5;Marrom;NA;Automática;2014;Veículo de loja;Itajaí;SC
+162000;8;3.2;Prata;NA;Automática;2014;Veículo de loja;Guaíba;RS
+97000;4;3.2;Prata;102000;Automática;2010;Veículo de particular;Taubaté;SP
+120000;5;3.2;Preto;20000;Automática;2013;Veículo de particular;São José do Rio Preto;SP
+76900;4;3.5;Prata;79000;Automática;2012;Veículo de concessionária;Barueri;SP
+83900;5;3.5;Branco;120000;Automática;2012;Veículo de concessionária;Vinhedo;SP
+85900;5;3.2;Preto;107346;Automática;2009;Veículo de concessionária;Montes Claros;MG
+91900;3;3.2;Prata;91710;Automática;2009;Veículo de concessionária;Jundiaí;SP
+94790;4;3.5;Branco;45000;Automática;2012;Veículo de concessionária;Taubaté;SP
+94790;3;3.2;Preto;188000;Automática;2011;Veículo de concessionária;São José dos Campos;SP
+103900;5;3.5;Prata;34000;Automática;2013;Veículo de concessionária;Vinhedo;SP
+108900;5;3.2;Branco;47000;Automática;2012;Veículo de concessionária;Jundiaí;SP
+109500;4;3.2;Prata;98000;Automática;2012;Veículo de concessionária;São José dos Campos;SP
+129990;5;3.2;Prata;0;Manual;2014;Veículo de concessionária;Maringá;PR
+129990;3;3.2;Prata;0;Manual;2014;Veículo de concessionária;Volta Redonda;RJ
+139790;4;3.2;Preto;7000;Automática;2015;Veículo de concessionária;São José dos Campos;SP
+155490;4;3.5;Preto;0;Automática;2015;Veículo de concessionária;Jundiaí;SP
+155990;5;3.2;Branco;0;Automática;2015;Veículo de concessionária;Vila Velha;ES
+168990;4;3.2;Branco;2514;Automática;2015;Veículo de concessionária;São José dos Campos;SP
+181990;4;3.2;Preto;0;Automática;2015;Veículo de concessionária;Jundiaí;SP
+183990;3;3.2;Prata;0;Automática;2015;Veículo de concessionária;Jundiaí;SP
+187990;5;3.2;Branco;0;Automática;2015;Veículo de concessionária;Vila Velha;ES
+73800;5;3.5;Prata;135000;Automática;2011;Veículo de loja;Rio de Janeiro;RJ
+79900;4;3.2;Prata;120000;Automática;2009;Veículo de loja;Niterói;RJ
+80000;5;3.5;Branco;79000;Automática Sequencial;2011;Veículo de loja;Campo Grande;MS
+85900;5;3.5;Cinza;31900;Automática;2011;Veículo de loja;São Paulo;SP
+86900;4;3.2;Branco;66915;Manual;2012;Veículo de loja;Santo André;SP
+89000;5;3.2;Prata;90000;Automática;2010;Veículo de loja;João Pessoa;PB
+89000;4;3.2;Prata;100;Automática;2010;Veículo de loja;Taubaté;SP
+89000;4;3.2;Preto;90000;Automática;2009;Veículo de loja;Campinas;SP
+89000;5;3.2;Prata;89000;Automática;2009;Veículo de loja;São Paulo;SP
+89800;4;3.2;Preto;96000;Automática;2010;Veículo de loja;Jaraguá do Sul;SC
+89900;4;3.5;Preto;27000;Automática;2012;Veículo de loja;São Paulo;SP
+92500;5;3.5;Prata;40000;Automática;2013;Veículo de loja;Santos;SP
+93000;5;3.5;Branco;60000;Automática;2012;Veículo de loja;Nova Odessa;SP
+95900;5;3.5;Prata;1000;Automática;2011;Veículo de loja;Caxias do Sul;RS
+95900;5;3.2;Branco;110000;Automática;2010;Veículo de loja;Goiânia;GO
+97000;5;3.5;Branco;26000;Automática;2013;Veículo de loja;Piracicaba;SP
+98900;5;3.2;Preto;50000;Automática;2012;Veículo de loja;Natal;RN
+99000;5;3.2;Prata;65000;Automática;2011;Veículo de loja;Aracaju;SE
+99000;5;3.5;Cinza;29000;Automática;2012;Veículo de loja;Jundiaí;SP
+100900;5;3.2;Prata;73255;Automática;2011;Veículo de loja;Cuiabá;MT
+99800;5;3.2;Branco;95000;Automática;2011;Veículo de loja;Jaraguá do Sul;SC
+99890;3;3.2;Preto;59000;Automática;2011;Veículo de loja;João Pessoa;PB
+108000;5;3.2;Cinza;62000;Automática;2011;Veículo de loja;Uberaba;MG
+113000;5;3.2;Preto;1e+05;Automática;2011;Veículo de loja;Campos dos Goytacazes;RJ
+112900;5;3.2;Cinza;39000;Automática;2013;Veículo de loja;Guarulhos;SP
+115000;5;3.2;Prata;107000;Automática;2013;Veículo de loja;Aparecida de Goiânia;GO
+118900;5;3.2;Prata;50254;Automática;2011;Veículo de loja;Fortaleza;CE
+116000;5;3.2;Prata;78000;Automática;2012;Veículo de loja;Natal;RN
+118800;5;3.2;Prata;37000;Automática;2012;Veículo de loja;Fortaleza;CE
+119999;4;3.2;Cinza;50000;Automática;2010;Veículo de loja;São Paulo;SP
+125900;5;3.2;Prata;40000;Automática;2012;Veículo de loja;Santa Cruz do Sul;RS
+129000;5;3.2;Preto;49000;Automática;2013;Veículo de loja;Curitibanos;SC
+132000;5;3.5;Dourado;11000;Automática;2014;Veículo de loja;Farroupilha;RS
+144000;5;3.2;Prata;0;Automática;2014;Veículo de loja;Petrolina;PE
+145477;5;3.2;Branco;0;Automática;2015;Veículo de loja;São Paulo;SP
+145990;5;3.2;Branco;0;Automática;2014;Veículo de loja;Petrolina;PE
+149500;4;3.2;Prata;15600;Automática;2014;Veículo de loja;Fortaleza;CE
+149900;5;3.2;Branco;29000;Automática;2014;Veículo de loja;Porto Alegre;RS
+162500;5;3.2;Cinza;4200;Automática;2015;Veículo de loja;São Paulo;SP
+167977;5;3.2;Branco;0;Automática;2015;Veículo de loja;São Paulo;SP
+169890;4;3.5;Branco;0;Automática;2015;Veículo de loja;Brasília;DF
+169990;4;3.2;Prata;0;Automática Sequencial;2014;Veículo de loja;Divinópolis;MG
+97900;5;3.2;Preto;NA;Automática;2010;Veículo de concessionária;Montes Claros;MG
+96000;3;3.2;Prata;NA;Automática;2010;Veículo de concessionária;Novo Hamburgo;RS
+87990;5;3.2;Preto;NA;Automática;2009;Veículo de loja;Natal;RN
+88000;5;3.2;Preto;NA;Automática;2010;Veículo de loja;Porto Velho;RO
+95500;5;3.2;Branco;NA;Manual;2010;Veículo de loja;Cafelândia;PR
+98990;4;3.2;Preto;NA;Automática;2012;Veículo de loja;Mossoró;RN
+126800;3;3.2;Preto;NA;Automática;2012;Veículo de loja;Novo Hamburgo;RS
+85000;1;3.5;Prata;57000;Automática;2011;Veículo de particular;São Paulo;SP
+84900;1;3.5;Cinza;100;Automática;2011;Veículo de concessionária;Uberlândia;MG
+112900;1;3.2;Prata;100;Automática;2013;Veículo de concessionária;Uberlândia;MG
+96700;2;3.2;Preto;59717;Automática;2011;Veículo de concessionária;Rio Branco;AC
+168000;1;3.2;Branco;0;Automática;2015;Veículo de concessionária;Patos de Minas;MG
+151490;1;3.5;Preto;0;Automática;2015;Veículo de concessionária;Barueri;SP
+151490;1;3.2;Cinza;0;Automática;2016;Veículo de concessionária;Barueri;SP
+155490;1;3.2;Prata;0;Automática;2015;Veículo de concessionária;Barueri;SP
+159900;1;3.2;Branco;0;Automática;2015;Veículo de concessionária;Manaus;AM
+177900;1;3.2;Branco;0;Automática;2015;Veículo de concessionária;Barueri;SP
+177990;1;3.2;Prata;0;Automática;2015;Veículo de concessionária;Fortaleza;CE
+179900;1;3.2;Preto;0;Automática;2015;Veículo de concessionária;Manaus;AM
+181900;1;3.2;Preto;0;Automática;2015;Veículo de concessionária;Barueri;SP
+79900;1;3.2;Prata;90000;Automática;2010;Veículo de loja;São Paulo;SP
+82900;1;3.2;Prata;99000;Automática;2009;Veículo de loja;Belo Horizonte;MG
+83890;1;3.2;Preto;97000;Automática;2009;Veículo de loja;Vassouras;RJ
+84890;1;3.5;Branco;100;Automática;2011;Veículo de loja;Brasília;DF
+89900;1;3.2;Prata;85000;Automática;2010;Veículo de loja;Salvador;BA
+92900;2;3.2;Preto;92447;Automática;2010;Veículo de loja;Natal;RN
+99900;2;3.2;Branco;100;Automática;2010;Veículo de loja;João Pessoa;PB
+116900;2;3.2;Preto;0;Manual;2014;Veículo de loja;São Paulo;SP
+120000;1;3.2;Branco;49749;Automática;2012;Veículo de loja;São José do Vale do Rio Preto;RJ
+129000;1;3.2;Branco;60243;Automática;2012;Veículo de loja;São Paulo;SP
+155900;1;3.2;Preto;13300;Automática;2014;Veículo de concessionária;Rio de Janeiro;RJ
+131990;2;3.2;Prata;NA;Automática;2012;Veículo de loja;Piracicaba;SP
+85000;0;3.5;Preto;70000;Automática;2011;Veículo de particular;São Paulo;SP
+111900;14;3.2;Prata;49000;Automática;2012;Veículo de particular;Novo Horizonte;SP
+103900;0;3.5;Prata;34000;Automática;2012;Veículo de concessionária;Jundiaí;SP
+104900;0;3.2;Preto;46000;Automática;2011;Veículo de concessionária;Rio de Janeiro;RJ
+155490;0;3.2;Branco;0;Automática;2015;Veículo de concessionária;Brasília;DF
+155490;0;3.2;Preto;0;Automática;2015;Veículo de concessionária;Jundiaí;SP
+181990;0;3.2;Branco;0;Automática;2015;Veículo de concessionária;Brasília;DF
+123900;0;3.2;Branco;15796;Automática;2013;Veículo de concessionária;Guarulhos;SP
+83990;0;3.2;Preto;77000;Automática;2009;Veículo de loja;Recife;PE
+86990;0;3.2;Prata;93500;Automática;2009;Veículo de loja;Natal;RN
+99000;0;3.2;Prata;102000;Automática;2011;Veículo de loja;Meleiro;SC
+163900;0;3.2;Branco;0;Automática;2014;Veículo de loja;São Paulo;SP
+125990;0;3.2;Preto;79000;Automática;2012;Veículo de concessionária;São Paulo;SP
+104900;0;3.2;Vermelho;NA;Automática;2011;Veículo de concessionária;Goiânia;GO
+181990;0;3.2;Branco;NA;Automática;2015;Veículo de concessionária;Feira de Santana;BA
+104800;0;3.2;Prata;NA;Automática;2011;Veículo de loja;Londrina;PR
+84999;0;3.2;Preto;NA;Automática;2012;Veículo de loja;Curitiba;PR
+135000;0;3.5;Prata;NA;Automática;2013;Veículo de loja;Campo Bom;RS
+105000;0;3.2;Branco;NA;Automática;2012;Veículo de loja;Fortaleza;CE
+118000;0;3.2;Prata;NA;Automática;2012;Veículo de loja;São Luís;MA
+148900;0;3.2;Preto;NA;Automática;2014;Veículo de loja;Ananindeua;PA
+85990;8;3.2;Branco;76000;Manual;2012;Veículo de loja;Rio de Janeiro;RJ
+87000;8;3.5;Prata;16040;Automática;2013;Veículo de loja;Campinas;SP
+104500;8;3.2;Branco;60000;Automática;2012;Veículo de loja;Osasco;SP
+108000;7;3.2;Prata;102000;Automática;2012;Veículo de loja;Vitória da Conquista;BA
+117900;8;3.2;Preto;145000;Automática;2013;Veículo de loja;Belo Horizonte;MG
+119990;4;3.2;Branco;0;Manual;2014;Veículo de concessionária;Presidente Prudente;SP
+177990;3;3.2;Prata;0;Automática;2015;Veículo de concessionária;Presidente Prudente;SP
+86900;5;3.5;Branco;38000;Automática;2012;Veículo de loja;Porto Feliz;SP
+89000;5;3.2;Branco;65000;Manual;2013;Veículo de loja;São Caetano do Sul;SP
+89000;4;3.5;Branco;75000;Automática;2012;Veículo de loja;Campinas;SP
+155490;2;3.2;Branco;0;Automática;2015;Veículo de concessionária;Presidente Prudente;SP
+155490;0;3.5;Branco;0;Automática;2015;Veículo de concessionária;Presidente Prudente;SP
+139990;0;3.2;Branco;0;Automática Sequencial;2014;Veículo de loja;Amparo;SP
+164990;0;3.2;Branco;0;Automática Sequencial;2014;Veículo de loja;Amparo;SP
