@@ -1,0 +1,454 @@
+---
+title: IGUIR2 - Galeria googleVis
+author: Eduardo E. Ribeiro Jr \& Walmes M. Zeviani
+output:
+    html_document:
+      css: ../galery.css
+      toc: yes
+---
+
+O pacote [googleVis] permite fazer gráficos da galeria Google Charts de
+dentro do R. O deselvolvedor do pacote, Markus Gesmann, mantém o pacote
+aberto no GitHub.
+
+As funções do googleVis possuem o prefixo `gvis` e o restante é composto
+pelo nome do gráfico na galeria Google com as letras maiúsculas e sem
+espaços. Não existe uma correspondência um para um.
+
+Todos os gráficos recebem objetos de classe `data.frame`. Todos os
+aspectos gráficos são controlados dentro de uma lista para o argumento
+`options=`. No entanto, a forma de modificar aspectos gráficos não segue
+os padrões R mas as definições em javascript.
+
+Os exemplos abaixo ilustram como usar algumas das funções do pacote e
+modificar elementos gráficos.
+
+## Instalação
+
+https://cran.r-project.org/web/packages/googleVis/  
+https://github.com/mages/googleVis
+
+```{r, eval = FALSE}
+## Estável
+install.packages("googleVis")
+
+## Em desenvolvimento
+library(devtools)
+install_github("mages/googleVis")
+
+```
+
+Como começar:
+
+```{r setOptions, message=FALSE}
+library(googleVis)
+
+## Para que output das funções gvis* não sejam páginas autocontidas mas
+## os fragmentos mínimos para produzir os gráficos.
+op <- options(gvis.plot.tag="chart")
+
+## Funções gráficas do pacote googleVis.
+apropos(what="^gvis", mode="function")
+
+```
+
+## Exemplos
+
+### Diagrama de dispersão (_gvisScatterChart_) ###
+
+Exemplo com o data frame `woman`.
+
+```{r, results="asis", tidy=FALSE}
+## Diagrama de dispesão.
+Scatter <- gvisScatterChart(
+    women, 
+    options=list(
+        legend="none",
+        vAxis="{title:'weight (lbs)'}",
+        hAxis="{title:'height (in)'}", 
+        width=800, height=600))
+plot(Scatter)
+
+```
+
+Para saber o que pode ser modificado, visitar a documentação de cada
+tipo de gráfico na galeria do Google. A documentação do
+[ScatterChart]. Abaixo um exemplo com o data frame `cars`.
+
+```{r ScatterChart, results="asis", tidy=FALSE}
+Scatter <- gvisScatterChart(
+    cars, 
+    options=list(
+        gvis.editor="Edit me!",
+        explorer="{actions: ['dragToZoom', 'rightClickToReset'],
+                   maxZoomIn:0.05}",
+        legend="none",
+        colors="['green']",
+        pointShape="square",
+        pointSize=5,
+        vAxis="{title:'Distance',
+                titleTextStyle:{color:'red', italic:false},
+                minValue:0, maxValue:130}",
+        hAxis="{title:'Speed',
+                titleTextStyle:{color:'blue'},
+                minValue:3, maxValue:26}",
+        width=800, height=600))
+
+## Plot retorna o código HTML para o gráfico.
+plot(Scatter)
+
+```
+
+### Gráfico de barras (_gvisBarChart_) ###
+
+Utiliza o data frame `HairEyeColor`.
+
+```{r BarChart, results="asis", tidy=FALSE}
+## str(HairEyeColor)
+x <- apply(HairEyeColor, 1, sum)
+H <- data.frame(hair=names(x), sum=x)
+H$share <- H$sum/sum(H$sum)
+
+Bar <- gvisBarChart(data=H, yvar="sum", xvar="hair",
+                    options=list(
+                        hAxis="{title:'Frequência absoluta'}",
+                        vAxis="{title:'Cor de cabelo'}",
+                        colors="['yellow']",
+                        width=800, height=600))
+plot(Bar)
+
+Column <- gvisColumnChart(data=H, yvar="share", xvar="hair",
+                          options=list(
+                              hAxis="{title:'Cor de cabelo'}",
+                              vAxis="{title:'Frequência relativa'}",
+                              colors="['orange']",
+                              width=800, height=600))
+plot(Column)
+
+```
+
+### Box-plot (_gvisCandlestickChart_) ###
+
+```{r Candle, results="asis", tidy=FALSE}
+x <- boxplot(Sepal.Length~Species, data=iris, outline=FALSE, plot=FALSE)
+x <- data.frame(t(x$stats[-3,]))
+names(x) <- c("Low", "Open", "Close", "High")
+x <- cbind(Species=levels(iris$Species), x)
+
+Candle <- gvisCandlestickChart(
+    data=x,
+    options=list(
+        legend="none",
+        hAxis="{title:'Espécies'}",
+        vAxis="{title:'Comprimento da pétala'}",
+        colors="['#123654']",
+        width=800, height=600))
+plot(Candle)
+
+```
+
+### Gráfico de Setores (_gvisPieChart_) ###
+
+```{r Pie, results="asis", tidy=FALSE}
+## str(HairEyeColor)
+x <- apply(HairEyeColor, 2, sum)
+H <- data.frame(eyes=names(x), sum=x)
+H$share <- H$sum/sum(H$sum)
+
+Pie <- gvisPieChart(
+    data=H, labelvar="eyes", numvar="sum",
+    options=list(
+        colors="['#7F462C', '#1569C7', '#C68E17', '#008000']",
+        width=800, height=600))
+plot(Pie)
+
+```
+
+### Mapas Geográficos (_gvisGeoChart_) ###
+
+População dos Estados brasileiros:
+<https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_população>.
+
+```{r GeoChart, results="asis", tidy=FALSE}
+##----------------------------------------------------------------------
+## Código do Web Scraping.
+
+## library(XML)
+## url <- "https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_população"
+## rl <- readLines(url)
+## da <- readHTMLTable(rl, stringsAsFactors=FALSE)
+## str(da)
+## br <- da[[1]]
+## br$Estado <- substr(br$Estado, 2, 20)
+## br$População <- as.integer(gsub("\\D", "", br$População))
+## dput(br[, c("Estado", "População")])
+
+##----------------------------------------------------------------------
+
+br <- data.frame(
+    Estado = c("São Paulo", "Minas Gerais", "Rio de Janeiro", "Bahia",
+               "Rio Grande do Sul", "Paraná", "Pernambuco", "Ceará",
+               "Pará", "Maranhão", "Santa Catarina", "Goiás", "Paraíba",
+               "Amazonas", "Espírito Santo", "Rio Grande do Norte",
+               "Alagoas", "Mato Grosso", "Piauí", "Distrito Federal",
+               "Mato Grosso do Sul", "Sergipe", "Rondônia", "Tocantins",
+               "Acre", "Amapá", "Roraima"),
+    População = c(44396484L, 20869101L, 16550024L, 15203934L, 11247972L,
+                  11163018L, 9345173L, 8904459L, 8175113L, 6904241L,
+                  6819190L, 6610681L, 3972202L, 3938336L, 3929911L,
+                  3442175L, 3340932L, 3270973L, 3204028L, 2914830L,
+                  2651235L, 2242937L, 1768204L, 1515126L, 803513L,
+                  766679L, 505665L))
+br$População <- log10(br$População)
+
+breaks <- seq(floor(min(br$População)),
+              ceiling(max(br$População)), by=0.5)
+
+require(RColorBrewer)
+pal <- brewer.pal(n=length(breaks), name="Blues")
+
+cl <- paste("{values:[",
+            paste0("'", formatC(breaks, format="d"), "'", collapse=","),
+            "], colors:[",
+            paste0("'", pal, "'", collapse=","),
+            "]}")
+
+GeoStates <- gvisGeoChart(
+    data=br,
+    locationvar="Estado",
+    colorvar="População",
+    options=list(
+        title="lala",
+        region="BR", 
+        displayMode="regions", 
+        resolution="provinces",
+        colorAxis=cl,
+        width=600, height=400))
+plot(GeoStates)
+
+```
+
+### Mapa via satélite (_gvisMap_) ###
+
+```{r MapChart, results="asis", tidy=FALSE}
+##----------------------------------------------------------------------
+## Código do Web Scraping.
+
+## library(XML)
+## url <- "http://relogiosdesol.blogspot.com.br/2009/11/coordenadas-geograficas-das-capitas-dos.html"
+## rl <- readLines(url)
+## da <- readHTMLTable(rl, stringsAsFactors=FALSE)
+## br <- da[[1]][-1,]
+## names(br) <- c("capital", "lat", "lon")
+
+##----------------------------------------------------------------------
+
+br <- data.frame(
+    capital = c("Aracaju - SE", "Belém - PA", "Belo Horizonte - MG",
+                "Boa Vista - RR", "Brasília - DF", "Campo Grande - MS",
+                "Cuiabá - MT", "Curitiba - PR", "Florianópolis - SC",
+                "Fortaleza - CE", "Goiânia - GO", "João Pessoa - PB",
+                "Macapá - AP", "Maceió - AL", "Manaus - AM",
+                "Natal - RN", "Palmas - TO", "Porto Alegre - RS",
+                "Porto Velho - RO", "Recife - PE", "Rio Branco - AC",
+                "Rio de Janeiro - RJ", "Salvador - BA", "São Luís - MA",
+                "São Paulo - SP", "Teresina - PI", "Vitória - ES"),
+    lat = c(-10.911, -1.456, -19.921, 2.82, -15.78, -20.443, -15.596,
+            -25.428, -27.597, -3.717, -16.679, -7.115, 0.039, -9.666,
+            -3.102, -5.795, -10.213, -30.033, -8.762, -8.054, -9.975,
+            -22.903, -12.971, -2.53, -23.548, -5.089, -20.319),
+    lon = -c(37.072, 48.504, 43.938, 60.673, 47.93, 54.646, 56.097,
+             49.273, 48.549, 38.543, 49.254, 34.863, 51.066, 35.735,
+             60.025, 35.209, 48.36, 51.23, 63.904, 34.881, 67.81,
+             43.208, 38.511, 44.303, 46.636, 42.802, 40.338))
+br$latlon <- with(br, paste(lat, lon, sep=":"))
+
+Map <- gvisMap(br,
+               locationvar="latlon",
+               tipvar="capital", 
+               options=list(showTip=TRUE, 
+                            showLine=TRUE, 
+                            enableScrollWheel=TRUE,
+                            mapType='terrain', 
+                            useMapTypeControl=TRUE,
+                            width="800px",
+                            height="800px"))
+plot(Map)
+
+```
+
+### Gráficos de Séries temporais (_gvisLineChart_) ###
+
+Dados de precipitação de Dourados em 2014 extratídos da Embrapa CPAO:
+<http://www.cpao.embrapa.br/clima/?lc=site/banco-dados/base_dados>.
+
+```{r}
+dourados <- data.frame(
+    dias=seq(from=as.Date("2014-01-01"),
+             to=as.Date("2014-12-31"), by=1),
+    chuva=c(0.2, 0.0, 3.6, 32.0, 38.2, 2.8, 0.0, 44.8, 0.0, 0.8, 1.0,
+            2.0, 23.0, 37.4, 1.0, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 61.6, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.8, 0.0, 0.0, 0.2, 0.0, 6.8, 0.0, 0.0, 31.6, 3.6, 3.8, 0.0,
+            0.0, 0.0, 0.0, 0.0, 44.4, 17.6, 3.6, 0.2, 5.0, 28.2, 20.2,
+            0.2, 0.0, 0.0, 13.2, 2.8, 0.0, 0.0, 1.8, 0.0, 0.0, 0.0,
+            17.0, 5.6, 0.6, 0.0, 20.2, 0.2, 0.6, 0.8, 0.0, 7.0, 11.2,
+            12.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 1.6, 0.2, 0.4, 7.4,
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 17.2, 1.4, 11.6,
+            4.2, 0.2, 1.0, 0.0, 0.0, 2.8, 0.4, 0.2, 12.8, 7.0, 0.2, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 45.2, 9.4, 0.2, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.2, 0.0, 0.0, 0.0, 0.0, 14.0, 0.4, 1.8, 0.2,
+            0.0, 0.0, 0.0, 27.4, 7.6, 7.6, 10.6, 0.2, 0.0, 0.0, 0.0,
+            0.0, 5.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 27.6, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 7.6, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 10.8, 5.8, 8.6, 13.8, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 20.0, 3.0, 0.0, 0.0, 0.0, 0.0, 26.2, 15.2, 0.0, 2.2,
+            0.4, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 5.2, 0.0, 0.0, 0.0, 0.2, 0.0, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 15.6,
+            0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 9.2, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 20.8, 2.2, 0.0, 0.0, 0.0,
+            29.8, 0.0, 4.2, 14.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 5.2, 1.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 0.0, 32.2, 0.2, 0.0, 0.0, 35.4, 3.0, 0.0, 0.0,
+            0.0, 27.0, 9.2, 0.0, 3.4, 0.0, 0.0, 6.2, 0.0, 3.8, 0.0,
+            32.4, 0.0, 0.0, 27.4, 1.4, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.0, 24.2, 50.8, 0.0, 0.4, 21.2, 0.0, 0.0, 0.0, 0.0,
+            6.4, 12.4, 0.6, 0.0, 0.0, 0.0, 0.0, 9.2, 9.4, 2.4, 1.8, 1.8,
+            22.0, 5.0, 0.0, 0.0, 0.0, 17.6, 0.0, 0.0, 0.8, 14.2, 10.2,
+            5.8, 0.0, 0.0, 2.2, 0.0, 0.0, 0.0, 2.8, 0.0), 
+    tmax=c(30.2, 33.9, 34.0, 29.8, 33.4, 30.0, 32.8, 32.3, 31.7, 34.0,
+           34.9, 30.5, 29.8, 28.2, 28.2, 29.4, 31.3, 32.8, 33.5, 34.4,
+           33.2, 33.3, 32.5, 32.8, 27.0, 32.4, 32.5, 33.4, 34.0, 34.1,
+           35.6, 36.2, 36.3, 36.1, 35.2, 35.8, 37.9, 37.4, 37.9, 35.5,
+           35.7, 35.7, 32.9, 32.2, 27.9, 28.6, 28.9, 30.4, 31.7, 32.6,
+           31.4, 26.4, 29.7, 29.7, 30.1, 28.5, 28.9, 26.3, 29.7, 31.4,
+           33.0, 21.9, 29.9, 32.1, 32.3, 29.8, 31.6, 33.7, 23.3, 25.1,
+           30.2, 31.5, 32.0, 33.6, 33.3, 33.0, 32.5, 31.8, 28.8, 30.3,
+           26.3, 28.3, 29.1, 30.4, 30.2, 30.8, 30.9, 27.4, 29.7, 30.1,
+           30.5, 31.8, 31.5, 31.4, 32.3, 33.6, 34.5, 34.7, 34.5, 28.9,
+           27.6, 27.2, 21.3, 21.3, 19.3, 22.3, 30.9, 27.4, 29.9, 27.2,
+           29.3, 21.4, 27.0, 27.3, 27.2, 27.6, 27.0, 25.6, 28.4, 30.3,
+           19.7, 24.0, 28.7, 28.9, 24.8, 27.2, 29.1, 28.9, 26.6, 25.0,
+           25.2, 27.9, 25.9, 28.6, 26.8, 25.0, 26.3, 26.6, 28.8, 28.6,
+           30.5, 30.7, 18.7, 14.0, 15.2, 12.5, 17.6, 21.3, 23.1, 25.3,
+           29.0, 22.2, 20.8, 22.7, 26.6, 30.3, 29.8, 30.4, 25.9, 20.0,
+           21.3, 26.7, 28.2, 29.9, 24.3, 27.6, 29.1, 28.3, 25.7, 23.4,
+           23.2, 24.8, 24.7, 30.1, 30.2, 29.6, 30.7, 28.0, 14.7, 20.2,
+           21.2, 25.0, 29.1, 30.4, 31.5, 30.8, 22.1, 17.1, 18.1, 16.8,
+           20.3, 22.4, 25.3, 26.4, 27.1, 28.3, 30.7, 30.9, 21.2, 21.5,
+           23.9, 26.4, 29.6, 22.6, 18.5, 16.9, 17.1, 17.5, 20.6, 24.9,
+           28.0, 29.3, 31.1, 31.9, 32.5, 32.6, 30.5, 27.6, 31.1, 29.1,
+           27.5, 28.4, 30.8, 33.0, 22.2, 22.6, 23.1, 29.7, 25.6, 29.7,
+           31.4, 29.5, 32.6, 33.8, 34.6, 34.6, 33.0, 22.2, 21.9, 27.7,
+           31.3, 33.5, 35.8, 33.8, 34.7, 34.4, 31.1, 28.8, 35.8, 24.8,
+           30.6, 34.4, 35.4, 35.9, 35.5, 35.4, 36.3, 26.8, 28.1, 34.0,
+           36.7, 28.9, 23.9, 26.9, 29.7, 33.7, 26.2, 31.1, 33.8, 22.4,
+           32.0, 35.0, 35.0, 33.0, 31.0, 29.7, 28.8, 29.0, 30.8, 31.8,
+           35.4, 35.5, 37.1, 38.2, 38.2, 39.4, 39.0, 39.2, 39.7, 40.8,
+           38.6, 37.7, 23.2, 29.5, 31.0, 33.1, 30.6, 27.4, 30.8, 33.0,
+           33.7, 33.6, 33.9, 32.5, 29.5, 31.7, 32.6, 31.5, 31.8, 32.9,
+           32.7, 26.6, 31.2, 33.4, 32.0, 26.8, 30.1, 28.8, 29.7, 30.3,
+           31.1, 33.6, 33.5, 29.6, 32.9, 22.2, 29.4, 32.3, 30.0, 26.1,
+           31.6, 31.0, 30.4, 32.5, 30.3, 26.4, 25.4, 30.3, 29.6, 31.1,
+           32.0, 30.3, 29.9, 31.9, 30.5, 30.8, 31.1, 32.9, 31.9, 31.8,
+           30.3, 29.2, 32.8, 32.9, 31.9, 24.0, 29.5, 26.7, 32.2, 32.5,
+           34.0, 34.8, 34.9, 33.2, 32.5),
+    tmin=c(23.5, 22.4, 21.8, 20.1, 19.0, 19.1, 20.1, 19.1, 19.1, 19.6,
+           21.1, 20.6, 18.9, 17.7, 20.6, 19.4, 19.0, 17.3, 20.3, 20.1,
+           21.8, 20.9, 22.6, 22.3, 18.8, 18.5, 18.6, 20.2, 19.5, 19.7,
+           20.5, 19.9, 21.1, 20.4, 22.4, 21.0, 21.1, 22.9, 21.3, 20.6,
+           21.2, 21.6, 19.6, 21.6, 20.5, 20.4, 19.5, 23.4, 21.4, 21.9,
+           21.1, 20.7, 21.2, 20.4, 20.5, 19.7, 19.5, 17.5, 16.0, 16.0,
+           18.5, 18.1, 18.6, 19.9, 20.1, 19.5, 17.9, 18.0, 17.7, 17.2,
+           18.5, 19.9, 18.3, 20.7, 19.9, 21.1, 19.4, 22.1, 20.7, 21.2,
+           17.7, 14.0, 18.2, 18.8, 18.4, 17.9, 19.5, 21.0, 21.1, 20.7,
+           18.7, 19.2, 19.5, 19.4, 20.7, 21.5, 21.4, 23.6, 19.9, 20.1,
+           20.5, 19.3, 14.4, 11.5, 14.6, 16.6, 15.6, 16.7, 16.1, 16.7,
+           17.7, 17.2, 16.0, 16.1, 13.6, 13.8, 17.1, 14.6, 15.4, 16.4,
+           13.5, 12.3, 15.8, 17.8, 18.0, 17.0, 14.5, 16.9, 13.7, 10.4,
+           13.7, 13.5, 16.5, 18.1, 16.3, 16.0, 12.9, 13.7, 14.1, 15.2,
+           17.8, 18.3, 10.9, 10.4, 8.9, 8.3, 8.0, 4.9, 8.0, 12.8, 15.8,
+           10.4, 7.5, 6.2, 14.8, 20.7, 21.9, 21.9, 14.9, 12.3, 13.8,
+           14.6, 16.9, 17.8, 17.6, 17.0, 16.8, 16.1, 15.2, 12.3, 9.8,
+           11.3, 11.7, 14.0, 17.4, 15.0, 17.4, 13.8, 12.5, 9.3, 7.2,
+           8.7, 14.3, 15.2, 16.6, 15.0, 13.4, 12.7, 12.7, 14.3, 13.8,
+           12.5, 12.1, 13.3, 14.1, 14.5, 15.8, 15.5, 9.5, 6.2, 5.9,
+           10.0, 13.8, 17.0, 6.4, 6.3, 11.1, 11.0, 15.1, 13.4, 14.4,
+           14.6, 12.8, 16.0, 16.0, 13.7, 16.0, 15.1, 15.0, 14.6, 13.3,
+           14.3, 14.3, 15.9, 10.5, 6.4, 13.0, 14.3, 16.5, 15.0, 15.1,
+           14.5, 13.2, 14.3, 17.0, 18.5, 14.4, 10.6, 10.0, 10.4, 13.1,
+           16.2, 18.5, 17.8, 22.1, 20.5, 18.5, 16.0, 17.5, 17.7, 16.0,
+           20.2, 18.4, 18.0, 17.2, 18.3, 19.5, 14.0, 11.7, 14.9, 20.3,
+           19.1, 16.6, 13.0, 10.8, 16.5, 17.6, 17.6, 18.8, 18.5, 18.5,
+           20.6, 19.9, 21.5, 19.2, 14.8, 14.3, 14.0, 16.4, 16.1, 18.5,
+           19.9, 17.4, 20.5, 21.9, 21.8, 23.0, 22.8, 22.4, 23.4, 24.1,
+           21.6, 18.3, 16.8, 17.8, 18.0, 18.9, 18.7, 19.7, 19.3, 21.4,
+           22.0, 20.4, 20.1, 20.9, 19.6, 21.2, 20.5, 19.8, 22.3, 19.8,
+           18.8, 17.7, 19.0, 18.3, 18.1, 17.9, 16.8, 14.6, 15.6, 16.5,
+           15.8, 20.6, 19.9, 21.1, 17.7, 16.4, 20.7, 20.8, 20.3, 21.1,
+           20.4, 20.7, 21.6, 21.1, 19.5, 19.3, 19.3, 20.7, 20.2, 18.6,
+           18.8, 19.9, 20.5, 20.9, 21.0, 19.9, 21.1, 21.2, 21.0, 19.6,
+           19.3, 21.2, 22.0, 22.3, 19.8, 18.1, 19.9, 21.2, 22.6, 21.6,
+           22.7, 21.7, 21.2, 22.8))
+
+```
+
+```{r Serie, results="asis", tidy=FALSE}
+Serie <- gvisLineChart(
+    data=dourados,
+    xvar="dias",
+    yvar=c("tmin", "tmax"),
+    options=list(
+        hAxis="{title:'Dias em 2014'}",
+        vAxis="{title:'Temperatura (Celsius)'}",
+        width=800, height=400))
+plot(Serie)
+
+```
+
+### Diagrama de calendário (_gvisCalendar_) ###
+
+Para ver o gráfico abaixo adequadamente, você tem que configurar como
+local do seu sistema operacional um ponto que não tenha horário de
+verão. Por exemplo, usar Bahia ao invés de Curitiba nas definições de
+*Time & Date* do Linux. Veja essa série de mensagens para maiores
+detalhes: [googleVis/issue#15].
+
+```{r Calendar, results="asis", tidy=FALSE}
+Cal <- gvisCalendar(
+    dourados, 
+    datevar="dias", 
+    numvar="chuva",
+    options=list(
+        title="Precipitação diária em Dourados-MS",
+        width=1000, height=300,
+        calendar="{cellSize: 15,
+                   cellColor:{stroke: 'red', strokeOpacity: 0.2},
+                   focusedCellColor:{stroke: 'red'}}")
+)
+plot(Cal)
+
+```
+
+## Referências
+
+  * A galeria de gráficos do Google: [Google Charts Gallery].
+  * Repositório de desenvolvimento do googleVis:
+    [Markus Gesmann googleVis].
+  * Slides do autor: [Introduction to googleVis].
+  * Exemplos de uso do googleVis: [googleVis examples].
+  * Exemplos do [João Neto].
+  * A [vignette em pdf].
+  * http://ouzor.github.io/blog/2014/11/21/interactive-visualizations.html
+
+[googleVis]: https://cran.r-project.org/web/packages/googleVis/index.html
+[Markus Gesmann googleVis]: https://github.com/mages/googleVis
+[Introduction to googleVis]: http://mages.github.io/Introduction_to_googleVis/
+[Google Charts Gallery]: https://developers.google.com/chart/interactive/docs/gallery
+[googleVis examples]: https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html
+[ScatterChart]: https://google-developers.appspot.com/chart/interactive/docs/gallery/scatterchart
+[João Neto]: http://www.di.fc.ul.pt/~jpn/r/GraphicalTools/googleVis.html
+[vignette em pdf]: https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis.pdf
+[googleVis/issue#15]: https://github.com/mages/googleVis/issues/15
