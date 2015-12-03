@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1222.1134"
+   height="408.83908"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="rule1.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.75524906"
+     inkscape:cx="591.44537"
+     inkscape:cy="179.08077"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-left="0.6"
+     units="cm"
+     fit-margin-right="0.6"
+     fit-margin-bottom="0.7"
+     fit-margin-top="0.7"
+     inkscape:window-width="1366"
+     inkscape:window-height="744"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-101.36516,-382.80781)">
+    <rect
+       style="fill:#e6e6e6;fill-opacity:0.58695649;fill-rule:nonzero;stroke:#cccccc;stroke-width:5.28352451;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985"
+       width="538.71649"
+       height="319.95749"
+       x="760.84882"
+       y="443.69916" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="778.20703"
+       y="472.99341"
+       id="text2987"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="778.20703"
+         y="472.99341"
+         id="tspan2995"
+         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono" /><tspan
+         sodipodi:role="line"
+         x="778.20703"
+         y="515.01843"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         id="tspan3084">shinyUI(fluidPage(</tspan><tspan
+         sodipodi:role="line"
+         x="778.20703"
+         y="560.01843"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#999999;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         id="tspan3094">    ## ...</tspan><tspan
+         sodipodi:role="line"
+         x="778.20703"
+         y="605.01843"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         id="tspan3090">    plotOutput(<tspan
+   style="font-weight:bold;fill:#000080"
+   id="tspan3980">&quot;</tspan><tspan
+   style="font-weight:bold;fill:#000080"
+   id="tspan3894">plot</tspan><tspan
+   style="font-weight:bold;fill:#000080"
+   id="tspan3982">&quot;</tspan>)</tspan><tspan
+         sodipodi:role="line"
+         x="778.20703"
+         y="650.01843"
+         id="tspan2999"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono">))</tspan></text>
+    <rect
+       style="fill:#e6e6e6;fill-opacity:0.58695649;fill-rule:nonzero;stroke:#cccccc;stroke-width:5.28352451;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect2985-7"
+       width="538.71649"
+       height="319.95749"
+       x="125.25275"
+       y="444.25815" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="142.61098"
+       y="472.99341"
+       id="text2987-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="142.61098"
+         y="472.99341"
+         id="tspan2995-7"
+         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono" /><tspan
+         sodipodi:role="line"
+         x="142.61098"
+         y="515.01843"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         id="tspan3021-5">shinyServer(</tspan><tspan
+         sodipodi:role="line"
+         x="142.61098"
+         y="560.01843"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         id="tspan3074">   function(input, output){</tspan><tspan
+         sodipodi:role="line"
+         x="142.61098"
+         y="605.01843"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+         id="tspan3078"><tspan
+           style="font-weight:bold;fill:#000080"
+           id="tspan3868">      output$plot &lt;-</tspan><tspan
+           style="fill:#808080"
+           id="tspan3886"> ## ...</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="142.61098"
+         y="650.01843"
+         id="tspan2999-6"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono">})</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.58823529;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="867.02374"
+       y="428.66132"
+       id="text3053"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3055"
+         x="873.02374"
+         y="428.66132"
+         style="font-size:24px">./app2files/ui.R </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:0.58823529;stroke:none;font-family:Ubuntu Mono;-inkscape-font-specification:Ubuntu Mono"
+       x="242.49524"
+       y="424.38696"
+       id="text3053-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3055-6"
+         x="248.49524"
+         y="424.38696"
+         style="font-size:24px">./app2files/server.R </tspan></text>
+    <g
+       id="g4123"
+       transform="translate(-2.2208604,0)" />
+    <g
+       id="text3860"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.92073292;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Ubuntu;-inkscape-font-specification:Ubuntu"
+       transform="matrix(1.5405416,-0.74594445,0.67576901,1.3956137,-7.6982055,1114.5567)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3866"
+         style="font-size:18px;font-weight:bold;line-height:125%;fill:#ff0000;fill-opacity:1;stroke:#ff0000;stroke-width:0.92073292;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Comfortaa;-inkscape-font-specification:Comfortaa Bold"
+         d="m 694.50002,20.035492 c 0.32225,0.216804 0.48339,0.486335 0.4834,0.808594 -10e-6,0.345709 -0.16115,0.61817 -0.4834,0.817383 l -6.64453,3.990234 c -0.12891,0.07617 -0.28126,0.114259 -0.45704,0.114258 -0.25781,10e-7 -0.47754,-0.08496 -0.65918,-0.254883 -0.17578,-0.175779 -0.26367,-0.395505 -0.26367,-0.659179 0,-0.328123 0.15235,-0.591794 0.45703,-0.791016 l 5.35254,-3.216797 -5.35254,-3.199219 c -0.30468,-0.199209 -0.45703,-0.46581 -0.45703,-0.799804 0,-0.128896 0.0234,-0.249013 0.0703,-0.360352 0.0527,-0.111317 0.12011,-0.207997 0.20214,-0.290039 0.082,-0.08202 0.17871,-0.146473 0.29004,-0.193359 0.11133,-0.05272 0.23145,-0.07909 0.36035,-0.0791 0.17578,1.1e-5 0.32813,0.0381 0.45704,0.114258 L 694.5,20.035494" />
+    </g>
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="M 417.99575,629.26421 C 401.1537,619.85618 615.97029,837.688 1070.977,628.31071"
+       id="path3064"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
