@@ -1,0 +1,133 @@
+---
+runtime: shiny
+output:
+  html_document:
+    css: ../palatino.css
+---
+
+```{r, include=FALSE}
+##-------------------------------------------
+## Definções do knitr. Não rodar.
+
+library(knitr)
+opts_chunk$set(
+    cache=FALSE,
+    tidy=FALSE,
+    fig.width=6,
+    fig.height=4.5,
+    fig.align="center",
+    dpi=100,
+    dev="png",
+    dev.args=list(png=list(family="Palatino", type="cairo")))
+options(width=90)
+
+```
+
+****
+
+<center>
+<h1>Alfabetismo e Renda</h1>
+
+Eduardo E. Ribeiro Jr e Walmes M. Zeviani
+</center>
+
+****
+
+Este é um documento gerado com R MarkDown que inclui widgets/handlers do
+shiny. No exemplo abaixo você pode selecionar para que Estado você
+deseja ver o diagrama de dispersão de alfabetismo em função de renda.
+Ao selecionar o nome de um município você pode destacá-lo no gráfico.
+Dados são para o ano de 1991 e extraídos do http://ipeadata.gov.br/.
+
+```{r, echo=FALSE, results="hide", message=FALSE, error=FALSE, warning=FALSE}
+
+da <- read.table("./alfab15_renda_1991.csv",
+                 header=TRUE, sep=";", dec=",", quote="",
+                 colClasses=c("factor", "numeric", "character", "NULL")[
+                                 c(1,4,3,2,2,4)])
+names(da) <- c("sig", "mun", "renda", "alf")
+da <- na.omit(da)
+
+require(lattice)
+require(plyr)
+
+xlab <- "Renda familiar per capita média (1991)"
+ylab <- "Alfabetizados (%, pessoas com >=15 anos)"
+
+```
+
+```{r, echo=FALSE}
+##-------------------------------------------
+## ui.R
+
+library(shiny)
+
+ui1 <- shinyUI(
+    fluidPage(
+        sidebarLayout(
+            sidebarPanel=sidebarPanel(
+                selectInput(inputId="ESTADO",
+                            label="Estado:",
+                            choices=levels(da$sig),
+                            selected="PR"),
+                selectInput(inputId="MUN",
+                            label="Município em destaque:",
+                            choices=da$mun,
+                            selected="Curitiba"),
+                checkboxInput(inputId="TREND",
+                              label="Inserir linha de tendência",
+                              value=FALSE)),
+            mainPanel=mainPanel(
+                plotOutput("PLOT")
+            )
+        )
+    )
+)
+
+##-------------------------------------------
+## server.R
+
+sv1 <- shinyServer(
+    function(input, output, session){
+        BASE <- reactive({
+            # input <- list(ESTADO="PR", MUN="Curitiba")
+            db <- subset(da, sig==input$ESTADO)
+            db$col <- 1
+            db$cex <- 0.8
+            db$pch <- 1
+            if (sum(input$MUN%in%db$mun)==1){
+                i <- db$mun==input$MUN
+                db$col[i] <- 2
+                db$cex[i] <- 1.5
+                db$pch[i] <- 19
+            }
+            db <- arrange(db, col, renda)
+            updateSelectInput(session,
+                              inputId="MUN",
+                              choices=sort(db$mun),
+                              selected=tail(db$mun, 1))
+            return(db)
+        })
+        output$PLOT <- renderPlot({
+            db <- BASE()
+            p1 <- xyplot(alf~renda, data=db,
+                         main=input$ESTADO,
+                         xlab=xlab, ylab=ylab,
+                         cex=db$cex, col=db$col, pch=db$pch)
+            if (input$TREND){
+                update(p1, type=c("p","smooth"))
+            } else {
+                p1
+            }
+        },
+        family="Palatino",
+        bg="transparent",
+        width=400,
+        height=300)
+    }
+)
+
+shinyApp(ui=ui1, server=sv1)
+
+```
+
