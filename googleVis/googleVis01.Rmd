@@ -1,16 +1,11 @@
-# Gráficos dinâmicos
-
-  * <http://ouzor.github.io/blog/2014/11/21/interactive-visualizations.html>
-
-## googleVis
-
-  * A galeria de gráficos do Google: [Google Charts Gallery].
-  * Repositório de desenvolvimento do googleVis:
-    [Markus Gesmann googleVis].
-  * Slides do autor: [Introduction to googleVis].
-  * Exemplos de uso do googleVis: [googleVis examples].
-  * Exemplos do [João Neto].
-  * A [vignette em pdf].
+---
+title: IGUIR2 - Galeria googleVis
+author: Eduardo E. Ribeiro Jr \& Walmes M. Zeviani
+output:
+    html_document:
+      css: ../galery.css
+      toc: yes
+---
 
 O pacote [googleVis] permite fazer gráficos da galeria Google Charts de
 dentro do R. O deselvolvedor do pacote, Markus Gesmann, mantém o pacote
@@ -28,6 +23,23 @@ os padrões R mas as definições em javascript.
 Os exemplos abaixo ilustram como usar algumas das funções do pacote e
 modificar elementos gráficos.
 
+## Instalação
+
+https://cran.r-project.org/web/packages/googleVis/  
+https://github.com/mages/googleVis
+
+```{r, eval = FALSE}
+## Estável
+install.packages("googleVis")
+
+## Em desenvolvimento
+library(devtools)
+install_github("mages/googleVis")
+
+```
+
+Como começar:
+
 ```{r setOptions, message=FALSE}
 library(googleVis)
 
@@ -40,7 +52,9 @@ apropos(what="^gvis", mode="function")
 
 ```
 
-### Exemplos
+## Exemplos
+
+### Diagrama de dispersão (_gvisScatterChart_) ###
 
 Exemplo com o data frame `woman`.
 
@@ -85,7 +99,9 @@ plot(Scatter)
 
 ```
 
-Gráfico de barras com o data frame `HairEyeColor`.
+### Gráfico de barras (_gvisBarChart_) ###
+
+Utiliza o data frame `HairEyeColor`.
 
 ```{r BarChart, results="asis", tidy=FALSE}
 ## str(HairEyeColor)
@@ -111,6 +127,8 @@ plot(Column)
 
 ```
 
+### Box-plot (_gvisCandlestickChart_) ###
+
 ```{r Candle, results="asis", tidy=FALSE}
 x <- boxplot(Sepal.Length~Species, data=iris, outline=FALSE, plot=FALSE)
 x <- data.frame(t(x$stats[-3,]))
@@ -129,7 +147,7 @@ plot(Candle)
 
 ```
 
-Gŕafico de setores.
+### Gráfico de Setores (_gvisPieChart_) ###
 
 ```{r Pie, results="asis", tidy=FALSE}
 ## str(HairEyeColor)
@@ -145,6 +163,8 @@ Pie <- gvisPieChart(
 plot(Pie)
 
 ```
+
+### Mapas Geográficos (_gvisGeoChart_) ###
 
 População dos Estados brasileiros:
 <https://pt.wikipedia.org/wiki/Lista_de_unidades_federativas_do_Brasil_por_população>.
@@ -208,6 +228,8 @@ plot(GeoStates)
 
 ```
 
+### Mapa via satélite (_gvisMap_) ###
+
 ```{r MapChart, results="asis", tidy=FALSE}
 ##----------------------------------------------------------------------
 ## Código do Web Scraping.
@@ -254,6 +276,8 @@ Map <- gvisMap(br,
 plot(Map)
 
 ```
+
+### Gráficos de Séries temporais (_gvisLineChart_) ###
 
 Dados de precipitação de Dourados em 2014 extratídos da Embrapa CPAO:
 <http://www.cpao.embrapa.br/clima/?lc=site/banco-dados/base_dados>.
@@ -384,6 +408,8 @@ plot(Serie)
 
 ```
 
+### Diagrama de calendário (_gvisCalendar_) ###
+
 Para ver o gráfico abaixo adequadamente, você tem que configurar como
 local do seu sistema operacional um ponto que não tenha horário de
 verão. Por exemplo, usar Bahia ao invés de Curitiba nas definições de
@@ -405,6 +431,17 @@ Cal <- gvisCalendar(
 plot(Cal)
 
 ```
+
+## Referências
+
+  * A galeria de gráficos do Google: [Google Charts Gallery].
+  * Repositório de desenvolvimento do googleVis:
+    [Markus Gesmann googleVis].
+  * Slides do autor: [Introduction to googleVis].
+  * Exemplos de uso do googleVis: [googleVis examples].
+  * Exemplos do [João Neto].
+  * A [vignette em pdf].
+  * http://ouzor.github.io/blog/2014/11/21/interactive-visualizations.html
 
 [googleVis]: https://cran.r-project.org/web/packages/googleVis/index.html
 [Markus Gesmann googleVis]: https://github.com/mages/googleVis
