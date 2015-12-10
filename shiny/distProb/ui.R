@@ -1,6 +1,3 @@
-##-------------------------------------------
-## ui.R
-
 require(shiny)
 
 choi <- c("Poisson"="poisson",
@@ -19,10 +16,19 @@ shinyUI(
             selectInput(inputId="dist",
                         label="Distribuição",
                         choices=choi),
-            uiOutput("ui")
+            uiOutput("ui"),
+            
+            uiOutput("OptsMedia")
         ),
         mainPanel(
-            plotOutput("plot")
+            tabsetPanel(
+                id = "tab", 
+                tabPanel("Distribuição", 
+                         plotOutput("plot")),
+                tabPanel("Distribuição Amostral da Média",
+                         uiOutput("grafsMedia")
+                         )
+            )
         )
     )
 )
