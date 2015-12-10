@@ -277,4 +277,42 @@ shinyServer(
                    
                    ) ## switch()
         }) ## renderUI
+
+        ## Opções para média amostral
+        output$OptsMedia <- renderUI({
+            if (input$tab == "Distribuição") {
+                return(NULL)
+            } else {
+                wellPanel(
+                    numericInput(
+                        inputId="n",
+                        label="Tamanho da amostra:",
+                        min = 2, max = 1000, value=10),
+                    HTML("<label>Tipo de gráfico: </label>"),
+                    tabsetPanel(
+                        id = "graf",
+                        type = "pills",
+                        tabPanel("Density"),
+                        tabPanel("ECDF"),
+                        tabPanel("Q-QNorm")
+                    ),
+                    helpText("Baseados em 500 amostras")
+                )
+            }
+        })
+
+        ## Gráficos para a distribuição média amostral 
+        output$grafsMedia <- renderUI({
+            if (is.null(input$graf)) {
+                return(NULL)
+            } else {
+                switch(
+                    input$graf,
+                    "Density" = plotOutput("density"),
+                    "ECDF" = plotOutput("ecdf"),
+                    "Q-QNorm" = plotOutput("qqnorm")
+                )
+            }
+        })
+        
     }) ## shinyServer()

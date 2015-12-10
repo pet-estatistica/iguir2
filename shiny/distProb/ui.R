@@ -13,19 +13,22 @@ shinyUI(
 
         titlePanel("Distribuições de probabilidade"),
         sidebarPanel(
-            numericInput(inputId="n",
-                         label="Tamanho da amostra:",
-                         value=10),
             selectInput(inputId="dist",
                         label="Distribuição",
                         choices=choi),
-            uiOutput("ui")
+            uiOutput("ui"),
+            
+            uiOutput("OptsMedia")
         ),
         mainPanel(
-            plotOutput("plot"),
-            plotOutput("density"),
-            plotOutput("ecdf"),
-            plotOutput("qqnorm")
+            tabsetPanel(
+                id = "tab", 
+                tabPanel("Distribuição", 
+                         plotOutput("plot")),
+                tabPanel("Distribuição Amostral da Média",
+                         uiOutput("grafsMedia")
+                         )
+            )
         )
     )
 )
