@@ -1,8 +1,19 @@
+<img src="http://200.17.213.89/~eduardo/images/iguir2.svg"
+width=100px align="right" display="block">
+
 Explorando Interfaces Gráficas com o R
 ======================================
 
 [Eduardo E. Ribeiro Jr](https://gitlab.c3sl.ufpr.br/u/eerj12), PET-Estatística UFPR  
 [Prof. Walmes M. Zeviani](http://www.leg.ufpr.br/~walmes/), LEG UFPR
+
+Projeto desenvolvido no serviço [GitLab do C3SL] (Centro de Computação
+Científica e Software Livre) e mantido também como repositório da
+organização [PET Estatística no GitHub]. Todas as contribuições para o
+projeto são bem vindas.
+
+****
+## Motivação
 
 O R é um programa para computação estatística e gráficos muito utilizado
 por estatísticos e cientistas de dados, possivelmente o mais
@@ -156,6 +167,8 @@ TODO
 
 <!------------------------------------------------------------------ -->
 
+[GitLab do C3SL]: https://gitlab.c3sl.ufpr.br/pet-estatistica/iguir2
+[PET Estatística no GitHub]: https://github.com/pet-estatistica/iguir2
 [`animation`]: http://yihui.name/animation/
 [`rgl`]: http://rgl.neoscientists.org/about.shtml
 [`googleVis`]: https://cran.r-project.org/web/packages/googleVis/index.html
