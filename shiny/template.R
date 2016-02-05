@@ -56,11 +56,11 @@ h2.iguir {
        <h1 class = 'iguir'>
        Interactive Graphical User Interface with R - IGUIR
        </h1>
-       <h2 class = 'iguir'>", title, "
+       <h2 class = 'iguir'>", "", "
        </h2>
    </td>
    <td class = 'iguir' align='right'> 
-       <img src = 'http://200.17.213.89/~eduardo/images/iguir2.svg' height = '128' width = '128'> </img> 
+       <img src = 'http://200.17.213.89/~iguir/iguir2.svg' height = '96' width = '96'> </img> 
    </td>  
 </table>", sep = "\n")
 }
