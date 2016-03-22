@@ -298,6 +298,7 @@ rsconnetc::deployApp("./apps/")
 * `shiny + rCharts`
 * `shiny + DT`
 
+##
 ### Dever de casa
 * [Tutorial shiny - RStudio](http://shiny.rstudio.com/tutorial/)
     - Lessons
@@ -311,7 +312,8 @@ rsconnetc::deployApp("./apps/")
 * [Lista *Shiny - Web Framework for Shiny*](https://groups.google.com/forum/#!forum/shiny-discuss)
 * [Google](https://www.google.com/)
 
-# Vamos à galeria IGUIR2
+# Vamos à galeria IGUIR2 <br><br> [shiny.leg.ufpr.br/iguir]
 
 # Obrigado!
 
+[shiny.leg.ufpr.br/iguir]: http://shiny.leg.ufpr.br/iguir/
