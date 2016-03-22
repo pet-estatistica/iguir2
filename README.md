@@ -1,4 +1,4 @@
-<img src="http://200.17.213.89/~eduardo/images/iguir2.svg"
+<img src="http://200.17.213.89/~iguir/iguir2.svg"
 width=100px align="right" display="block">
 
 Explorando Interfaces Gráficas com o R
@@ -12,8 +12,14 @@ Científica e Software Livre) e mantido também como repositório da
 organização [PET Estatística no GitHub]. Todas as contribuições para o
 projeto são bem vindas.
 
+- [Motivação](#motivacao)
+- [Como visualizar o material](#como-visualizar-o-material)
+- [Organização do repositório](#organizacao-do-repositorio)
+
+
 ****
-## Motivação
+
+## Motivação ##
 
 O R é um programa para computação estatística e gráficos muito utilizado
 por estatísticos e cientistas de dados, possivelmente o mais
@@ -55,7 +61,6 @@ de dá como:
    principalmente a explicação funções exibindo, interativamente, a
    influências dos argumentos da função sobre os resultados.
 
-
 Este repositório explora sete pacotes R, que possibilitam alguma forma
 de interação com o usuário. Os pacotes abordados que se encaixam na
 geração de gráficos dinâmicos são: [`animation`] que serve para gerar
@@ -73,18 +78,89 @@ nesta categoria, o pacote [`shiny`] que possibilita construir aplicações
 Web com o R baseadas em *javascript* também ganha destaca no nosso
 material.
 
-É importante destacar que os arquivos com nome `package.Rmd`, onde
-`package` pode assumir `animation`, `googleVis`, `gWidgets`, `rCharts`,
-`rgl` e `rpanel` precisam ser compilados para que gerem os respectivos
-arquivos `.html`. Essa compilação pode ser realizada com a função
-`rmarkdown::render()`. Os slides do material contém _links_ para os
-arquivos resultados dessa compilação. 
+## Como visualizar o material ##
 
-As aplicações Shiny produzidas para este projeto estão ativas no
+Primeiramente certifique-se que todos as bibliotecas abordadas estão
+instaladas no seu computador:
+
+```r
+## Verificando e instalando, se necessário, todos os pacotes abordados
+
+## CRAN
+pkg <- c("animation", "googleVis", "gWidgets", "rgl", "rpanel", "shiny")
+sapply(pkg, FUN = function(x) {
+    if (!require(x, quietly = TRUE, character.only = TRUE))
+        install.packages(x, dep = TRUE, repos = repos, lib = lib)
+    else TRUE
+})
+
+## GITHUB
+if (!require("rCharts", quietly = TRUE, character.only = TRUE))
+    devtools::install_git("rCharts", "ramnathv")
+```
+
+Para este projeto foram elaborados vários exemplos que podem ser
+explorados a partir de seu código-fonte em R. Porém como opção de
+apresentação das biliotecas exploradas, elaboramos também galerias de
+exemplos, escritas em [RMarkDown]. Estas galerias devem ser compiladas
+para que se possa visualizar seu resultado em formato HTML. Abaixo
+temos os códigos em R para compilar e visualizar os materiais:
+
+```r
+## Lista o estado do diretório iguir2
+files0 <- list.files(recursive = TRUE)
+dirs0 <- list.dirs(recursive = TRUE)
+
+## Encontra todos os arquivos RMarkdown do diretório
+rmdAll <- list.files(pattern = "*.Rmd$", recursive = TRUE)
+
+## Separa os que Rmd Shiny, que devem ser executados com run
+rmdShiny <- grepl("^shiny", rmdAll)
+rmdFiles <- rmdAll[!rmdShiny]
+rmdShiny <- rmdAll[rmdShiny]
+
+## Compila os arquivos Rmd e abre no navegador padrão
+library(rmarkdown)
+
+sapply(rmdFiles, FUN = function(x) {
+    path <- render(x, quiet = TRUE)
+    browseURL(path)
+})
+
+## Para as aplicações Rmd shiny deve-se compilá-las uma a uma, pois elas
+## utilizam na sessão R. Certifique-se de parar o processo atual para
+## executar a próxima aplicação
+run(rmdShiny[1])
+run(rmdShiny[2])
+run(rmdShiny[3])
+browserURL("http://shiny.leg.ufpr.br/iguir/") ## online
+
+## Abrindo o pdf no visualizador padrão. Agora os links funcionam :)
+file <- "./slides/slides.pdf"
+switch(.Platform$OS.type,
+       "windows" = shell.exec(file),
+       "unix" = system(paste(getOption("pdfviewer"), file)))
+
+## Limpa o diretório. Para compilar as galerias de exemplos muitos
+## arquivos adicionais são criados (principalmente no animation). Veja
+## os objetos *Creates.
+files1 <- list.files(recursive = TRUE)
+dirs1 <- list.dirs(recursive = TRUE)
+
+filesCreates <- setdiff(files1, files0)
+dirsCreates <- setdiff(dirs1, dirs0)
+file.remove(filesCreates, dirsCreates)
+```
+
+Executando o cógido descrito vc terá todos os arquivos gerados e poderá
+usufruir dos _links_ incluídos na apresentação PDF elaborada.
+
+Obs.: As aplicações Shiny produzidas para este projeto estão ativas no
 servidor RStudio/Shiny do LEG/PET: <http://shiny.leg.ufpr.br/iguir/>.
 
 ****
-## Organização do repositório
+
+## Organização do repositório ##
 
 Como organização do material produzido adotamos no repositório um
 diretório dedicado a cada pacote abordado. Cada repositório tem suas
@@ -109,8 +185,7 @@ pelo diagrama abaixo.
 │   ├── anima.R            ## Animações elaboradas
 │   └── ...
 ├── googleVis
-│   ├── googleVis.Rmd      ## Galeria de exemplos
-│   └── googleVis.html     ## Galeria compilada
+│   └── googleVis.Rmd      ## Galeria de exemplos
 ├── gWidgets
 │   ├── gWidgets.Rmd       ## Galeria de exemplos
 │   ├── gifs
@@ -133,7 +208,6 @@ pelo diagrama abaixo.
 │   └── ...
 ├── shiny
 │   ├── shiny-pres.Rmd     ## Apresentação detalhada do pacote
-│   ├── shiny-pres.html    ## Apresentação compilada
 │   ├── images             ## Imagens utilizadas na apresentação
 │   │   ├── figures.svg
 │   │   └── ...
@@ -156,14 +230,8 @@ pelo diagrama abaixo.
         ├── imagem.pdf     ## Compilação do Tikz
         └── ...
 
-48 directories, 300 files
-
+49 directories, 300 files
 ```
-
-****
-## Como citar esse material
-
-TODO
 
 <!------------------------------------------------------------------ -->
 
@@ -176,3 +244,4 @@ TODO
 [`gWdigets`]: https://cran.r-project.org/web/packages/gWidgets/index.html
 [`shiny`]: http://shiny.rstudio.com/
 [`rCharts`]: http://ramnathv.github.io/rCharts/
+[RMarkDown]: http://rmarkdown.rstudio.com/
