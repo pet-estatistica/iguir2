@@ -1,0 +1,44 @@
+.irs-min, .irs-max {
+    color: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    font-size: 10px;
+    line-height: 1.333;
+    text-shadow: none;
+    top: 0px;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+.irs-from, .irs-to, .irs-single {
+    color: rgba(255, 255, 255, 0);
+    background: transparent none repeat scroll 0% 0%;
+    font-size: 11px;
+    line-height: 1.333;
+    text-shadow: none;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+.irs-bar-edge {
+    height: 3px;
+    top: 25px;
+    width: 14px;
+    border-width: 1px 0px 1px 1px;
+    border-style: solid none solid solid;
+    border-color: rgba(66, 139, 202, 0) -moz-use-text-color rgba(66, 139, 202, 0) rgba(66, 139, 202, 0);
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    background: rgba(66, 139, 202, 0) none repeat scroll 0% 0%;
+    border-radius: 16px 0px 0px 16px;
+}
+
+.irs-bar {
+    height: 8px;
+    top: 25px;
+    border-top: 1px solid rgba(66, 139, 202, 0);
+    border-bottom: 1px solid rgba(66, 139, 202, 0);
+    background: rgba(66, 139, 202, 0) none repeat scroll 0% 0%;
+}

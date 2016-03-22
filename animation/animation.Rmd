@@ -170,13 +170,16 @@ while(i<100 & dif>tol){
 
 ## Demostração do algoritmo Newton-Raphson para otimização de função 
 saveHTML({
-  for(j in 2:i){
-    curve(fx0, -10, 10, main=paste("passo ", j-1, ", (x = ",
-                                   round(x[j],2), ")", sep=""))
-    abline(h=0, lty=2)
-    arrows(x[j-1], fx0(x[j-1]), x[j], fx0(x[j]), length=0.1, col=3, lwd=2)
-    abline(v=x[j], h=fx0(x[j]), lty=3, col=2)
-  }
+    for(j in 2:i){
+        suppressWarnings({
+            curve(fx0, -10, 10, main=paste("passo ", j-1, ", (x = ",
+                                           round(x[j],2), ")", sep=""))
+            abline(h=0, lty=2)
+            arrows(x[j-1], fx0(x[j-1]), x[j], fx0(x[j]),
+                   length=0.1, col=3, lwd=2)
+            abline(v=x[j], h=fx0(x[j]), lty=3, col=2)
+        })
+    }
   abline(v=x[i], h=fx0(x[i]), col=2, lwd=2)
   text(0, -3, label="CONVERGIU!", cex=2)
   ani.pause() },
