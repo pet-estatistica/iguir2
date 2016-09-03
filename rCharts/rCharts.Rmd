@@ -22,7 +22,7 @@ library(rCharts)
 ## Para renderização rCharts
 options(
   rcharts.mode = 'iframesrc', 
-  rcharts.cdn = TRUE,
+  rcharts.cdn = FALSE,
   RCHART_WIDTH = 800,
   RCHART_HEIGHT = 400
 )
